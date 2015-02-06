@@ -1,0 +1,90 @@
+\documentclass[12pt]{book}
+\usepackage{epsfig,html}
+\pagestyle{plain}
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+\topmargin=-0.5in
+\textwidth=6.25in
+\textheight=9.0in
+%\renewcommand{\textfraction}{0.05}
+\newcommand{\Cerenkov}{\v{C}erenkov}
+\parindent=2em
+\hyphenation{cebaf}
+\title{HALL C OPERATING MANUAL \\ Rev. 2.2 \\ October, 1999}
+\author{R.~Carlini, R.~Ent, H.~Fenker,\\
+P.~Gueye, C.~Keppel, S.~Lassiter, A.~Lung, D.~Mack,\\ 
+S.~Wood, W.~Vulcan, C.~Yan, B.~Zihlmann ......}
+\date{\underline{Minor Revision Date:} \today}
+\begin{document}
+\setcounter{tocdepth}{4}
+\maketitle
+{\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+\listoffigures
+\listoftables
+}
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\chapter{Procedures for Experiments }
+\label{chapt:proc}
+\input{c_proc.tex}
+
+\chapter{Operational Procedures for Hall~C}
+\label{chapt:osp}
+\input{c_ops.tex}
+
+%\chapter{Safety Assesment Document for Hall~C Equipment}
+%\label{chapt:sad}
+%\input{c_sad.tex}
+
+%\chapter{Personnel Allowed to Operate Hall~C Equipment}
+%\label{chapt:personnel}
+%\input{c_pers.tex}
+
+%
+% begin appendicies
+%
+\appendix
+\chapter{Questions to be Addressed by a Conduct of Operations (COO) for a Hall~C 
+Experiment}
+\label{app:questions}
+\input{a_quest.tex}
+
+\chapter{Pearls of Wisdom}
+\label{app:pearls}
+\input{pearls.tex}
+
+
+\chapter{Sample EH\&S Review Committee Charge}
+\label{app:charge}
+\input{charge.tex}
+
+\chapter{Hazard Assessment Criteria}
+\label{app:criteria}
+\input{criteria.tex}
+
+%\chapter{Conduct of Operations for CEBAF Hall~C Experiment 89-012}
+%\label{app:coo}
+%\input{coo_8912.tex}
+
+%\chapter{Safety Assessment Document for the Hall C Cryogenic Target}
+%\label{app:cryotarget_sad}
+%\input{cryo_tgt.tex}
+
+\chapter{Glossary of Terms}
+\label{app:glossary}
+\input{glossary.tex}
+
+\newpage
+\begin{thebibliography}{MM99m}
+
+\input{biblio.tex}
+
+\end{thebibliography}
+
+\end{document}
+

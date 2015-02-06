@@ -1,0 +1,11 @@
+*~
+*.log
+
+# Intermediate latex file
+
+*.aux
+*.dvi
+*.lof
+*.lot
+*.out
+*.toc

@@ -1,0 +1,496 @@
+%!
+%%BoundingBox: 32 50 583 759
+%%Title: superharp-control
+%%CreationDate: Mon Apr 22 08:19:29 1996
+%%Creator: Tgif-2.16-p8 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+%%Orientation: Portrait
+%%Pages: 1
+%%DocumentFonts: (atend)
+%%EndComments
+%%BeginProlog
+
+/tgifdict 39 dict def
+tgifdict begin
+
+/tgifellipsedict 6 dict def
+tgifellipsedict /mtrx matrix put
+
+/tgifellipse
+ { tgifellipsedict begin
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 0 360 arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+/tgifpatdict 10 dict def
+
+/tgifpatbyte
+ { currentdict /retstr get exch
+   pat i cellsz mod get put
+ } def
+
+/tgifpatproc
+ { 0 1 widthlim {tgifpatbyte} for retstr
+   /i i 1 add def
+ } def
+
+/tgifpatfill
+ { tgifpatdict begin
+      /h exch def
+      /w exch def
+      /lty exch def
+      /ltx exch def
+      /cellsz exch def
+      /pat exch def
+
+      /widthlim w cellsz div cvi 1 sub def
+      /retstr widthlim 1 add string def
+      /i 0 def
+
+      ltx lty translate
+      w h true [1 0 0 1 0 0] {tgifpatproc} imagemask
+      ltx neg lty neg translate
+   end
+ } def
+
+/pat3 <8000000008000000> def
+/pat4 <8800000022000000> def
+/pat5 <8800220088002200> def
+/pat6 <8822882288228822> def
+/pat7 <aa55aa55aa55aa55> def
+/pat8 <77dd77dd77dd77dd> def
+/pat9 <77ffddff77ffddff> def
+/pat10 <77ffffff77ffffff> def
+/pat11 <7fffffff7fffffff> def
+/pat12 <8040200002040800> def
+/pat13 <40a00000040a0000> def
+/pat14 <ff888888ff888888> def
+/pat15 <ff808080ff080808> def
+/pat16 <f87422478f172271> def
+/pat17 <038448300c020101> def
+/pat18 <081c22c180010204> def
+/pat19 <8080413e080814e3> def
+/pat20 <8040201008040201> def
+/pat21 <8844221188442211> def
+/pat22 <77bbddee77bbddee> def
+/pat23 <c1e070381c0e0783> def
+/pat24 <7fbfdfeff7fbfdfe> def
+/pat25 <3e1f8fc7e3f1f87c> def
+/pat26 <0102040810204080> def
+/pat27 <1122448811224488> def
+/pat28 <eeddbb77eeddbb77> def
+/pat29 <83070e1c3870e0c1> def
+/pat30 <fefdfbf7efdfbf7f> def
+/pat31 <7cf8f1e3c78f1f3e> def
+
+/tgifcentertext { dup stringwidth pop 2 div neg 0 rmoveto } def
+
+end
+
+%%EndProlog
+%%Page: 1 1
+
+%%PageBoundingBox: 32 50 583 759
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.00 mul translate
+72 128 div 95 mul 100 div dup neg scale
+
+gsave
+
+% RCBOX
+1.000 0.000 0.000 setrgbcolor
+gsave
+   newpath
+      304 128 moveto
+      320 128 320 256 16 arcto 4 {pop} repeat
+      320 240 lineto
+      320 256 128 256 16 arcto 4 {pop} repeat
+      144 256 lineto
+      128 256 128 128 16 arcto 4 {pop} repeat
+      128 144 lineto
+      128 128 320 128 16 arcto 4 {pop} repeat
+   closepath 1 setgray fill
+   1.000 0.000 0.000 setrgbcolor
+   newpath
+      304 128 moveto
+      320 128 320 256 16 arcto 4 {pop} repeat
+      320 240 lineto
+      320 256 128 256 16 arcto 4 {pop} repeat
+      144 256 lineto
+      128 256 128 128 16 arcto 4 {pop} repeat
+      128 144 lineto
+      128 128 320 128 16 arcto 4 {pop} repeat
+   closepath eoclip newpath
+   pat6 8 120 120 208 144 tgifpatfill
+grestore
+gsave
+   3 setlinewidth
+   newpath
+      304 128 moveto
+      320 128 320 256 16 arcto 4 {pop} repeat
+      320 240 lineto
+      320 256 128 256 16 arcto 4 {pop} repeat
+      144 256 lineto
+      128 256 128 128 16 arcto 4 {pop} repeat
+      128 144 lineto
+      128 128 320 128 16 arcto 4 {pop} repeat
+   closepath stroke
+   1 setlinewidth
+grestore
+
+% RCBOX
+0.000 0.000 1.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      304 512 moveto
+      320 512 320 640 16 arcto 4 {pop} repeat
+      320 624 lineto
+      320 640 128 640 16 arcto 4 {pop} repeat
+      144 640 lineto
+      128 640 128 512 16 arcto 4 {pop} repeat
+      128 528 lineto
+      128 512 320 512 16 arcto 4 {pop} repeat
+   closepath stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0.000 1.000 0.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      224 512 moveto
+      -256 0 atan dup cos 12 mul 224 exch sub
+      exch sin 12 mul 256 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      224 256 12 5 0 -256 tgifarrowtip
+   1 setgray closepath fill
+   0.000 1.000 0.000 setrgbcolor
+   newpath
+      224 256 12 5 0 -256 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0.000 1.000 0.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      320 192 moveto
+      0 224 atan dup cos 12 mul 544 exch sub
+      exch sin 12 mul 192 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      544 192 12 5 224 0 tgifarrowtip
+   1 setgray closepath fill
+   0.000 1.000 0.000 setrgbcolor
+   newpath
+      544 192 12 5 224 0 tgifarrowtip
+   closepath fill
+grestore
+
+% OVAL
+0.000 1.000 1.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath 672 208 128 112 tgifellipse stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0.000 1.000 0.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      672 320 moveto
+      672 768 lineto
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+1.000 0.000 1.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      672 768 moveto
+      192 0 atan dup cos 12 mul 672 exch sub
+      exch sin 12 mul 960 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      672 960 12 5 0 192 tgifarrowtip
+   1 setgray closepath fill
+   1.000 0.000 1.000 setrgbcolor
+   newpath
+      672 960 12 5 0 192 tgifarrowtip
+   closepath fill
+grestore
+
+% RCBOX
+0.000 0.000 1.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      752 960 moveto
+      768 960 768 1088 16 arcto 4 {pop} repeat
+      768 1072 lineto
+      768 1088 576 1088 16 arcto 4 {pop} repeat
+      592 1088 lineto
+      576 1088 576 960 16 arcto 4 {pop} repeat
+      576 976 lineto
+      576 960 768 960 16 arcto 4 {pop} repeat
+   closepath stroke
+   1 setlinewidth
+grestore
+
+% RCBOX
+1.000 0.000 0.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      752 1216 moveto
+      768 1216 768 1344 16 arcto 4 {pop} repeat
+      768 1328 lineto
+      768 1344 576 1344 16 arcto 4 {pop} repeat
+      592 1344 lineto
+      576 1344 576 1216 16 arcto 4 {pop} repeat
+      576 1232 lineto
+      576 1216 768 1216 16 arcto 4 {pop} repeat
+   closepath stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+1.000 0.000 1.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      672 1088 moveto
+      128 0 atan dup cos 12 mul 672 exch sub
+      exch sin 12 mul 1216 exch sub lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      672 1216 12 5 0 128 tgifarrowtip
+   1 setgray closepath fill
+   1.000 0.000 1.000 setrgbcolor
+   newpath
+      672 1216 12 5 0 128 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      224 566 moveto (CONTROL) tgifcentertext show
+      224 594 moveto (PANEL) tgifcentertext show
+   grestore
+
+% TEXT
+0.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      224 182 moveto (SUPERHARP) tgifcentertext show
+      224 210 moveto (DEVICE) tgifcentertext show
+   grestore
+
+% TEXT
+0.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      672 190 moveto (SUPERHARP:DIGIT) tgifcentertext show
+      672 218 moveto (FILE) tgifcentertext show
+      672 246 moveto (\(ASCII FILE\)) tgifcentertext show
+   grestore
+
+% TEXT
+0.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      672 1006 moveto (SUPERHARP) tgifcentertext show
+      672 1034 moveto (TK/TCL) tgifcentertext show
+      672 1062 moveto (INPUT FILE) tgifcentertext show
+   grestore
+
+% TEXT
+0.000 1.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      672 1262 moveto (ONLINE) tgifcentertext show
+      672 1290 moveto (DISPLAY) tgifcentertext show
+      672 1318 moveto (SCREEN) tgifcentertext show
+   grestore
+
+% BOX
+0.000 1.000 0.000 setrgbcolor
+gsave
+   1.415 setmiterlimit
+   3 setlinewidth
+   [8 8] 0 setdash
+   newpath
+      64 64 moveto 832 64 lineto 832 704 lineto 64 704 lineto
+   closepath stroke
+   [] 0 setdash
+   1 setlinewidth
+   1 setmiterlimit
+grestore
+
+% BOX
+1.000 0.000 1.000 setrgbcolor
+gsave
+   1.415 setmiterlimit
+   3 setlinewidth
+   [8 8] 0 setdash
+   newpath
+      512 832 moveto 832 832 lineto 832 1384 lineto 512 1384 lineto
+   closepath stroke
+   [] 0 setdash
+   1 setlinewidth
+   1 setmiterlimit
+grestore
+
+% TEXT
+0.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      968 998 moveto (TK/TCL) tgifcentertext show
+      968 1035 moveto (GRAPHICAL) tgifcentertext show
+      968 1072 moveto (SOFTWARE) tgifcentertext show
+   grestore
+
+% TEXT
+0.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [34 0 0 -34 0 0] makefont setfont
+   gsave
+      960 398 moveto (EPICS) tgifcentertext show
+   grestore
+
+% BOX
+0.000 0.000 0.000 setrgbcolor
+gsave
+   1.415 setmiterlimit
+   3 setlinewidth
+   newpath
+      896 320 moveto 1024 320 lineto 1024 448 lineto 896 448 lineto
+   closepath stroke
+   1 setlinewidth
+   1 setmiterlimit
+grestore
+
+% BOX
+0.000 0.000 0.000 setrgbcolor
+gsave
+   1.415 setmiterlimit
+   3 setlinewidth
+   newpath
+      856 960 moveto 1072 960 lineto 1072 1088 lineto 856 1088 lineto
+   closepath stroke
+   1 setlinewidth
+   1 setmiterlimit
+grestore
+
+% POLY/OPEN-SPLINE
+1.000 0.000 0.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      672 768 moveto
+      0 224 atan dup cos 12 mul exch sin 12 mul rmoveto
+      896 768 lineto
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   newpath
+      672 768 12 5 -224 0 tgifarrowtip
+   1 setgray closepath fill
+   1.000 0.000 0.000 setrgbcolor
+   newpath
+      672 768 12 5 -224 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+1.000 0.000 0.000 setrgbcolor
+/Times-BoldItalic findfont [25 0 0 -25 0 0] makefont setfont
+   gsave
+      992 766 moveto (HARPCONV.C) tgifcentertext show
+      992 794 moveto (FILE) tgifcentertext show
+   grestore
+
+% RCBOX
+1.000 0.000 0.000 setrgbcolor
+gsave
+   3 setlinewidth
+   newpath
+      1072 704 moveto
+      1088 704 1088 832 16 arcto 4 {pop} repeat
+      1088 816 lineto
+      1088 832 896 832 16 arcto 4 {pop} repeat
+      912 832 lineto
+      896 832 896 704 16 arcto 4 {pop} repeat
+      896 720 lineto
+      896 704 1088 704 16 arcto 4 {pop} repeat
+   closepath stroke
+   1 setlinewidth
+grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Trailer
+%MatchingCreationDate: Mon Apr 22 08:19:29 1996
+%%DocumentFonts: Times-BoldItalic
+%%EOF
+
