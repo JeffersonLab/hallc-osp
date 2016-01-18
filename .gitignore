@@ -1,6 +1,9 @@
 *~
 *.log
 
+# Some users will need this
+html.sty
+
 # Intermediate latex file
 
 *.aux
