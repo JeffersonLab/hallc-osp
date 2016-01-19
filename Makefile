@@ -1,6 +1,7 @@
 FILES = introduction/intro.tex beamline/beamline.tex \
 	targets/targets.tex spectrometers/spectrometers.tex \
-	detectors/detectors.tex \
+	detectors/detectors.tex controls/controls.tex \
+	analysis/analysis.tex \
 	glossary.tex biblio.tex
 
 pdf: c_operman.pdf
