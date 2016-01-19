@@ -1,5 +1,5 @@
 FILES = introduction/intro.tex beamline/beamline.tex \
-	targets/targets.tex \
+	targets/targets.tex spectrometers/spectrometers.tex \
 	glossary.tex biblio.tex
 
 pdf: c_operman.pdf
