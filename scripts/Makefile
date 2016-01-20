@@ -121,18 +121,18 @@ pdf:	 clean $(namest)
 	echo "Rerun-TEST" > $(top).log ; \
 	ln -s -f $(fnam) $(top).tex ; \
 	ln -s -f ../src/$(top)/title.tex . ; \
-	$(PDFLATEX) $(top) ;\
+	$(LATEX) $(top) ;\
 	$(BIBTEX) $(top) 
 	nrun=1; while [ ! -z "`sed -n '/Rerun-TEST/p' < $(top).log`" ] ; do \
 	   echo Rerun ... ; \
-	   $(PDFLATEX) $(top) ; \
+	   $(LATEX) $(top) ; \
 	   nrun=`expr $$nrun + 1` ; \
 	   if [ $$nrun -gt 5 ]; then echo 'Compiling document too often, something is wrong.'; exit 1; fi; \
 	done ;  \
         if [ ! -z "`sed -n '/undefined references/p' < $(top).log`" ]; then \
-            $(PDFLATEX) $(top) ; nrun=`expr $$nrun + 1` ; \
+            $(LATEX) $(top) ; nrun=`expr $$nrun + 1` ; \
         fi ; \
-	   $(PDFLATEX) $(top) ; \
+	   $(LATEX) $(top) ; \
 	   nrun=`expr $$nrun + 1` ; \
 	echo Finished at iteration $$nrun
 	echo "------- Warnings / Errors --------"
