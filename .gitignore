@@ -20,5 +20,7 @@ run/.config
 *.lot
 *.out
 *.toc
+*.bbl
+*.blg
 
 c_operman.pdf
