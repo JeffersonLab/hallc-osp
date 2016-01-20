@@ -4,6 +4,14 @@
 # Some users will need this
 html.sty
 
+# ignore the compiled document
+osp.pdf
+version/*
+run/osp.tex
+run/title.tex
+run/currinfolevel.tex
+run/.config
+
 # Intermediate latex file
 
 *.aux
