@@ -22,5 +22,6 @@ run/.config
 *.toc
 *.bbl
 *.blg
+*.brf
 
 c_operman.pdf
