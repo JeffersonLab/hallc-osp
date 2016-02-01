@@ -1,4 +1,35 @@
-\chapter{Detectors}
+\chapter{Detectors}\label{chap:detectors}
+
+The detector packages of the SHMS and HMS must perform at least two
+functions: tracking and
+particle identification (PID).
+A particle traversing the detector stack
+encounters two sets of drift chambers with six planes of sense
+wires in each chamber. From the chamber information both positions
+and angles in the dispersive and transverse directions can be determined.
+The information from these chambers is the principal input
+of the tracking algorithms.
+
+% Some details have to be changed to encompase differences in SHMS
+The chambers are followed by two planes of hodoscopes designated S1X and S1Y.
+These plastic scintillator arrays provide the timing reference for the
+drift chambers, are used in trigger formation, and in combination
+with a second hodoscope pair, provide time-of-flight particle identification.
+These scintillators can also be used to perform crude tracking.
+
+The next element encountered by a particle is a gas threshold Cerenkov detector.
+This is used for particle identification. In the SOS spectrometer, this
+gas threshold Cerenkov detector can be replaced by an Aerogel detector,
+with a similar function.
+
+The second hodoscope pair, S2X and S2Y, is located directly behind the
+gas Cerenkov. Their function is essentially the same as that of S1X and S1Y.
+In the SOS spectrometer, an option exists to have this hodoscope pair
+be preceded by a third chamber to improve tracking.
+
+The final element in the detector stack is the lead glass shower calorimeter.
+This is used for energy determination and PID.
+
 
 \section{Common Systems}
 This section describes systems that are common to the detectors in both
