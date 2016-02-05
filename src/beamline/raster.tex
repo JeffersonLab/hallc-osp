@@ -1,0 +1,185 @@
+
+% Operations Manual Title
+\infolevone{
+\section{Fast Raster}
+%\setcounter{subsection}{0}
+}
+
+%%% The following lifted from the Hall A manual
+
+% ESAD Title
+\begin{safetyen}{0}{0}
+\infoleveqnull{\section{Fast Raster}}
+
+The Hall C beam rastering system, which is used to move the over the physics targets to
+mitigate local heating effects, has undergone a major update and a new operational
+safety procedure (OSP) is being written for it and must be reviewed and approved prior
+to this systems use.
+
+\subsection{Hazards}
+
+The hazards of this updated system are addressed in the accompanying OSP.
+
+\subsection{Mitigations}
+
+The mitigations of this updated system are addressed in the accompanying OSP.
+
+\subsection{Responsible Personnel}
+
+\begin{namestab}{tab:raster:personnel}{Fast Raster responsible personnel}{%
+          Fast Raster responsible personnel}
+ \RobertMichaels{Primary Contact}
+ \JackSegal{Secondary Contact}
+\end{namestab}
+\end{safetyen}
+
+\obsolete{
+\subsection{Details of Equipment}
+
+The beam is rastered on target with an amplitude of
+several millimeters at 25 kHz to prevent overheating.  
+The raster is a set of four of air-core dipoles located
+approximately 23 m upstream of the target. 
+Two dipoles are for horizontal (X) motion and
+another two for vertical (Y).  During the 6 GeV era
+there was only one pair of X and Y, but we have doubled
+the raster to account for the energy increase to 11 GeV.
+The arrangement along the beamline along the 
+direction of the beam will be XXYY.
+
+For a typical 40A current in the raster coils, the
+deflection by one pair (e.g. the X direction) of coils, 
+in radians, is $\theta = 1.94 \times 10^{-3}/ E$
+where $E$ is the electron's energy in GeV.
+For example, at $E = 6$ GeV, a 0.32 mrad deflection is achieved.
+Projected onto the target (about 21 m away) this is a $\pm$ 6.8 mm
+excursion {\it if} there were no other magnetic fields 
+between the raster and the target; however, there are quadrupoles
+which change this depending on the beam tune.
+
+Since 2003 we've used the triangle-wave 
+raster pattern designed by Chen Yan.  
+This achieves a very uniform rectangular
+density distribution of beam on the target 
+by moving the beam with a time-varying dipole
+magnetic field whose waveform is triangular
+with very little dwell time at the peaks.  
+The electronics design is an ``H-bridge''
+in which switches are opened and closed 
+at 25 kHz, to switch between two directions 
+of current (100 A peak-to-peak) 
+through the raster coils.
+
+Three new features during the 12-GeV era are 
+1) the driver of the H-bridge electronics is now
+an Agilent model 33522A waveform generator; and
+2) The two X are synchronized with each other, and
+the two Y are synchronized.  This makes the kicks
+add and allows us to accommodate the higher energy
+of the beam; and 3) The entire raster can
+be synchronized to an external 10 MHz wave-train
+supplied by the polarized injector electronics.
+This makes the nominal 25 kHz an exact multiple of
+the helicity-flip rate, which achieves a cancellation
+of raster noise, important for parity-violation 
+experiments only.
+The synchronization of the pairs of X and Y are
+accurate to within a few nsec.
+
+For most users, these three new features will not be
+noticeable and the raster will appear to function
+the same as during the 6 GeV running.
+A user can view the 
+status of the raster in the
+EPICS overview screen called ``General Accelerator
+Parameters'' where the set-point for the radius amplitude
+and the readback of the peak-current in the raster are displayed.
+
+Control of the raster is done by first asking the MCC
+operators to set up the raster for a particular size
+typically 2 mm square.
+The control software assumes a field-free region between
+the raster and the target, so it is only approximately
+correct because there are several quadrupoles in this region.
+It is important to check the raster spot size and
+make adjustments if necessary.  The adjustment is made
+by asking MCC to change the size and noting the 
+linear relationship between what their software says
+the size is and the actual size.
+Relatively small independent adjustments to the 
+gains on the X and the Y raster
+coils are available in the middle room of the hall A
+counting room using the ``PGA Controller'' knobs;
+however, it is not recommended to touch these.
+Near these knobs is also located an oscilloscope X-Y trace
+of the current in the raster.  A fast shutdown (FSD) shuts
+the beam down within 0.1 msec if the raster fails, thus
+affording some protection of the target.
+
+{\it NOTE:  If you are unsure of the status of the raster,
+measure the spot size with very low current ($\le 2 \mu$A) or with
+the target out of the beam.}  It would be a mistake
+to check the beam spot size with high current on target; by
+the time you check it, the target may already be destroyed.
+The rastered beam spot on target can be checked with
+plots in the ROOT analyzer or by 
+using the stand alone code called \mycomp{spot},
+also called \mycomp{raster}.
+For more details on usage, type \mycomp{spot -h} (help)
+on the ADAQ computers.
+
+Regarding the BPM measurements, it should be noted that 
+the stripline BPMs displayed by \mycomp{spot} have a high-frequency 
+cutoff of approximately 30 kHz.  Since the raster frequency is 25 kHz
+the plot of the amplitude distribution shows spikes at the 
+limits of the orbit, instead of a flat distribution.  The scale
+factor between what is seen in \mycomp{spot} and the real width of the beam
+is $\sim 1.5$, i.e. the beam is 1.5 times bigger than the naive
+reading of the \mycomp{spot} distribution.
+}
+
+%%% The following from the old Hall C manual
+
+\subsection{Raster Systems}
+
+Vertical and horizontal air-core magnets provide beam
+rastering patterns on the Hall~C target (Fast Raster or FR), the
+Hall~C M\o ller Polarimeter target (M\o ller Raster or MR), and the Hall~C 
+Polarized Target Raster (SR) in order to prevent possible damage to the material by
+overheating. All are AC magnets. No DC fields 
+exist when they are operated. No remanent field remains after
+the current is switched off.
+
+Both FR and SR magnets are driven by a 250 W audio amplifier. The FR
+and SR magnets are shielded by a plexiglass cage and are marked with a
+``high voltage dangerous'' symbol.  A red light indicates the
+operation of these two raster systems. During their operation, personnel
+should be away from the resonance loop because the rms voltage across
+the magnets is over 400 V.
+
+The M\o ller raster magnets are located on the accelerator side of the
+beamline shield wall.
+
+The following conditions lead to a fast shutdown of the raster devices:
+\begin{itemize}
+\item{Crate power failure}
+\item{Magnets power failure}
+\item{Overcurrent detection (short occurs inside the magnets)}
+\item{Over temperature}
+\item{Detection of missing cycles or improper frequency}
+\item{VME system reset}
+\item{Phase-lock network is broken}
+\end{itemize}
+
+\noindent Both FR and SR power drivers have an automatic fault display and
+shutdown. The signals are also sent to FSD.
+
+The following Reference Documents exist:
+\begin{itemize}
+\item{Requirement for beam raster monitor for the beam dump and target,
+R. C. Cuevas, C. Yan, 12 July, 1995}
+\item{Technical requirement for Hall~C beam dump raster,
+C. Yan, June 24, 1995, JLab-R-94-02}
+\item{M\o ller Raster Manual at \nolinkurl{~cdaq/documents/beamline/Moller_Raster_Manual.txt}}
+\end{itemize}
+%}%\infolevone
