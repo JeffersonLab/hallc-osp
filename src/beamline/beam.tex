@@ -8,15 +8,15 @@
 % ESAD Section Title
 \infoleveqnull{\section{Beamline}}
 
-The control and measurement equipment along the Hall A beamline consists of 
+The control and measurement equipment along the Hall C beamline consists of 
 various elements necessary to transport beam with the required specifications 
 onto the reaction target and the dump and to simultaneously measure the 
 properties of the beam relevant to the successful implementation of the 
-physics program in Hall A.  
+physics program in Hall C.  
 
 \infolevone{
 The resolution and accuracy requirements in Hall 
-A are such that special attention is paid to the following:
+C are such that special attention is paid to the following:
 \begin{list}{\arabic{enumi}.~}{\usecounter{enumi}\setlength{\itemsep}{-0.15cm}}
   \item Determination of the incident beam energy;
   \item Control of the beam position, direction, emittance and stability;
@@ -24,34 +24,37 @@ A are such that special attention is paid to the following:
   \item Determination of the beam polarization.
 \end{list}
 
-A schematic of the Hall A line starting at the shield wall is
-shown on Fig.~\ref{fig:Aline1},~\ref{fig:Aline2} and \ref{fig:Aline3}. 
+Drawings of the Hall C line from the shield wall to the target are
+show in
+shown on Figs.~\ref{fig:Cline1},~\ref{fig:Cline2} and \ref{fig:Cline3}. 
 
 \begin{figure}
 \begin{center}
-\includegraphics[angle=0,width=15cm]{compton_r}
-\caption[Beamline: Hall A Beamline Overview]{Schematic of the Hall A beamline
-starting at the shield wall to end of alcove.}
-\label{fig:Aline1}
+\includegraphics[angle=0,width=15cm]{compton_12gev.png}
+\caption[Beamline: Hall C Beamline Overview]{Compton Polarimeter, located
+in the alcove.}
+\label{fig:Cline1}
 \end{center}
 \end{figure}
 
 \begin{figure}
 \begin{center}
-\includegraphics[angle=0,width=15cm]{aline}
-\caption[Beamline: Hall A Beamline Overview]{Schematic of the Hall A beamline
-from the end of the alcove to the target chamber.  This image has been updated
-to show the new larger raster system as well as the new Moller magnets.}
-\label{fig:Aline2}
+\includegraphics[angle=0,width=15cm]{moller_12gev.png}
+\caption[Beamline: Hall C Beamline Overview]{Schematic of the Hall C
+Moller Polarimeter, consisting of a superconducting magnet that polarizes
+the Moller target, 3 quadrupole magnets that function as a spectrometer to
+analyze Moller scattered electrons, and detectors.  The 3 quadrupoles also
+serve as beam optics elements during normal operations.}
+\label{fig:Cline2}
 \end{center}
 \end{figure}
 
 \begin{figure}
 \begin{center}
-\includegraphics[angle=0,width=15cm]{dump_r}
-\caption[Beamline: Hall A Beamline Overview]{Schematic of the Hall A beamline
-from the target chamber to the dump diffuser.}
-\label{fig:Aline3}
+\includegraphics[angle=0,width=15cm]{ds_beamline.png}
+\caption[Beamline: Hall C Beamline Overview]{View of the beamline from
+entrance to the hall to the target scattering chamber.}
+\label{fig:Cline3}
 \end{center}
 \end{figure}
 }
@@ -80,12 +83,14 @@ quadrupole and a pair of steering magnets (correctors) associated with it.
 After the shield wall at the entrance to the tunnel into the hall the beam is 
 essentially undeflected onto the target and into the dump.  
 
+% Note the vertical jog
+
 The beamline optics elements are designed to deliver 
 various optical tunes of the beam on to the physics target as well as 
 simultaneously deliver various optical tunes at other locations along the 
 beamline. These requirements are listed in Tables \ref{beam_tab3} and \ref{beam_tab4}. 
 For the basic beamline we 
-are able to deliver beam onto the hall A target in the achromatic
+are able to deliver beam onto the hall C target in the achromatic
 mode. 
  
 \begin{table}[hp]
@@ -101,7 +106,7 @@ Dispersive & $\propto \eta\delta$ & 4m to 12m & 50$\mu$m & 50$\mu$m \\
 Defocussed & 0 to 3mm & 0 & $\pm$10\% & $\pm$10\% \\ \hline
 \end{tabular}
 \end{center}
-\caption[Beamline: Optics Requirements Target]{ Line A Optics and Beam Requirements at Target}
+\caption[Beamline: Optics Requirements Target]{ Line C Optics and Beam Requirements at Target}
 \label{beam_tab3}
 \end{table}
 
@@ -122,7 +127,7 @@ Compton Pol.  & $>$80$\mu$m & 0 & 50$\mu$m & 50$\mu$m \\ \hline
 Energy-arc {\color{red}\footnotemark[\arabic{footnotetmp1}]~\footnotemark[\arabic{footnotetmp2}]} && 15m & 50$\mu$m & 50$\mu$m \\ \hline
 \end{tabular}
 \end{center}
-\caption[Beamline: Optics Requirements Other]{ Line A Optics and
+\caption[Beamline: Optics Requirements Other]{ Line C Optics and
          Beam Requirements at Other Locations.
 }
 \label{beam_tab4}
@@ -167,7 +172,7 @@ BPMs can be recorded in three different ways:
 \infolevone{
 \begin{figure}[hp]
 \begin{center}
-\includegraphics[angle=0,width=15cm]{BPM_fig}
+%\includegraphics[angle=0,width=15cm]{BPM_fig}
 {\linespread{1.}
 \caption[Beamline: BPM Readout Electronics]{Schematic of the BPM readout
 electronics}
@@ -297,12 +302,12 @@ work on the Hall A beamline is coordinated.
 
 \begin{namestab}{tab:beam:personnel_beam}{Beam line: authorized personnel}{%
    Beamline physics division and accelerator division points-of-contact.}
-  \namestabheader{Hall A Physicists}
-  \DouglasHiginbotham{\em 1st Contact}
-  \RobertMichaels{\em 2nd Contact}
+  \namestabheader{Hall C Physicists}
+  \DaveGaskell{\em 1st Contact}
+  \MarkJones{\em 2nd Contact}
   \namestabheader{Liaisons from Accelerator Division}
   \HariAreti{..to Physics}
-  \YvesRoblin{..to Hall-A}
+  \JayBenesch{..to Hall-C}
 \end{namestab}
 \end{safetyen}
 
