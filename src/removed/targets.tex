@@ -1,0 +1,72 @@
+\section{The Cryogenic Target System}
+
+Much of the physics program at JLab requires the use of cryogenic targets
+filled with hydrogen, deuterium or helium isotopes. The Hall~C cryogenic
+system contains three separate loops in order to allow for rapid changes
+of target fluid.  This system will be extensively discussed in
+another section.  Here, we only summarize some main features.
+
+A target loop is a circulating system of target gas and consists of the following
+elements:
+
+\subsection{Target Circulation Fan} This is some sort of device to keep
+the target fluid circulating through the system. In the Hall~C cryogenic
+targets this function is performed by a two stage axial flow fan which is
+immersed in the target fluid. This is a small AC motor with fan blades attached
+on both shafts of the rotor. The blades in our case are simple Archimedes
+screws with a diameter of 2.8 inches. The motors where extracted from Globe
+VAX-3-FC Blowers, part $\#$ 19A798. The factory installed
+bearings were then replaced with bearings suitable for cryogenic service
+(Barden, Bartemp-no lube SR4SSTB5). The fans are powered asynchronously
+with three phase AC power from a variac and since the stators are wound with
+two poles the maximum rotation speed is 3600 rpm.
+\subsection{Target Cells} This is the thin walled vessel in the circulation loop
+where the electron beam interacts with the target fluid. Two types
+of target cells will be employed in Hall~C. These are the ``beer can" cells
+and the vertical flow cells. The vertical flow cells are also referred
+to as ``tuna can" or ``sink trap" cells.
+The beer can cells are constructed from Coors beer cans (3004 series aluminum)
+and come in two standard lengths, 4 cm and 15 cm.
+The vertical flow cells are 4 cm in length and are constructed from 7050
+series aluminum.
+\subsection{Heat Exchangers} This is where the heat that is deposited in the target
+fluid by interaction with the electron beam is removed. The target fluid is
+circulated on one side of the heat exchanger and cold helium
+from a refrigerator is circulated through the other side of the heat exchanger.
+The cryogens for the Hall~C target will be supplied from the End Station
+Refrigerator (ESR).
+
+A new feature in 1999 is the conversion of the cryotarget cooling from
+the previous series/parallel flow to a pure parallel flow cooling
+system.  This was done to make control of the three cryotarget loops
+simpler, truly independent, and truly interchangeable.  The use of
+LN$\_2$ as a precooler was elected in favor of directing a small
+amount of the 20K exhaust helium.  
+
+\subsection{Heaters} The temperature of the target can be regulated by powering
+a heater immersed in the target fluid.
+
+\subsection{Other Features of the Cryotarget System}  In addition to the above components which make up the loop a cryogenic target
+needs a gas handling system and instrumentation. The gas handling system
+enables the operator to fill, empty and perform other manipulations of the
+target while the instrumentation is needed in order to verify the target's
+status, temperature, pressure, etc. The temperature is particularly critical
+in that it is the dominate parameter that is correlated to target density.
+
+A system of several targets also needs a motion mechanism so that the desired
+target can be inserted in the beam. The Hall~C target accomplishes this by
+means of a three rail system, two ball screws and a guide bearing.
+The ball screws are driven by two AC motors each of which has a resolver and
+a 50 to 1 gear reducer. The resolver output of one of the motors is used
+to track the position with one of the motor controllers acting as a master
+while the second controller is slaved to the master.
+
+All the instrumentation and control of the target system is implemented
+via the EPICS system (this is the same control system used by the main
+machine).
+
+%Questions concerning the cryogenic targets should be referred to J.H. Mitchell
+%at extension 7851.
+
+%\vfil
+%\eject
