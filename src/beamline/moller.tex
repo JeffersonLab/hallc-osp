@@ -3,7 +3,6 @@
 \infolevone{
 \section{M\o ller Polarimeter }
 %\setcounter{subsection}{0}
-}
 
 The M\o ller Polarimeter is used to measure the electron beam
 polarization. Instructions for carrying out such a measurement
@@ -132,9 +131,9 @@ allow experimenters to monitor the quadrupole settings.
 
 To run the GUI using medm do the following steps
 \begin{itemize}
-\item Log onto cdaqh1 from the account {\tt cvxwrks}.
-\item Set directory: \begin{verbatim} cd MEDM/moller \end{verbatim}
-\item Start the GUI: \begin{verbatim} medme moller.adl  \end{verbatim} 
+\item Log onto cdaqh1 from the account \texttt{cvxwrks}.
+\item Set directory: \texttt{cd \textasciitilde{}/MEDM/moller}
+\item Start the GUI: \texttt{medme moller.adl}
 \end{itemize}
 %
 
@@ -268,8 +267,8 @@ A screen snapshot is shown in Figure \ref{molcryomedm}.
 To run the GUI using medm, perform the following steps:
 \begin{itemize}
 \item Log onto cdaqh1 from the account {\tt cvxwrks}.
-\item Set directory: \begin{verbatim} cd MEDM/Moller/CRYO \end{verbatim}
-\item Start the GUI: \begin{verbatim} medme hcmcryo.adl  \end{verbatim} 
+\item Set directory: \texttt{cd MEDM/Moller/CRYO}
+\item Start the GUI: \texttt{medme hcmcryo.adl}
 \end{itemize}
 
 \begin{figure}
@@ -418,46 +417,46 @@ downstairs in the hall behind the green
 shielding blocks. The EPICS drivers are located on the opsrv cluster.
 The boot ROM looks as follows:
 
-\begin{verbatim}
-boot device          : ei 
-processor number     : 0 
+\texttt{\\
+boot device          : ei \\
+processor number     : 0 \\
 host name            : opsrv 
-file name            : /cs/op/iocs/iochc11/vx/vxWorks 
-inet on ethernet (e) : 129.57.242.11:fffffc00 
-inet on backplane (b): 
-host inet (h)        : 129.57.236.50 
-gateway inet (g)     : 129.57.240.1 
-user (u)             : vxwrks 
-ftp password (pw) (blank = use rsh): 
-flags (f)            : 0x0 
-target name (tn)     : iochc11
-startup script (s)   : /cs/op/iocs/iochc11/startup 
-other (o)            : 
-\end{verbatim}
-
+file name            : /cs/op/iocs/iochc11/vx/vxWorks \\
+inet on ethernet (e) : 129.57.242.11:fffffc00 \\
+inet on backplane (b): \\
+host inet (h)        : 129.57.236.50 \\
+gateway inet (g)     : 129.57.240.1 \\
+user (u)             : vxwrks \\
+ftp password (pw) (blank = use rsh): \\
+flags (f)            : 0x0 \\
+target name (tn)     : iochc11\\
+startup script (s)   : /cs/op/iocs/iochc11/startup \\
+other (o)            : \\
+}
 
 The M\o ller target, collimators, solenoid power supply, and
 solenoid cryogenics controls are all handled by vmec10 (also
 known as iochc10) which resides in the left-hand side of the
 same split backplane VME crate. Its boot ROM looks like:
 
-\begin{verbatim}
-boot device          : ei 
-processor number     : 0 
-host name            : opsrv 
-file name            : /cs/op/iocs/iochc10/vx/vxWorks 
-inet on ethernet (e) : 129.57.168.110:fffffc00 
-inet on backplane (b): 
-host inet (h)        : 129.57.236.50 
-gateway inet (g)     : 129.57.168.1 
-user (u)             : vxwrks 
-ftp password (pw) (blank = use rsh): 
-flags (f)            : 0x0 
-target name (tn)     : iochc10 
-startup script (s)   : /cs/op/iocs/iochc10/startup 
-other (o)            : 
-\end{verbatim}
 
+
+\texttt{\\
+boot device          : ei \\
+processor number     : 0 \\
+host name            : opsrv \\
+file name            : /cs/op/iocs/iochc10/vx/vxWorks \\
+inet on ethernet (e) : 129.57.168.110:fffffc00 \\
+inet on backplane (b): \\
+host inet (h)        : 129.57.236.50 \\
+gateway inet (g)     : 129.57.168.1 \\
+user (u)             : vxwrks \\
+ftp password (pw) (blank = use rsh): \\
+flags (f)            : 0x0 \\
+target name (tn)     : iochc10 \\
+startup script (s)   : /cs/op/iocs/iochc10/startup \\
+other (o)            : \\
+}
 
 
 
@@ -522,8 +521,8 @@ The time required to ramp up the superconducting solenoid is about 10 minutes.
 	\item If it is desired to take M\o ller measurements at beam currents
 	      higher than $\approx$ 2 $\mu$ A it will be necessary to energize
 	      the M\o ller raster system. See the documentation in
-              \begin{verbatim} ~cdaq/documents/beamline/Moller_Raster_Manual.txt \end{verbatim}
+              \nolinkurl{\~cdaq/documents/beamline/Moller\_Raster\_Manual.txt}
 \end{enumerate}
 
 
-
+}

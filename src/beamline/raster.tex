@@ -1,34 +1,70 @@
 
 % Operations Manual Title
 \infolevone{
-\section{Fast Raster}
+\section{Raster Systems}
 %\setcounter{subsection}{0}
-}
 
 %%% The following lifted from the Hall A manual
 
 % ESAD Title
 \begin{safetyen}{0}{0}
-\infoleveqnull{\section{Fast Raster}}
+\infoleveqnull{\section{Raster Systems}}
 
-The Hall C beam rastering system, which is used to move the over the physics targets to
-mitigate local heating effects, has undergone a major update and a new operational
-safety procedure (OSP) is being written for it and must be reviewed and approved prior
-to this systems use.
+The Hall C beamline includes two raster systems.  These systems, the
+M\o ller Raster (MR) and the Fast Raster (FR),
+rapidly move the beam position on the M\o ller Polarimeter target and
+the Hall~C target, respectively, in order to prevent possible damage
+to the target by overheating.  The FR also serves to reduce boiling
+and uncertainties in target thickness for cryogenic targets.  The beam
+rastering is done with with vertical and horizontal air-core magnets
+that are driven by AC currents from a 250 W audio amplifier.
+\sawnote{Is it still a 250W audio amplifier?}
+No DC fields exist when these
+magnets are operated and no remnant field remains when the current is
+switched off.
+
+The M\o ller raster magnets are located on the accelerator side of the
+beamline shield wall so are not normally accessible from Hall C.
+
+The following conditions lead to a fast shutdown of the raster devices:
+\begin{itemize}
+\item{Crate power failure}
+\item{Magnets power failure}
+\item{Overcurrent detection (short occurs inside the magnets)}
+\item{Over temperature}
+\item{Detection of missing cycles or improper frequency}
+\item{VME system reset}
+\item{Phase-lock network is broken}
+\end{itemize}
+
+\noindent Both FR and SR power drivers have an automatic fault display and
+shutdown. The signals are also sent to FSD.
+
+The following Reference Documents exist:
+\begin{itemize}
+\item{Requirement for beam raster monitor for the beam dump and target,
+R. C. Cuevas, C. Yan, 12 July, 1995}
+\item{Technical requirement for Hall~C beam dump raster,
+C. Yan, June 24, 1995, JLab-R-94-02}
+\item{M\o ller Raster Manual at \nolinkurl{~cdaq/documents/beamline/Moller_Raster_Manual.txt}}
+\end{itemize}
 
 \subsection{Hazards}
 
+
+\sawnote{Describe the Hazards here.}
 The hazards of this updated system are addressed in the accompanying OSP.
 
 \subsection{Mitigations}
 
+\sawnote{Describe the mitigations here.}
 The mitigations of this updated system are addressed in the accompanying OSP.
 
 \subsection{Responsible Personnel}
 
 \begin{namestab}{tab:raster:personnel}{Fast Raster responsible personnel}{%
           Fast Raster responsible personnel}
- \RobertMichaels{Primary Contact}
+ \MarkJones{Primary Contact}
  \JackSegal{Secondary Contact}
 \end{namestab}
 \end{safetyen}
@@ -157,29 +193,4 @@ operation of these two raster systems. During their operation, personnel
 should be away from the resonance loop because the rms voltage across
 the magnets is over 400 V.
 
-The M\o ller raster magnets are located on the accelerator side of the
-beamline shield wall.
-
-The following conditions lead to a fast shutdown of the raster devices:
-\begin{itemize}
-\item{Crate power failure}
-\item{Magnets power failure}
-\item{Overcurrent detection (short occurs inside the magnets)}
-\item{Over temperature}
-\item{Detection of missing cycles or improper frequency}
-\item{VME system reset}
-\item{Phase-lock network is broken}
-\end{itemize}
-
-\noindent Both FR and SR power drivers have an automatic fault display and
-shutdown. The signals are also sent to FSD.
-
-The following Reference Documents exist:
-\begin{itemize}
-\item{Requirement for beam raster monitor for the beam dump and target,
-R. C. Cuevas, C. Yan, 12 July, 1995}
-\item{Technical requirement for Hall~C beam dump raster,
-C. Yan, June 24, 1995, JLab-R-94-02}
-\item{M\o ller Raster Manual at \nolinkurl{~cdaq/documents/beamline/Moller_Raster_Manual.txt}}
-\end{itemize}
-%}%\infolevone
+}%\infolevone

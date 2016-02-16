@@ -8,6 +8,12 @@
 \input{preamb_common} % include the common preambule 
 \input{namesenv} % definition for the ``names table'' environment
 %
+
+%% For adding comments into text
+\newcommand\sawnote[1]{\textcolor{red}{#1}}
+%\renewcommand\sawnote[1]{}
+%%
+
 \infoleveqnull{
 \renewenvironment{safetyen}[2]%  SAFETY environment
        {\color{white}%
@@ -62,6 +68,7 @@
 \input{introduction/all}
 \input{beamline/all}
 \input{targets/all}
+\input{vacuum/all}
 \input{spectrometers/all}
 \input{detectors/all}
 \input{controls/all}

@@ -1,8 +1,12 @@
-
+\infoleveqnull{\section{Hall C Spectrometers}}
 %\section{Introduction}
 
-	The two magnetic spectrometers in Hall~C are the principal instruments
-available for use in electron scattering experiments. In this chapter
+	The two magnetic spectrometers in Hall~C are designed to perform
+high resolution and high accuracy nuclear physics experimetns.  These
+spectrometers transport and detect scattered particles such as
+electrons, positrons, pions, protons, and kaons.
+\infolevone{
+In this chapter
 we discuss the features and safe operation of these
 spectrometers,
 the High Momentum Spectrometer, or HMS,
@@ -61,12 +65,78 @@ The design value for the maximum momentum accessible to the HMS magnet
 system is 6 GeV/c, though in its initial phase the maximum momentum
 has been limited to 4 GeV/c.
 
+
 \section{The Super High Momentum Spectrometer (SHMS)}
 5.5 to 40 degrees.  Up to 11 GeV/c.  
 
 The purpose of the SHMS horizontal bender is to bend scattered
 particles away from the beamline so that smaller scattering angles can be
 measured.
+
+}
+
+\begin{safetyen}{0}{0}
+\infolevone{\section{Safety Information}}
+\label{sec:hrs-safety}
+
+\subsection{Hazards}
+
+The spectrometers have associated vacuum, electrical, cryogenic and
+magnet systems all of which can be extremely dangerous due to the size
+and stored energy in the systems.  Hazards of rotating the
+spectrometers as well as the particle detectors that get placed inside
+the detector hut of the spectrometer are covered in detail in
+following sections.
+
+\subsection{Mitigations}
+
+The vacuum systems associated with the spectrometers are essentially 
+pressure vessels and care should be exercised so as not to puncture the 
+windows.   During hall maintenance, covers are placed over the windows
+to help mitigate accidentally hitting a window.
+
+The magnets themselves are installed inside cryostats.  These vessels 
+are exposed to high pressures and are therefore equipped with safety 
+relief valves and burst discs.   
+
+The cryogenic system operates at an elevated pressure at 4K.  One must
+guard against cold burns and take the normal precautions with pressure
+vessels when operating this system.  Only authorized personnel are
+permitted to install and take out U-tubes.
+
+The magnets have a great deal of stored energy as they are large 
+inductors. Always make sure people are clear of them and that
+the dump resistor is attached to the magnet.
+
+\subsection{Responsible Personnel}
+
+In the event that problems arise during 
+operation of the magnets, qualified personnel should be notified
+(see Table \ref{tab:spec:personnel_magnet}).  
+This includes any prolonged or serious problem with the source of magnet 
+cryogens (the ESR).  On weekends and after hours there will be a 
+designated individual on call for magnet services.  Any member of the 
+Hall A technical staff is qualified to deal with unusual magnet 
+situations but in the event of serious problems the technician on
+call should be contacted.
+
+\begin{namestab}{tab:spec:personnel_magnet}{Spectrometers: authorized personnel}{%
+      List of spectrometer responsible personnel where ``W.B.'' stands for the white board 
+      in the counting house.}
+   \TechonCall{\em Contact}
+   \PaulBrindza{}
+   \SteveLassiter{}
+   \EricSun{}
+   \MikeFowler{}
+   \JoeBeaufait{}
+   \JackSegal{}
+   \MahlonLong{}
+\end{namestab}
+
+
+\end{safetyen}
+
+\infolevone{
 \section{Features Common to Both Spectrometers}
 
 \subsection{Vacuum Windows}
@@ -109,7 +179,7 @@ bolt hole diameter of $10.5$ inches.
 \caption{The HMS exit flange and the 8" vacuum spool piece. \label{fig:hms_flange}}
 \end{figure}
 
-\begin{comment}
+\begin{obsolete}
 The SOS spectrometer vacuum can has a volume of approximately $2$ m$^3$,
 representing a stored energy of $2 \times 10^5$ Joules. The entrance
 window (near the pivot) is round and has a diameter of $9$ inches.
@@ -118,7 +188,7 @@ window is located in the SOS detector hut. It is rectangular.
 The opening has a length of $40.5$ inches and a width of $6.5$ inches.
 The SOS exit
 window must support a load of $3,896$ lbs ($17,275$ N) under vacuum.
-\end{comment}
+\end{obsolete}
 
 % Which responsible persons?
 {\bf One of the responsible personnel must be present for
@@ -185,7 +255,7 @@ the SOS spectrometer windows; a similar laminate as used in the
 larger windows has been tested and utilized.  The thinner material is
 composed of 0.0045'' Kevlar sandwiched between 2 sheets of 0.002'' Mylar.
 
-\begin{comment}
+\begin{obsolete}
 The SOS spectrometer windows are currently made of the same composite fabric
 as the HMS windows. The SOS exit window is rectangular, with a $6.5$ inch
 by $39.5$ inch opening.
@@ -196,14 +266,12 @@ loads under vacuum on the SOS windows (and HMS entrance window)
 are much smaller than that on the HMS exit window,
 there is
 no aluminum shutter in the SOS spectrometer.
-\end{comment}
 
-\begin{comment}
 \begin{figure}
 \includegraphics[width=6in]{figSOSwindow}
 \caption{The SOS exit window and the vacuum test tank. \label{fig:sos_window}}
 \end{figure}
-\end{comment}
+\end{obsolete}
 
 \paragraph{Window Material Testing}
 
@@ -497,14 +565,14 @@ the upstairs catwalk of the HMS.
 
 Cryogenic information about each magnet is available on the control
 screens located in the Hall~C counting house.
-\begin{comment}
+\begin{obsolete}
 These are located on the first deck
 of the shield house by the ``pasta fork" at the rear of the spectrometer.
 Normally during run periods the control screens are sent upstairs to the
 Hall~C counting house and information on all the HMS magnets is available
 on the HMS control screen located in the center of the main console.
 The control of all magnets is described in a following Subsection.
-\end{comment}
+\end{obsolete}
 
 The power supplies for the magnets are located on the carriage
 adjacent to the magnets. The supplies are all water cooled and
@@ -1044,7 +1112,7 @@ given here is taken from that procedure, but has not yet  been tested.\\
 This procedure is called \textbf{CYCLING
 THE MAGNET}, and needs to be  followed for all three quadrupoles.
 
-\begin{comment}
+\begin{obsolete}
 \paragraph{Magnet Selection}
 
 The superconducting magnet keyboard and video signals are transmitted to
@@ -1136,7 +1204,7 @@ prompt is "HMS" (without the quotes).}
 
 
 \end{description}
-\end{comment}
+\end{obsolete}
 
 \paragraph{Checking Cryogenics}
 
@@ -1641,7 +1709,7 @@ using terminal server hctsv7, port 3:
 \begin{minipage}{6in}
 \begin{enumerate}
 \item telnet hctsv7 2003
-\item type {\tt \verb|\B|} to connect to HMS, {\tt \verb|\A|} for SOS. (Must be UPPER CASE)
+\item type \texttt{\\B} to connect to HMS, \texttt{\\A} for SOS. (Must be UPPER CASE)
 \item {\tt P PFB} gives readback of the current position (see Table \ref{tab:col_pos})
 \item To {\em MOVE} the collimators:
    \begin{itemize}
@@ -1650,9 +1718,9 @@ using terminal server hctsv7, port 3:
 	\item After you have reached the correct slit, disable the motor by typing {\tt 1}
 
    \end{itemize}
-\item If necessary, {\tt K} (kill) is the opposite of {\tt EN}
-\item Get rid of your session by typing {\tt \verb|ctrl-]|} (both pushed together), then
-at the telnet prompt, type {\tt quit}.
+\item If necessary, \texttt{K} (kill) is the opposite of \texttt{EN}
+\item Get rid of your session by typing \texttt{ctrl-]} (both pushed together), then
+at the telnet prompt, type \texttt{quit}.
 \end{enumerate}
 \end{minipage}
 
@@ -1813,4 +1881,83 @@ nothing is hung up or stretching.
 In case you need to rotate the spectrometer manually, contact one of the trained
 personnel listed in Responsible Personnel (chapter 4) in
 the \htmladdnormallinkfoot{ESAD}{http://www.jlab.org/Hall-C/document}.
+}
 
+\infoleveqnull{\section{Spectrometer Rotation}
+
+\sawnote{This section is just for the ESAD.  Currently just based on the
+Hall A ESAD.  The HMS rotation discussion above needs to be updated
+and broadened to also include the SHMS and this ESAD text merged in.
+Include statement that angle limits are set by experiment and that
+movements to small angles may need to be done by experts.
+}
+
+
+%
+%
+Since the Hall C spectrometers each weigh in excess of \sawnote{XXX}
+tons it is very important that all safety precautions are carefully
+adhered to.   During operations, the spectrometers are certified
+to allow remote rotation by shift crews within prescribed limits.  In
+the absence of this certification, the spectrometers may only be
+rotated by trained technical staff.
+
+\begin{safetyen}{0}{0}
+\subsection{Hazards}
+
+Hazards include:
+\begin{itemize}
+\item{Knocking items over.}
+\item{The wheels crushing things (including fingers and toes) on the floor in the path of the 
+spectrometer}
+\item{Damaging the beamline or other equipment on the floor if one goes to too small 
+or too large an angle, or if it just gets pushed around inadvertently.}
+\item{Tearing out of cables etc. physically attached to the superstructure}
+\end{itemize}
+
+\subsection{Mitigations}
+
+Hazard mitigations:
+\begin{itemize}
+\item{Guards on either side of the wheels prevent items from getting under them.}
+\item{Large pins in the floor to stop the spectrometer rotated beyond the needed angular range.}
+\item{Blinking lights on the spectrometers indicating they are in motion or that motion
+is possible (controls engaged etc.)}
+\item{During a running experiment the run coordinator and work coordinator should know in advance 
+of any moves.  Moves at any other time must be cleared with the Hall work coordinator 
+before implementation.}
+\item{Careful inspection of the intended path to make sure it is clear. This is part of
+the pre-run checklist performed by the technical staff prior to closing the Hall and
+a remote camera allows shift worker to inspect the area.}
+\item{Any motion that takes a spectrometer inside 14 degrees or outside \emph{X} degrees
+(\emph{X} being specified in the pre-run checklist and noted on the whiteboard during a run) 
+must be supervised by a trained Hall A technician.}
+\end{itemize}
+\end{safetyen}
+
+\subsection{Responsible Personnel}
+
+Following the experimental run plan, as posted in the counting house
+by the run coordinator, shift workers are allowed to rotate the HRS
+following guidelines of the standard equipment manual.  In the event
+of a problem getting the spectrometers to rotate the run coordinator
+should notified.  If the run coordinator is unable to solve the
+problem, and with the run coordinators concurrence, qualified
+personnel should be notified to repair the problem (see
+Table~\ref{tab:spectrometers:personnel_rotate}).  On weekends and after hours
+please only use the tech-on-call number.  It should be noted that for
+experiments that are using thick targets at high current, it is not
+uncommon that the produced radiation will cause the motion system to
+require a hard reset.
+
+\begin{namestab}{tab:spectrometers:personnel_rotate}{Spectrometer Rotation: authorized personnel}{%
+      List of HRS responsible personnel where ``W.B.'' stands for the white board 
+      in the counting house.}
+   \TechonCall{\em Contact}
+   \MikeFowler{}
+   \WalterKellner{}
+   \AndyKenyon{}
+   \JoeBeaufait{}
+\end{namestab}
+
+}
