@@ -542,8 +542,8 @@ about 150 - 200 cfm is reasonable. The tank should not be filled to
 more than -5 in Hg during purge cycles.
 
 The tank contains two 5 inch PMT's which use {\bf positive} HV.
-Note that all the other PMT bases in the HMS are designed for use with
-negative HV. They operate
+(Note: only this detector and the Aerogel counter use positive HV, all the other PMT bases in the HMS are designed for use with
+negative HV.) They operate
 at between 2000 and 2700 Volts. The Anode is at HV and its signal is
 viewed through a decoupling capacitor in the base. The HV is supplied
 by one pod of the same {\em CAEN} power supply used for the drift chambers.
@@ -695,7 +695,41 @@ The histograms associated with the calorimeter should be inspected
 regularly to assure that it is functioning properly.
 
 \section{Aerogel Detector}
-The HMS Aerogel detector is located between the second wire chamber
-and the first plane of the hodoscopes.
-\sawnote{Does it take Positive HV.  If so note that fact in the Gas
-  Cerenkov section.}
+The HMS Aerogel detector\cite{Asaturyan2005364} is located between the
+second wire chamber and the first plane of the hodoscopes.  It
+provides improved $\pi/K/p$ particle ID for momenta above
+$3~\textrm{GeV}/c$.  The detector is mounted on a sliding rail system
+so that it may easily be placed into or removed from the path of
+particles in the detector hut depending on the needs of a given
+experiment.
+
+The Aerogel detector, which has an area of $120\times
+70~\textrm{cm}^2$ consists of a 9 cm thickness of Aerogel followed by a
+diffusion box for a total thickness of 25 cm. The diffusion box is
+line with Millipore paper ``Membrane GSWP-0010'' which has a
+reflectivity of $\sim 96\%$ \cite{millipore}.   The ``long'' sides the diffusion
+box each have 8 Photonis XP4572 PMTs.  These bases for these tubes are
+powered with positive HV.
+(Note: only this detector and the gas Cerenkov detector
+use positive HV, all the other PMT bases in the HMS are designed for
+use with negative HV.)
+
+Two Aerogel indices of refraction, $n=1.015$ and $n=1.030$, are
+available for use with the detector.  The Aerogel is in radiator
+trays which may be swapped (by experts) to change the refraction
+indexed installed in the detector.
+
+
+\begin{table}
+\caption{Momentum threshold above which pions, kaons and protons will 
+produce Cerenkov light in Aerogel's with various indices of refraction.
+\label{tab:shms_aerogel}}
+\begin{center}
+\begin{tabular}{cccc}
+  n& $\pi_{\textrm{thr}}(\textrm{GeV}/c)$ & $K_{\textrm{
+  thr}}(\textrm{GeV}/c)$ & $p_{\textrm{thr}}(\textrm{GeV}/c)$\\
+  1.030 & 0.57 & 2.00 & 3.80 \\
+  1.015 & 0.81 & 2.84 & 5.40 \\
+\end{tabular}
+\end{center}
+\end{table}
