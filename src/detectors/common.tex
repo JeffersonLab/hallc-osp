@@ -10,14 +10,18 @@ The CAEN Distributed High Voltage System is responsible for
 providing high voltage power to all HMS and SHMS detector systems
 including phototubes for hodoscopes, Cerenkov detectors, and shower
 counters as well as wire voltages for drift chambers. 
-This is in
-general a networked system made up of individual crates (Controllers)
-each of which can hold up to four independent high voltage modules
-(Cards).  Each card provides 16 channels of high voltage output (SHV
-connectors).  There are three flavors of Cards which are in use with the
-Hall~C detector systems, they are listed in Table~\ref{tab:hv_cards}.  All types of Cards 
-can in general be intermixed within a Crate.
-
+This system is a
+networked system made up of individual crates (Controllers)
+each of which can hold several independent high voltage modules
+(Cards).  The crates are a mix SY403 mainframes which hold four cards
+with 16 SHV outputs and newer SY4527 mainframes holding up to 8 cards with 24
+SHV outputs each.  (Other cards with different numbers of channels and
+different high voltage connector form factors are available, but only
+the described types are used in Hall C.)
+There are several flavors of cards in use with the
+Hall~C detector systems which are listed in Tables~\ref{tab:hv_cards}
+and \ref{tab:hv_cards_new}.  A given crate may have a mix of card
+types, although cards can not be exchanged between SY403 and SY4527 crates.
 
 \begin{table}
 \caption{Specifications of SY403 High-Voltage Cards used in Hall~C Detector 
@@ -27,7 +31,7 @@ Systems\label{tab:hv_cards}.}
         &Card type      &Max Voltage    &Max Current    &Detector System \\
 	&		&		&		&	\\
 	& A403 (or A503)&--3000V		&3.0mA		&Hodo/Shower\\
-	& A503P		&+3000V		&3.0mA		&Cerenkov\\
+	& A503P		&+3000V		&3.0mA		&Cerenkov/Aerogel\\
 	& A505		&--3000V		&200$\mu$A 	&Drift Chambers\\
   \end{tabular}
 \end{center}
@@ -40,8 +44,8 @@ Systems\label{tab:hv_cards_new}.}
 \begin{tabular}{ccccc}
   &Card type      &Max Voltage    &Max Current    &Detector System \\
   &		&		&		&	\\
-  & A1535SN       &--3500V	&3.0mA		&Hodo/Shower\\
-  & A1535SP       &+3500V    &3.0mA		&Cer?/?\\
+  & A1535SN       &--3500V	&3.0mA		&Hodo/Shower/Heavy Gas\\
+  & A1535SP       &+3500V    &3.0mA		&Noble Gas/Aerogel\\
 
   \end{tabular}
 \end{center}
