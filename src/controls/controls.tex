@@ -1,8 +1,52 @@
+A distributed computer system
+based on the 
+Experimental Physics and Industrial Control System 
+(EPICS)~\cite{EPICSwww}
+%\htmladdnormallinkfoot{}{\url{http://www.aps.anl.gov/epics}}
+ architecture monitors and commands
+the various Hall C systems. The basic components of the system are:
+\begin{itemize}
+\item Input/Output Controllers (IOCs) - Systems containing single
+board computers (SBCs) and I/O modules
+(i.e analog-to-digital converters (ADCs), digital I/O and RS-232C interfaces).
+Each SBC executes the real-time operating system VxWorks and the corresponding EPICS application (signal database
+and sequencers).  IOCs are typically VME SBCs and crates, but may also
+be other platforms such as standard Linux servers or small form factor
+systems such as Raspberry PIs.
+\item Operator Interfaces (OPI) - Computers capable of executing
+EPICS tools to interact with the IOCs.
+The four most used tools in Hall C are (a)
+a Web-enabled version of the Motif-based Display Editor/Manager (MEDM)~\cite{MEDMwww}, 
+(b) StripTool and, (c) a signal archiver.
+MEDM is the main interface used for monitoring and controlling both the hall and accelerator
+equipment. StripTool allows to monitor 
+the behavior of one or more signals as a function of time. 
+The signal archiver keeps a record of a selected set of signals.
+\item Boot Servers - IOCs load the various
+software components needed to perform their functions from these machines (i.e. operating system,
+signal database and controls algorithms).
+%\item MEDM Servers - OPI computers obtain the framework of each MEDM screen from these machines.
+%\item Local Area Network (LAN) - the communication path joining the IOCs, OPIs and various servers.
+\end{itemize}
+
+In addition equipment controlled with EPICS, Hall C uses an industrial
+control system, composed of Allen Bradley PLCs (Programmable Logic
+Controllers) and commercial OPI software.  This system is used to
+control the cryogenics, magnets and motion of the HMS and SHMS
+spectrometers.  The use of this system is described in
+chapter~\ref{spectrometerschapter}. 
+
+\infolevtwo{
+\section{System's Components}
+
 Need to be careful not to put information here that quickly goes out
 of date.  Refer to howtos for EPICS build directory, HV configuraion
 and operation
 
 Basic description of EPICS.
+
+Note that used to display information about accelerator status and to
+display and control Hall C equipment such as targets and high voltage.
 
 Describe logging of EPICS information.   Information logged by
 accelerator.  Instructions on how to add signals to logging.  How to
@@ -20,3 +64,4 @@ Note that spectrometer information is availabe as readonly EPICS so
 that spectrometer information can be read, displayed and logged with
 EPICS tools.
 
+}
