@@ -167,272 +167,367 @@ different from 0 (i.e. 1-99)}
 EPICS system is active.}
 \end{itemize}
 
-\subsection{The Gas Mixing System}
+\subsection{The Wire Chamber Gas Mixing System}
+% (BDS) Largely pulled from detailed gas_system_HOWTO document
 
-The Hall~C On-line gas mixing system exists in the gas shed located
+The Hall~C wire chamber gas mixing system exists in the gas shed located
 to the left of the counting house in the parking lot between the counting house
-and the accelerator service building.
-It provides two parallel
-flow-controlled gas streams from a common source.  Flow rates, and gas mix
-can be controlled independently in each of the gas streams.  The main
+and the accelerator service building (building 96C).  The main
 component of the system is a single MKS 647 menu driven 4-channel
-controller that operates both of the parallel systems.  Gas flow is
+controller that maintains the mix proportions and pressure regulation of the
+gas supplied to the wire chambers.  Gas flow is
 controlled by 2259c proportional mass flow control valves.  The 647 allows
 the Gas Calibration factor to be altered in software, allowing the user to
 change to a different gas without recalibration of the mass flow control
 valves.
 
-A temperature controlled alcohol bubbler is provided for each gas
-stream.  The alcohol level in each stream is maintained by a float valve
+A temperature controlled alcohol bubbler is provided for the gas
+stream.  The alcohol level in the stream is maintained by a float valve
 fed from a reservoir outside the bubbler chiller. This allows the alcohol
 system to be refilled without opening the system to air.  A sight glass on
-the side of the reservoir allows the level to be monitored.  A by-pass loop
-around each alcohol system is provided should alcohol free gas be desired
-or if the alcohol system requires maintenance.
+the side of the reservoir allows the level to be monitored.  A bypass loop
+around the alcohol system is provided should alcohol-free gas be desired,
+or if the alcohol system requires maintenance.  Remote monitoring and limited
+controls are provided through an EPICS display screen accessible via
+\textbf{JMenu/Monticello $\rightarrow$ Hall C $\rightarrow$ Hall C Gas Shed},
+or equivalent\footnote{Path to EDM file is /cs/opshome/edm/hlc/HLC\_gas\_shed.edl}.
 
-The 647 is factory upgradeable to 8 channels.  The gas mixing
-system has been plumbed to provide 2 parallel 3 channel gas streams.  In
-the original installation, the mass flow control valves for channels 5 and
-6 (gas \#3) were not installed.
-
-To upgrade to 6 channel operation, 2 additional 2259c valves need
-to purchased and installed.  The 647 needs to be returned to the factory
-for the upgrade to 8 channel operation
-
-The system will support a remote monitor and remote control through
-a separate display port and an RS232 port on the back of the MKS 647 unit.
-
-{\bf This system operates by measuring and controlling flow rate instead
-of pressure. This system will maintain a constant rate of flow
-regardless of pressure. It should not be used without appropriate pressure
-relief device such as relief bubblers and relief valves. It should not be
-connected to a closed vessel or system.}
-
-{\bf Warning:} {\em{When using flow controlled systems such as this one, one 
-must never introduce gas into a vessel without insuring that an outlet from the vessel is 
-open.  The gas will continue to flow at the flow rate set point until the gas 
-reaches the pressure setting of the pressure device ie. the regulator or relief 
-bubbler, or until the vessel fails}.}
+{\bf This system operates by measuring and controlling pressure, not flow rate.
+This system will work to maintain a pressure, regardless of the flow rate.
+This allows the (pressure dependent) Rotameter-style flow meters to provide
+a constant flow rate to detector systems.  Nevertheless, it should not be used
+without appropriate pressure relief device such as relief bubblers and relief
+valves.}
 
 The manual valves used in this system are numbered on their
 handles.  Those numbers are referenced in this document and in
 Figure~\ref{fig:gas_mix}.
 \begin{figure}
-\includegraphics[width=6in,bb=12 12 750 590]{HallCGasMixlvl1.pdf}
-\caption{Diagram of Hall~C Gas Mixing System\label{fig:gas_mix}}
+\includegraphics[width=0.9\columnwidth]{HallCGasMixlvl1.pdf}
+\caption{Diagram of the Hall~C Gas Mixing System\label{fig:gas_mix}}
 \end{figure}
 
-\paragraph{Normal Operation.}
+\paragraph{Settings for Normal Operation}
 
-For normal operation, with the alcohol systems in use, the following valves
-should be set as follows:
+A summary of all of the settings required to make the controller
+function properly is given in Table~\ref{tab:mixer_nominals}. The
+table also shows which screen contains each parameter. Instructions
+for setting parameters are given below. Detailed instructions for
+configuring and operating the MKS~647 can be found in the
+manufacturer's instruction manual, a copy of which is posted at
+\url{https://hallcweb.jlab.org/document/vendor\_manuals/}.
 
-{\bf For The HMS:}
+\begin{table}[hbt]
+\begin{minipage}[h!]{\textwidth}
+{\scriptsize
+\begin{center}
+\begin{tabular}{|l|c|l|}
+\hline
+Parameter   & Set To   & {\it Controller Screen}/Comments\\ \hline
+\multicolumn{2}{|c|}{\bf Manual Valves  } &  Valves are labeled        \\
+Valves 1, 2, 4, 8 & OPEN                  &         \\
+Valves 3, 5, 6, 7 & CLOSED                &         \\ \hline
+\multicolumn{2}{|c|}{\bf Pressure PID Loop Settings   } & {\it Pressure Control} (Fig. \ref{fig:pressure_control})  \\
+Pressure    & 500 Torr &                   \\
+PID Mode    & AUTO     &                   \\
+PID GAIN    & 4.0      &                   \\
+PID INTEG   & 10.0     &                   \\
+PID LEAD    & 0.000    &                   \\ \hline
+\bf Mixture     & 1        & {\it User} (Fig. \ref{fig:user_display})/ Lower-right corner\\ \hline
+\multicolumn{2}{|c|}{\bf Gas Composition for Mixture 1} & {\it Gas Composition} (Fig. \ref{fig:gas_composition})\\
+Channel 1   & 1.000    &  (Argon)                 \\
+Channel 2   & 1.000    &  (Ethane)                 \\
+Channel 3   & 0.000    &                   \\
+Channel 4   & 0.000    &                   \\ \hline
+\multicolumn{2}{|c|}{\bf MFC Valve Size } & {\it Range Selection} (Fig. \ref{fig:range_selection})  \\
+\multicolumn{2}{|c|}{\bf  / Gas}             & {\it Gas Selection} (Fig. \ref{fig:gas_selection})  \\
+Channel 1   & 2.0 SLM / Ar         & provides 2.78 SLM Argon\\
+Channel 2   & 5.0 SLM / C$_2$H$_6$ & provides 2.50 SLM Ethane\\
+Channel 3   & \it unused&                  \\
+Channel 4   & \it unused&                  \\ \hline
+\multicolumn{2}{|c|}{\bf Channels ON/OFF Settings} & {\it Extended Display} (Fig. \ref{fig:extended_display})   \\
+Channel 1   & ON       &                   Press ``ON 1'' (\em Argon)  \\
+Channel 2   & ON       &                   Press ``ON 2'' (\em Ethane) \\
+Channel 3   & OFF      &                   Press ``OFF 3'' (\em not in use) \\
+Channel 4   & OFF      &                   Press ``OFF 4'' (\em not in use) \\ \hline
+\multicolumn{2}{|c|}{\bf Pressure Transducer} & {\it Pressure Setup}  \\
+Controller  & STD      &                   \\ 
+Range F.S.  & 1000 Torr&                   \\ \hline
+\multicolumn{2}{|c|}{\bf MFC Valve Controls     } & {\it Mode Selection} (Fig. \ref{fig:mode_selection}) \\
+Channel 1   & PID      &                                   \\
+Channel 2   & SLAVE / 1&                                   \\
+Channel 3   & INDEP    &                                   \\
+Channel 4   & INDEP    &                                   \\ \hline
+\bf Alcohol Temp. & 2$^\circ$\,C & Electronic Temperature  \\
+                  &              & Control Box             \\ \hline
+\hline
+\end{tabular}
+\end{center}
+}%end of \scriptsize
+\end{minipage}
+\caption{Normal Valve and Parameter Settings for the Gas Mixing System.
+\label{tab:mixer_nominals}}
+\end{table}
+%=====================================================================
+\paragraph{General Operation of the Mass Flow Controller}
+If the controller screen is dark, press {\bf ESC} to awaken the
+display.  Many screens merely provide a menu of other screens you may
+access: simply press the item number you desire. To go up one level in
+the menu hierarchy, press {\bf ESC}. The \emph{Menu Tree} for the 647C
+controller is shown in Fig. \ref{fig:command_tree}.
 
-Open - 3, 4, 11, 14; Closed - 12, 13, 17, 18, 19, 20
+In general, to change a parameter displayed on the controller screen
+use the \textbf{left/ right} arrow keys to move the cursor to the item you
+wish to change. Then either use the number keys to enter the value
+desired for that item (numeric parameter) or use the {\bf ENTER} or
+{\bf up/down} keys to cycle a parameter through its available settings
+(configuration parameter). Numeric parameters may be incrementally
+modified by using the {\bf up/down} arrow keys. To make certain that a
+new parameter becomes active, move the cursor off of the parameter
+after you have entered the new value.
 
+The initial menu upon startup is the {\bf Main Menu}
+(Fig.~\ref{fig:main_menu}).  For normal operation use the {\bf User
+Display} menu (Fig.~\ref{fig:user_display}). It shows the amount of
+each gas currently flowing, the total gas flow, and the current
+delivery pressure. This display also shows which of several possible
+pre-defined gas mixtures is selected. These mixtures are configured 
+on the {\bf Gas Composition} screen, Fig. \ref{fig:gas_composition}.
+For normal operation, we use
+only mixture {\bf \#1}, (number shown on the lower-right of the
+display). {\bf Only on this screen can this parameter be changed.}
+Mixture {\bf \#2} is usually configured to provide 100\% argon for
+purging flammable gas out of the chambers.
 
-Unless the gas \#3 Mass flow control valve is installed, valve \#6 should
-always be closed.
+The {\bf Extended Display} menu (Fig.~\ref{fig:extended_display})
+shows actual flow, flow set point, units, valve full-scale range, gas
+calibration factor, whether that channel is enabled, and whether each
+channel is operating in master, slave, PID, or independent mode. This
+display is most useful to a system expert wishing to verify the system
+parameter settings.  Most parameters cannot be modified from this
+screen, however.
 
-{\bf For the SOS:}
-
-Open - 1, 2, 7, 10; Closed - 8, 9, 15, 16, 19, 21.
-
-
-Unless the gas \#3 Mass flow  control valve is installed, valve \#5 should
-always be closed.
-
-\paragraph{Operating the MKS 647 Mass Flow Controller.}
-
-The gas flow is controlled by a MKS 647 controller and mass flow
-control valves.  The 647 is menu driven from a CRT in the front panel and
-with a keypad with cursor controls. The 647 features a non-volatile memory
-so settings are retained even if the unit is unpowered.  The initial menu
-upon startup is the Command Menu.  For normal operation use either the User
-Display menu (Command menu item \#1) or the Extended Display menu (Command
-menu item \#2).  The User Display menu shows actual flow in each channel and
-the total flow in all channels.  The Extended Display menu shows actual
-flow, flow set point, units, valve full scale range, gas calibration
-factor, whether that channel is enabled, and whether each channel is
-operating in master, slave, or independent mode.
-
-{\bf To set flow rates:}
-
-The flow rate set points are adjusted from the Extended Display
-menu.  There are two methods to change valve flow rate set point.  If you
-want to enter a specific value you must first turn off the flow in that
-channel or all of the channels.  Using the cursor keys move the cursor to
-the desired channel.  Enter the desired flow rate.
-
-The flow rate set point can be changed with gas flowing using the
-cursor keys. In the Extended Display mode move the cursor to the desired
-channel using the left/right cursor keys.  The set point can then be
-adjusted up or down using the cursor up/down keys.
-
-{\bf To turn gas flow on or off:}
-
-The gas flow can be turned on or off while in any menu.  When any
-of the mass flow valves are open the green LED labeled ``GAS ON" on the 647
-is lit.  When none of the gas flow valves are open the red ``STAND BY" LED
-will be flashing.  In the Extended Display menu the bottom line displays on
-or off, by channel, to show which mass flow valves are enabled.  The green
-LED must be lit and an ``ON" must be displayed in the bottom row of the
-Extended Display menu for gas to be flowing in a particular channel.
-
-{\bf Turning the gas on or off is done in two steps which can be done in
-either order.}
-Each channel must be enabled by pressing ``ON" and then
-that channel number.  The command input must be enabled by pressing ``ON"
-and then ``ALL" from the keypad.  This allows a single channel or all of the
-enabled channels to be turned on or off at once.  Both steps must be
-performed initially, but thereafter only one of the steps need be performed
-to cycle the gas flow on or off.
-
-To turn gas off in a single channel press ``OFF" and then the
-desired channel.  If you want to close all the valves simultaneously, press
-the ``OFF" key and then the ``ALL/0" key.  To turn gas back on you must
-reverse whichever sequence you used to stop the gas flow.  For example if
-you turned the gas off by pressing ``OFF" and then the channel number, it
-must be turned back on by pressing ``on" and then the channel number.  If
-you turn off all the channels by pressing ``OFF" , ``ALL" you must turn it
-back on by pressing ``ON" , ``ALL."
-
-{\bf To by-pass the alcohol system:}
-
-For the HMS:
-Open valves 12 \& 13, then close valves 11 \& 14, in that order!
-
-For the SOS:
-Open valves 8 \& 9, then close valves 7 \& 10, in that order!
-
-{\bf To refill the alcohol bubblers:}
-
-The alcohol bubbler system features a refill system that allows
-filling directly from the bottle, minimizing exposure of the alcohol to air
-and reducing the possibility of a spill.
-{\bf The reservoirs should be refilled
-before they become empty to maintain a head of liquid over the float valve
-which will prevent air from entering the system.}
-In the back of the gas
-system rack is a holder for gallon sized alcohol bottles and a cap with dip
-tube.  Place a new bottle in the bottle holder and replace the cap with the
-cap with dip tube.
-
+Delivery pressure set-point and pressure \emph{PID-loop} control parameters
+may be configured from the {\bf Pressure Control} screen
+(Fig.~\ref{fig:pressure_control}).
+%
+\begin{figure}[tb]
+\begin{center}
+\framebox{
+\begin{minipage}{.65\textwidth}
+\footnotesize
 \begin{itemize}
-\item{ \bf{Step-by-Step Instructions for Refilling the SOS Alcohol Bubbler}\\
-\em{These steps must be individually completed in the order listed!}}\\
-Refer to Fig.~\ref{fig:gas_mix}. 
-\begin{enumerate}
-\item{If needed, install a full bottle of alcohol in the back of the gas racks as mentioned in the preceeding paragraph.}
-\item{{\em Open valves 8,9. Close valves 7,10} to Put the SOS alcohol bubbler in BYPASS.}
-\item{{\em Close valve 16} to isolate the warm reservoir gas from the bubbler.}
-\item{{\em Open valve 15} to bleed off the warm reservoir gas pressure.}
-\item{{\em Open valve 19} to pressurize the alcohol bottle.}
-\item{{\em Open valve 21} to flow alcohol into the warm reservoir.}
-\item{When the alcohol level in the sight-glass is within 2cm of the top, stop
-the flow of alcohol: {\em Close valve 21.}}
-\item{{\em Close valve 19.}}
-\item{{\em Open valve 16.}}
-\item{{\em Close valve 15.}}
-\item{{\em Open Valves 7 and 10. Close Valves 8 and 9.}}
-\item{Record what you did in both the gas logbook and the electronic logbook.} 
-\end{enumerate}
-
-\item{ \bf{Step-by-Step Instructions for Refilling the HMS Alcohol Bubbler}\\
-\em{These steps must be individually completed in the order listed!}}\\
-Refer to Fig.~\ref{fig:gas_mix}. 
-\begin{enumerate}
-\item{If needed, install a full bottle of alcohol in the back of the gas racks as mentioned in the preceeding paragraph.}
-\item{ {\em Open valves 12,13. Close valves 11,14} to Put the HMS alcohol bubbler in BYPASS.}
-\item{{\em Close valve 18} to isolate the warm reservoir gas from the bubbler.}
-\item{{\em Open valve 17} to bleed off the warm reservoir gas pressure.}
-\item{{\em Open valve 19} to pressurize the alcohol bottle.}
-\item{{\em Open valve 20} to flow alcohol into the warm reservoir.}
-\item{When the alcohol level in the sight-glass is within 2cm of the top, stop
-the flow of alcohol: {\em Close valve 20.}}
-\item{{\em Close valve 19.}}
-\item{{\em Open valve 18.}}
-\item{{\em Close valve 17.}}
-\item{{\em Open Valves 11 and 14. Close Valves 12 and 13.}}
-\item{Record what you did in both the gas logbook and the electronic logbook.} 
-\end{enumerate}
+\item MAIN MENU (Fig. \ref{fig:main_menu})
+   \begin{enumerate}
+   \item [1] USER DISPLAY (Fig.\ref{fig:user_display})
+   \item [2] EXTENDED DISPLAY (Fig.~\ref{fig:extended_display})
+   \item [3] PRESSURE CONTROL (Fig.~\ref{fig:pressure_control})
+   \item [4] DIAGNOSTICS
+      \begin{enumerate}
+      \item [4.1] ERROR LISTING
+      \item [4.2] SIGNALS
+      \end{enumerate}
+   \item [5] INSTRUMENT SETUP
+      \begin{enumerate}
+      \item [5.1] RANGE SELECTION (Fig.~\ref{fig:range_selection})
+      \item [5.2] GAS SELECTION (Fig.~\ref{fig:gas_selection})
+      \item [5.3] MODE SELECTION (Fig.~\ref{fig:mode_selection}) 
+      \item [5.4] ZERO ADJUST
+      \item [5.5] TRIP LIMITS
+      \item [5.6] GAS COMPOSITION (Fig.~\ref{fig:gas_composition})
+      \end{enumerate}
+   \item [6] SYSTEM SETUP
+   \item [7] PRESSURE SETUP 
+   \item [ ]
+   \item [9] INFORMATION
+   \item [0] POWER OFF
+   \end{enumerate}
 \end{itemize}
+\end{minipage}
+} %%end of \framebox{
+\caption{Command Tree for the MKS-647C Control Panel}
+\label{fig:command_tree}
+\end{center}
+\end{figure}
+%
+\begin{center}
+\begin{figure}[hbt]
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-main_menu-eps-converted-to.pdf}
+\caption{MKS~647 Main Menu\label{fig:main_menu}}
+\end{minipage}
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-user_display-eps-converted-to.pdf}
+\caption{MKS~647 User Display\label{fig:user_display}}
+\end{minipage}
+\end{figure}
+\end{center}
+%
+\begin{center}
+\begin{figure}[hbt]
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-extended_display-eps-converted-to.pdf}
+\caption{Extended Display Screen\label{fig:extended_display}}
+\end{minipage}
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-pressure_control-eps-converted-to.pdf}
+\caption{Pressure Control Screen\label{fig:pressure_control}}
+\end{minipage}
+\end{figure}
+\end{center}
+%=====================================================================
+\paragraph{Gas Flow Rates}
+\label{sec:gas_flow_rates}
+The flow rates are adjusted automatically by the controller in order
+to maintain a constant delivery pressure at the output. Only the flow
+{\em ratios} should be set by the operator. We use a 1:1 ratio, set on
+the {\bf Gas Composition} screen (Fig.~\ref{fig:gas_composition}), as
+indicated in Table~\ref{tab:mixer_nominals}.
 
-\paragraph{Recalibration and Rezeroing}
+The average total flow should equal the sum of the flows to all of the
+detectors in the shield house. (Note that the ball-type flowmeters in
+the shield house are calibrated for nitrogen. The approximate
+multiplier to convert these readings for 50/50 Argon-Ethane is 0.9 .)
 
-Mass flow control valves(the 2259c's) require periodic recalibration
-and rezeroing.
+System configuration parameters specifying the full-scale flow
+capacity (for nitrogen) of each valve, the types of gases actually
+flowing through each valve, and the mode of control for the valves are
+set in the screens pictured in Figs.~\ref{fig:range_selection},
+\ref{fig:gas_selection}, and \ref{fig:mode_selection}. These figures
+show the nominal settings for the Hall-C system.
 
-\noindent{\bf Rezeroing:}
+\begin{center}
+\begin{figure}[hbt]
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-gas_composition-eps-converted-to.pdf}
+\caption{Gas Composition Screen\label{fig:gas_composition}}
+\end{minipage}
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-range_selection-eps-converted-to.pdf}
+\caption{Range Selection Screen\label{fig:range_selection}}
+\end{minipage}
+\end{figure}
+\begin{figure}[hbt]
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-gas_selection-eps-converted-to.pdf}
+\caption{Gas Selection Screen\label{fig:gas_selection}}
+\end{minipage}
+\begin{minipage}{2.7in}
+\includegraphics[width=2.6in,height=1.8in]{drift_gas_system-mode_selection-eps-converted-to.pdf}
+\caption{Mode Selection Screen\label{fig:mode_selection}}
+\end{minipage}
+\end{figure}
+\end{center}
 
-Rezeroing or Zero Offset is easy and can be performed often and should be
-performed every time the unit is moved, recalibrated, or adjusted.  The
-valve must be in the orientation it will be used to rezero it.
-{\bf To use the
-Auto Zero function one must insure that the channel is not switched on and
-there is no possibility of flow in that channel ie. the manual valve in
-line with the mass flow valve must be closed.}
-The Zero Adjust menu is
-reached from the main menu to the Instrument Setup menu.  In the Zero
-Adjust menu move the cursor to the word EXEC on the channel to be zeroed in
-Zero Adjust line.  The unit will measure the current value and use that for
-the new zero offset.  If the operation is successful the word EXEC will be
-changed to Done.  If the offset is too large or that channel is on, the
-unit will display fail.  In that case, one should check if there is any
-flow (even extremely small flow) through the valve.
+%=====================================================================
+\paragraph{To set the Delivery Pressure:}
 
-\noindent{\bf Recalibration:}
+Navigate to the {\bf Pressure Control} menu. The pressure set-point (in
+Torr) is indicated at the bottom-center of the screen. This value
+should be set to 500.0. Note that the system can not respond instantly
+to a change in requested gas pressure: it has no way to release excess
+pressure and must wait for the detector systems to consume it
+\footnote{An \emph{over-pressure relief valve} releases gas through a
+small oil bubbler in the gas shed if the pressure exceeds about
+600~Torr.}; it cannot build up pressure any faster than the
+flow-control valves can supply it. It may take thirty minutes or so
+for the pressure regulation system to stabilize at a new set-point or
+stabilize in response to a change in total gas consumption. However,
+you should be able to observe a change in the gas flow within a few
+seconds (possibly up to a minute) after a set-point change.
 
-MKS recommends recalibration every 12-24 months.  The valves must be
-returned to the factory for recalibration.  After reinstallation, the
-valves need to be rezeroed.
+%=====================================================================
+\paragraph{To turn gas flow on or off:}
 
-\paragraph{Filtering}
+The gas flow can be turned on or off while in any menu.  In the
+Extended Display menu the bottom line displays ``ON'' or ``OFF'', by
+channel, to show which mass flow valves are enabled.  ``ON'' must be
+displayed in the bottom row of the Extended Display menu for gas to be
+flowing in a particular channel.
 
-{\bf All filter maintenance should be performed with the gas supplies shut off
-at the tanks.  Insure that no pressure remains inside the filter
-before proceeding.}
+For gas to flow, two conditions must be met: 
+\begin{enumerate}
+\item Each channel (1 and 2) must be enabled by pressing ``ON'' and then the
+  desired channel number.
+\item The entire system must be enabled by pressing ``ON" and then ``ALL" from
+  the keypad.
+\end{enumerate}
+Thus, each valve can be controlled individually using ``ON/OFF~-~\emph{Channel
+Number}'', or all flow can be controlled using ``ON/OFF~-~ALL''. If the system
+is enabled, the status line at the bottom of every screen will indicate ``FLOW
+ON GAS ON''. {\bf Note:} because Valve-2 (ethane) is normally slaved to Valve-1
+(argon), when Valve-1 is disabled there will be no flow through Valve-2.
 
-Both input channels of this system feature high performance long life
-filters using a pre-filter and molecular sieve in stainless steel filter
-vessels.  The pre-filter and filter cartridges are available from the
-company listed below.  The pre-filter is a mechanical filter to remove
-liquids and solids from the gas stream and to protect the molecular sieve
-downstream from it.
+%=====================================================================
+\paragraph{To Change a Gas Bottle}
 
-\noindent{\bf Replacing filter cartridges:}
+The argon and ethane supply bottles should be replaced by new (full)
+bottles when the bottle content drops below about 10\% of its
+capacity.  For argon, the bottle content is directly indicated by the
+bottle pressure: a new bottle usually contains 2000 to
+3000~psig. Argon bottles should be changed whenever the bottle
+pressure is found to be below about 200~psig. 
 
-The cartridges are replaced by loosening the nut on the bottom of the bowl
-and removing the bowl.  The cartridges can be exchanged and the bowl and
-nut replaced and tightened.
+Ethane bottles, on the
+other hand, contain liquefied ethane. Thus the bottle pressure is just
+the vapor pressure of ethane at whatever the current temperature
+happens to be. At 70$^\circ$\,F this is about 544~psig. The pressure gauge
+will not tell you how much ethane is left in the bottle until it reads
+zero! Instead, we measure the ethane content by observing the weight
+of the bottle and comparing it to the weight when the bottle was
+full. A standard B-size cylinder contains about 32~pounds of ethane.
+The ethane cylinders on the manifold sit on scales which have been 
+pre-set to indicate the net weight of ethane in the bottle.
+Numbers in the green portion of the dial indicate ethane remaining.
+If the indicator points to the red portion of the dial, the bottle
+is empty.
 
-\noindent{\bf Using 13x molecular sieve filters with ethane:}
+Handling and connecting bottles of compressed gas require special
+knowledge.  The high pressure gas stored in the cylinders (bottles)
+constitutes significant stored energy. Mishandling of a gas bottle can
+pose a lethal hazard! Refer to the JLab ESH\&Q Manual
+for safe handling practices. If you do not already know how to safely
+manipulate compressed gas hardware, have a knowledgeable person train
+you.
 
-{\sl It has been reported that when using 13x molecular sieve filters with
-ethane, some ethane is trapped in the filter making the cartridges
-flammable.   To purge the ethane from the  filter cartridge a pair valves
-and external connections are on either side of that cartridge.  A nitrogen
-line should be connected to valve \#22 and a vent line connected to valve
-\#23 before changing filters. Nitrogen should flow through the filter for
-several hours before changing.}
+After attaching a new gas bottle to the supply manifold, check the
+connection for leaks using \emph{Snoop} or a similar leak detector.
 
-\noindent {\bf Purchasing Filters and Repairs:}
+%=====================================================================
+\paragraph{The Alcohol Bubbler}
 
-The following filter types are used:
-\begin{itemize}
-\item[~]3/100-12-bx microfiber pre-filter
-\item[~]CI-100-12-103 molecular sieve final filter
-\end{itemize}
+To reduce the rate of aging of the wire chambers, the operating gas
+contains a small quantity of alcohol vapor. The vapor is added by
+bubbling the argon/ethane mixture through liquid alcohol. The
+temperature of the alcohol controls the alcohol vapor pressure, which
+determines the amount of vapor added to the gas. The alcohol content
+also affects the electron drift velocity in the wire chambers, so it
+must be held approximately constant.
 
-These filter cartridges are available from:  Balston Filters, 6767 Forest Hills Drive, Suite 305, Richmond, VA 23225,  1-800-221-1900
+Gas is bubbled through the liquid alcohol inside the glass
+dome vessel in the refrigerator. The dome is covered by a
+perforated steel cylinder as a precaution against breakage. The
+alcohol level is controlled by a float valve inside the metal cold
+reservoir, which is also inside the refrigerator. As long as there is
+alcohol in the warm reservoir (sitting on top of the refrigerator),
+the liquid levels inside the refrigerator will remain constant. A
+drain valve (\#7) inside the refrigerator is available for emptying
+all liquid from the system.  It is for use by experts only and should
+remain closed during normal operation.
 
-Recalibration and repair of the mass flow control valves and controller are
-available from:  MKS instruments, Six Shattuck Road, Andover, MA 01810,  
-1-800-227-8766 or508-975-2350
+%=====================================================================
+\subparagraph {Alcohol Temperature Control}
+
+To keep the alcohol temperature (and thus the vapor pressure) constant,
+the alcohol bubbler is housed in a refrigerator which is controlled by
+an electronic temperature regulator having 1$^\circ$C sensitivity. The 
+controller is located on a shelf in the right-hand rack of the gas mixing
+system. Normally, the actual temperature in the refrigerator is
+indicated on the front panel of the controller. The controller should
+be set to maintain a temperature of 2$^\circ$\,C.
 
 
-
+%=====================================================================
 \subsection{Hall C Laser Pulser System}
 The Hall C laser pulser sytem provides light pulses
 in the visible  blue scintillation region to monitor
