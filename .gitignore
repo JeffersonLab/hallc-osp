@@ -1,5 +1,7 @@
 *~
 *.log
+*.swp
+*.swo
 
 # Some users will need this
 html.sty
