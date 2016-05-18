@@ -2,13 +2,12 @@
 %\section{Introduction}
 
 	The two magnetic spectrometers in Hall~C are designed to perform
-high resolution and high accuracy nuclear physics experimetns.  These
-spectrometers transport and detect scattered particles such as
-electrons, positrons, pions, protons, and kaons.
+high resolution and high accuracy nuclear physics experiments.  These
+spectrometers transport and detect charged particles that are scattered or produced 
+in beam-target interactions.
 \infolevone{
 In this chapter
-we discuss the features and safe operation of these
-spectrometers,
+we discuss the features and safe operation of these spectrometers,
 the High Momentum Spectrometer, or HMS,
 and Super High Momentum Spectrometer, or SHMS.  These spectrometers
 share many common features.  After this
@@ -16,31 +15,57 @@ introduction and overviews of the individual spectrometers, the
 spectrometers are discussed together as a series of subsystems.
 This chapter covers the ``mechanical'' subsystems of the spectrometers.
 The detector packages and
-shields houses are discussed in Chapter~\ref{chap:detectors}.
+shield houses are discussed in Chapter~\ref{chap:detectors}.
 
-Both spectrometers are composed of series of superconducting magnets,
-including quadrupoles and dipoles.  
+Both the HMS and the SHMS are designed around a series of superconducting magnets,
+including quadrupoles and dipoles, followed by a set of particle detectors.  The first
+magnet on the SHMS is a horizontal-bending (HB) dipole that bends particles
+away from the beam-line. The HMS does not have a horizontal bender.
 The primary purpose of the quadrupole magnets is to increase the flux of
-charged particles entering the dipole magnet and to focus the orbits of the
-charged particles into the detector hut.
-Each spectrmoeter also has a large dipole magnet, which deflects
-charged particles
-into the detector hut 
-such that they can be momentum
-analyzed.
+charged particles entering the main dipole magnets and to focus the orbits of the
+charged particles into the detector huts.
+The dipole magnets deflect charged particles vertically
+as they enter the detector hut. Some of the detectors measure the amount of deflection
+so that we may
+determine the momentum of each particle. Other detectors provide accurate timing 
+to trigger the readout of all detector data, or they measure a particle's speed
+or total energy so that we can determine its mass.
 
-Each spectrometer has a rotatable support structure, called the
-carriage, which supports the magnets.
+Each spectrometer is built on a rotatable support structure or carriage. 
+These ride on steel 
+wheels and rails and rotate around the pivot. Experiments using the HMS or
+SHMS place their experimental targets along the beamline above the pivot.
+The support structures carry the weight of the magnets and detectors, and keep
+them aligned to one-another and pointed at the target. On the SHMS, the shield 
+house and all of the
+other spectrometer equipment are also carried by the support structure. The
+HMS has a separate carriage that supports these items.
 
-Each spectrometer includes a shield house which contain the particle
-detector packages.  In the case of the SHMS, this shield house (and a separate
-shield house for electronics) are part of the carriage structure.  In
-the case of the HMS, the detector shield house is a separate
-structure, coupled to the carriage by a ``push bar'' on the ``pasta fork''.
-The ``pasta fork" is the name given to the steel piece that protrudes
-from the back of the carriage. The detector frame is supported on the
-``pasta fork." This insures that the detectors do not move relative
-to the magnetic elements.
+During beam operations a large number of particles is
+produced in the target. A few of these enter one of the spectrometers. Most of 
+them go forward at small angles and are stopped in the beam dump. The
+remainder, scattered over a wide range of angles,  interact with the beam pipe, 
+the air, nearby structures, etc., and
+constitute background radiation that would overwhelm the detectors.
+The shield houses have thick walls that are designed to reduce the amount of
+radiation that gets inside. Both spectrometers use
+concrete and lead lining on the walls as shielding. On
+the SHMS, two custom types of concrete improve the neutron stopping power 
+of the walls by
+adding boron (in the form of boron-carbide) or extra hydrogen (recycled
+plastic chips). Each shield house has a room that surrounds the detectors.
+The SHMS has a second room, shielded from the first, that protects the
+electronic systems.
+
+%Each spectrometer includes a shield house which contain the particle
+%detector packages.  In the case of the SHMS, this shield house (and a separate
+%shield house for electronics) are part of the carriage structure.  In
+%the case of the HMS, the detector shield house is a separate
+%structure, coupled to the carriage by a ``push bar'' on the ``pasta fork''.
+%The ``pasta fork" is the name given to the steel piece that protrudes
+%from the back of the carriage. The detector frame is supported on the
+%``pasta fork." This insures that the detectors do not move relative
+%to the magnetic elements.
 
 \section{The High Momentum Spectrometer (HMS) }
 
@@ -67,12 +92,71 @@ has been limited to 4 GeV/c.
 
 
 \section{The Super High Momentum Spectrometer (SHMS)}
-5.5 to 40 degrees.  Up to 11 GeV/c.  
+%5.5 to 40 degrees.  Up to 11 GeV/c.  
+%
+%The purpose of the SHMS horizontal bender is to bend scattered
+%particles away from the beamline so that smaller scattering angles can be
+%measured.
+The Super High Momentum Spectrometer (SHMS) operates on the beam-left
+side of the beamline, and can be rotated around the pivot for scattering angles from 5.5
+to 40~degrees. It was built between 2009 and 2016 as the major
+Hall-C component of the 12-GeV Upgrade Project.  The five superconducting
+magnets on the SHMS can be set for a central-ray momentum of up to 11~GeV/c.
+The minimum design momentum is 2 GeV/c. A CAD model of the SHMS is shown
+in Fig.~\ref{fig:SHMS_CAD_Model} and Table y??y lists the performance specifications. 
 
-The purpose of the SHMS horizontal bender is to bend scattered
-particles away from the beamline so that smaller scattering angles can be
-measured.
+\begin{figure}
+\includegraphics[width=6in]{SHMS_Rendered_Recolored_Annotated}
+\caption{CAD Rendering of the Super-High-Momentum Spectrometer. \label{fig:SHMS_CAD_Model}}
+\end{figure}
 
+The primary magnetic elements on the SHMS, the Q1, Q2, Q3, and Dipole magnets, provide
+point-to-point focusing and momentum dispersion just like the four magnets with
+the same names on the HMS. The SHMS Q1 was 
+manufactured by Scientific Magnetics, Inc. in Abingdon, England. The Q2, Q3, and
+the Dipole were constructed by Sigmaphi in Vannes, France.
+
+In order to reach the smallest scattering angles the SHMS has a horizontal-bend
+(HB) magnet as its first magnetic element. It was built by FRIB, the Department of Energy
+facility at Michigan State  University. This small, high-field magnet bends
+central-momentum particles to the left by 3~degrees so that the remainder of the
+spectrometer parts will be further away from the primary electron beam. The HB
+magnet is an asymmetric "C"-dipole which has a flux-return iron yoke only on
+the side away from the primary beam. When the SHMS is set for small scattering 
+angles, the electron beam passes very close to the spectrometer and to the
+HB magnet's superconducting
+coils. In this configuration the coils see a high radiation dose which may cause
+them to have a limited 
+lifetime. Experiments must be planned in such a way that this exposure is minimized.
+
+A further consequence of making the SHMS operate at small scattering angles is
+that the iron yokes of the HB and Q2 magnets had to be designed with notches 
+that just clear the beamline vacuum pipe. The fringe fields from these magnets can
+deflect the primary electron beam away from the middle of the beam dump. 
+The effects of this field
+must be mitigated by a combination of good experiment planning, magnetic shielding, 
+and automatic safety systems.
+
+The SHMS shield house has two rooms. The dipole magnet penetrates the front
+wall of the room containing the detectors. Inside this are the two sets of 6-plane
+drift chambers, the Heavy-Gas Cerenkov (HGC), the two pairs of trigger hodoscopes 
+(S1X/S1Y and S2X/Q2Y), and
+the Preshower and Shower Counters (calorimeters). The SHMS focal plane forms an 
+angle of about 5~degrees with respect to the central trajectory, 
+and intersects that trajectory at
+a point midway between the two drift chamber boxes. Additional  particle-identification
+detectors (Noble-Gas Cerenkov (NGC), and/or Aerogel Cerenkov) may also be 
+installed if needed by the current experiment. When the NGC is not in use it may
+be replaced by a tank that extends the vacuum system up  to a window just in
+front of the first drift chamber. In this configuration, a mechanical safety shutter
+must be closed over this large vacuum window before personnel may enter the
+room.
+
+The second room in the SHMS shield house houses the
+electronics controlling the magnet power supplies, the data-acquisition 
+electronics (DAQ) and power supplies for the detectors, and theVESDA
+smoke and flammable gas sensor systems. When personnel enter the shield
+house they first pass into this "Electronics Room". 
 }
 
 \begin{safetyen}{0}{0}
@@ -83,30 +167,54 @@ measured.
 
 The spectrometers have associated vacuum, electrical, cryogenic and
 magnet systems all of which can be extremely dangerous due to the size
-and stored energy in the systems.  Hazards of rotating the
+and stored energy in the systems.  
+Parts of the spectrometers are at elevated levels which would present fall
+hazards if the installed safety equipment were not present.
+Hazards of rotating the
 spectrometers as well as the particle detectors that get placed inside
 the detector hut of the spectrometer are covered in detail in
 following sections.
 
+Signage and alerts are placed to remind workers of some of the potential hazards
+in Hall C, but each individual is ultimately responsible for his or her own 
+safety. Always read and respect warning signs, and never attempt to 
+circumvent barriers or other equipment
+that has been installed for your protection. If you discover what appears to be a
+new or unidentified hazard, protect your coworkers by warning them
+and alert the Hall-C management and Safety Warden.
+
 \subsection{Mitigations}
 
+Both of the spectrometers have elevated work platforms that are secured by
+gates and handrails. Never attempt to bypass these protections. During experiment
+running periods, in order to allow spectrometer rotation, it may be necessary to
+remove the handrails around the target platform. In this condition access to the 
+target platform is restricted to trained individuals who have been specifically
+authorized to work near there. Fall-protection equipment is required.
+
 The vacuum systems associated with the spectrometers are essentially 
-pressure vessels and care should be exercised so as not to puncture the 
-windows.   During hall maintenance, covers are placed over the windows
-to help mitigate accidentally hitting a window.
+pressure vessels and care should be exercised so as not to damage or puncture the 
+vacuum windows.   The large vacuum windows inside the two shield houses are protected
+by shutters which must be lowered into place before the access door to the
+detector rooms will open. (When the Noble-Gas Cerenkov (NGC) is installed in the SHMS, 
+the NGC itself protects the vacuum window and the shutter is not present.)
+During hall maintenance, covers are placed over the spectrometer
+vacuum windows near the pivot
+to help prevent anything from accidentally hitting a window.
 
 The magnets themselves are installed inside cryostats.  These vessels 
 are exposed to high pressures and are therefore equipped with safety 
 relief valves and burst discs.   
 
-The cryogenic system operates at an elevated pressure at 4K.  One must
+The cryogenic system operates at an elevated pressure and at a temperature 
+about 4~Kelvin (helium system) or about 90~Kelvin (nitrogen system).  One must
 guard against cold burns and take the normal precautions with pressure
-vessels when operating this system.  Only authorized personnel are
-permitted to install and take out U-tubes.
+vessels when operating this system.  Manipulation of any cryogenic system
+component such as a U-Tube or manual valve may only be performed by
+a trained cryogenic-system expert.
 
-The magnets have a great deal of stored energy as they are large 
-inductors. Always make sure people are clear of them and that
-the dump resistor is attached to the magnet.
+When they are powered, the magnets have a great deal of stored energy as they are large 
+inductors. Always make sure people are clear of the magnets and their dump resistors.
 
 \subsection{Responsible Personnel}
 
@@ -154,29 +262,65 @@ The material chosen for the vacuum windows, then, must be both light enough
 to have a minimum effect on the beam and
 strong enough to operate reliably and safely.
 
-% Is this information still correct
-To achieve the above goals,
-composite Mylar/Kevlar vacuum windows have been constructed for the
-Hall~C spectrometers. The density of the Kevlar used
-is $\approx 0.75$ gm/cm$^3$ with a radiation
-length of $55.2$ cm \cite{rdup1}. The radiation length
-of Mylar is $28.7$ cm. The Kevlar has a tensile strength of 900 lbs/inch.
-
-The HMS spectrometer vacuum can has a volume
+The HMS spectrometer vacuum channel has a volume
 of approximately $6$ m$^3$, representing a stored energy of $6 \times 10^5$
-Joules. A drawing of the exit flange to which the vacuum
+Joules. A drawing of the  flange to which the exit vacuum
 window is attached is shown in Figure~\ref{fig:hms_flange}.  It is a
 circle with a center-to-center bolt hole diameter of $40$ inches
-and a $38$ inch diameter vacuum opening. This is the largest vacuum window
+and a $38$ inch diameter opening. This is the largest vacuum window
 required for Hall~C.
 Under vacuum, this window must support 16,785
-lbs (74,425 N). It is located in the HMS detector hut. The HMS
-entrance window is located near the pivot and has a center-to-center
-bolt hole diameter of $10.5$ inches.
+lbs (74,425 N). It is located in the HMS detector hut. 
 
+In the past, prior to the 12-GeV Upgrade, multiple scattering was a
+more significant issue than it is with today's higher-energy particles.  
+The large  vacuum window in the HMS
+shield house was often made of a Mylar/Kevlar composite material. 
+The density of the Kevlar used was $\approx 0.75$ gm/cm$^3$ with a radiation
+length of $55.2$ cm \cite{rdup1}. The radiation length
+of Mylar is $28.7$ cm. The Kevlar has a tensile strength of 900 lbs/inch. This composite
+material minimized the effective thickness of the window while providing the needed
+strength. However, the composite ages and loses integrity over time, so the window
+had to be replaced approximately every six months. There is no longer any known
+supplier of this material.
+
+Thin metal windows have an indefinite lifetime and cause
+multiple scattering which is small compared to the intrinsic resolution of
+the Hall-C spectrometers. Both the HMS and the SHMS are now equipped
+with metal windows, as detailed in Table ~\ref{tab:hall_c_windows_specs}.
+
+\begin{table}
+\begin{center}
+\caption{Vacuum Windows in Hall C\label{tab:hall_c_windows_specs}}
+\vspace{\baselineskip}
+\begin{tabular}{|l|l|l|l|} 
+\hline
+Window Location				& Dimensions 	 	& Material & Thickness (mm) \\ \hline
+Scattering Chamber Exit			& Very Wide		& Al		& 0.406\\
+HMS Entrance	on Snout			& 254 mm (dia)		& Unob	& ??\\
+HMS Exit						& 1016 mm (dia)	& Unob	& ??\\
+SHMS Entrance on HB Magnet		& $\approx 180$(w) x $\approx 220$(h)		& Al	& 0.508\\
+SHMS Exit					& 000 (dia)		& Al		& 0.508\\
+SHMS Exit from Vacuum Extension	& 000 (dia)		& Al	& 0.508\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+As shown in the table, the entrance window to the HMS is on the end of the 
+snout which extends from the HMS Q1 magnet towards the target. The SHMS
+entrance window is on the front of the HB magnet. Fig.~\ref{fig:hms_flange} shows
+the 8" long vacuum spool piece which forms the end of the HMS vacuum
+volume and provides the mounting flange for the large vacuum window. 
+
+
+%The HMS entrance window is located near the pivot and has a center-to-center
+%bolt hole diameter of $10.5$ inches.
+
+%Figure~\ref{fig:hms_flange}
 \begin{figure}
 \includegraphics[width=6in]{figHMSflange}
-\caption{The HMS exit flange and the 8" vacuum spool piece. \label{fig:hms_flange}}
+\caption{The HMS exit flange and the 8" long Vacuum Spool Piece. \label{fig:hms_flange}}
 \end{figure}
 
 \begin{obsolete}
@@ -196,6 +340,7 @@ any work directly affecting a Hall~C vacuum window}.
 
 \paragraph{Design and Placement of HMS Large Window}
 
+\begin{obsolete}
 After extensive testing of the above design
 and of other similar designs and fabrics (Spectra, Kevlar/Nylon fabric),
 we chose to have a new
@@ -212,6 +357,7 @@ method have
 been used successfully on both Hall~C spectrometers, holding a vacuum of
 $\approx 10^{-4}$ Torr. It is necessary to have a large number of bolt holes in the flange ring
 for clamping strength.
+\end{obsolete}
 
 Figures~\ref{fig:hms_window} shows the
 window and ring flanges as mounted on the spectrometer. The thick
@@ -273,6 +419,8 @@ no aluminum shutter in the SOS spectrometer.
 \end{figure}
 \end{obsolete}
 
+
+\infolevfour{
 \paragraph{Window Material Testing}
 
 Standard models used in predicting vacuum
@@ -293,16 +441,16 @@ inch thick aluminum blanking flange. For hydrostatic testing, windows (both
 round and rectangular) are mounted directly on
 blanking flanges with appropriate water fittings installed.
 
-\begin{table}
+\begin{figure}
 \includegraphics[height=7.5in]{vacuum}
 \caption{Tests on the Hall~C Vacuum Windows (1 of 2) \label{tab:win_tst1}} 
-\end{table}
+\end{figure}
 \clearpage
 
-\begin{table}
+\begin{figure}
 \includegraphics[height=7.5in]{vacuumc}
 \caption{Tests on the Hall~C Vacuum Windows (2 of 2) \label{tab:win_tst2}}
-\end{table}
+\end{figure}
 \clearpage
 
 The tests show that the large HMS exit window does not begin to leak until
@@ -364,7 +512,6 @@ Entrance and exit windows composed of the Mylar/Kevlar laminate
 material here described have held vacuum on the Hall C
 spectrometer effectively and safely for over three years.
 
-\infolevfour{
 
 \paragraph{Vacuum Window Fabrication and Installation Procedure}
 
@@ -1619,8 +1766,8 @@ is currently maintained by the two mechanical pumps.
 One pump is located between Q3 and the Dipole on the small angle
 side of the carriage while the second pump is the backing
 pump of the turbo and pumps the spectrometer volume through the turbo.
-Presently we do not use the turbo pump to pump the spectrometer volume due to
-the high leak rate through the large rear vacuum window in the shield house.
+%Presently we do not use the turbo pump to pump the spectrometer volume due to
+%the high leak rate through the large rear vacuum window in the shield house.
 This mechanical pump is located
 at the back of the carriage and the turbo is located in the shield house
 underneath the end of the vacuum can that protrudes into the detector hut.
@@ -1668,14 +1815,16 @@ HMS collimators is denoted in Table~\ref{tab:apertures}.
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 {} & {} & {} & {} & {} & {} \\
-HMS/SOS & d$\Omega$ & Horizontal & Vertical & Shape & Note \\
-{} & (msr) & (mr) & (mr) & {} & {} \\
+HMS				& d$\Omega$ 	& Horizontal 	& Vertical 		& Shape 			& Note \\
+{} 				& (msr) 		& (mr) 		& (mr) 		& {} 				& {} \\
 {} & {} & {} & {} & {} & {} \\ \hline
-HMS & 6.74 & $\pm$ 27.5 & $\pm$ 70.0 & Octagonal, Flared & Quads Nominal \\
-HMS & 6.74 & $\pm$ 27.5 & $\pm$ 70.0 & Octagonal, Flared & Quads Backward \\
-{} & {} & {} & {} & {} & {} \\
-SOS & 7.55 & $\pm$ 57.5 & $\pm$ 37.5 & Octagonal, Flared & \\
-SOS & 3.98 & $\pm$ 32.5 & $\pm$ 35.0 & Octagonal, Flared & \\
+{}Need Description	& 6.74 		& $\pm$ 27.5 	& $\pm$ 70.0 	& Octagonal, Flared 	& Quads Nominal \\
+{}	 			& 6.74 		& $\pm$ 27.5 	& $\pm$ 70.0 	& Octagonal, Flared 	& Quads Backward \\
+{} & {} & {} & {} & {} & {} \\ \hline
+%SOS & 7.55 & $\pm$ 57.5 & $\pm$ 37.5 & Octagonal, Flared & \\
+%SOS & 3.98 & $\pm$ 32.5 & $\pm$ 35.0 & Octagonal, Flared & \\
+SHMS			& d$\Omega$ 	& Horizontal 	& Vertical 		& Shape 			& Note \\
+{} 				& (msr) 		& (mr) 		& (mr) 		& {} 				& {} \\
 \hline
 \end{tabular}
 \end{center}
@@ -1687,7 +1836,46 @@ veto counter (to prevent punch-through of hadrons) and/or to increase
 the collimator thickness. Two circular quick-connect flanges are
 added for feed-through of possible light guides.
 
+A similar remotely-operated collimator box is installed on the SHMS between the
+HB and Q1 magnets. The collimator ladder assembly within this box may be positioned
+at three settings. The top position (accessed when the assembly is at its lowest
+position) is a stretched octagon with opening height 9.843" and width 6.693" on the
+upstream side. It is 2.5" thick. The lower two positions both present sieve holes in
+rectangular pattern with holes separated by 0.6457" horizontally and 0.9843"
+vertically. The sieve pattern at the middle ladder position has 11 columns of holes with
+the sixth column centered horizontally. The holes on the bottom sieve are in ten
+columns and are offset by one-half a column gap from those in the middle sieve.
+The sieve collimators are 1.25" thick. The geometry is illustrated in Fig.~\ref{fig:SHMS_Collimators}.
+Both sieves and octagonal collimator are
+made of Mi-Tech\texttrademark{} Tungsten HD-17 (Density 17 g/cc. 90\%~W, 6\%~Ni, 4\%~Cu).
+
+Because the SHMS has both a horizontal bend (HB magnet) and a vertical bend (main Dipole
+magnet), a second sieve collimator is required for optics calibration. It is placed immediately
+upstream of the HB magnet entrance. Two options are provided: a conventional passive
+sieve collimator and the so-called \textit{active sieve} which is a detector based on Gas Electron 
+Multipliers (GEMs).  A photo of the passive sieve options is shown in Fig.~\ref{fig:HB_Sieve_Photo}
+and the dimensions and hole pattern are shown in Fig.~\ref{fig:HB_Sieve_Layout}.
+
+\begin{figure}
+\includegraphics[width=3in]{SHMS_Collimators}
+\caption{Geometry of the Main Collimator and the Sieve Slits in the SHMS \label{fig:SHMS_Collimators}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{HB_Sieve_Photo}
+\caption{Upstream Sieve Slits that go on the front of the HB magnet of the SHMS \label{fig:HB_Sieve_Photo}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{HB_Sieve_Layout}
+\caption{Upstream Sieve Slits that go on the front of the HB magnet of the SHMS \label{fig:HB_Sieve_Layout}}
+\end{figure}
+
 \subsection{Operation of the HMS Slit System}\label{sssec:slit_control}
+
+{\bf IN 2016 EPICS DRIVERS AND SCREENS ARE BEING WRITTEN FOR 
+THE COLLIMATOR MOTION CONTROLS. THE TEXT BELOW WILL NEED TO BE UPDATED.}
+
 A remote control system consisting of motor/actuators exists to slide
 the slits into place. Resolvers specify the exact position of the
 slits.  The control box is located downstairs in Hall~C, behind the
@@ -1702,6 +1890,7 @@ system.
 {\bf After a power cycle the HMS slit moves itself to the {\it HOME} position,
 returning a reading of 0. Thus, after a power failure or other cycle, the slit
 must be commanded to a meaningful position using the commands described below.}
+
 
 Normally, the system is operated remotely. Connect to the controller
 using terminal server hctsv7, port 3:
@@ -1727,18 +1916,32 @@ at the telnet prompt, type \texttt{quit}.
 Don't forget to get rid of your session. If you do not close your session nobody
 else can communicate with the slit controllers.
 
+%\begin{table}[!ht]\
+%\caption{Slit Collimator Positions\label{tab:col_pos}}
+%\begin{center}
+%\begin{tabular}{rlrr}
+%   &                  &     HMS   & SOS\\
+%\hline
+%1) & Sieve Slits      &  19804600 &  11638719\\
+%2) & Large Collimator &       N/A &   3190717\\
+%3) & Pion Collimator  &  -3096800 &       N/A\\
+%\end{tabular}
+%\end{center}
+%\end{table}
+
 \begin{table}[!ht]\
 \caption{Slit Collimator Positions\label{tab:col_pos}}
 \begin{center}
 \begin{tabular}{rlrr}
-   &                  &     HMS   & SOS\\
+   &                  &     HMS   & SHMS\\
 \hline
-1) & Sieve Slits      &  19804600 &  11638719\\
-2) & Large Collimator &       N/A &   3190717\\
-3) & Pion Collimator  &  -3096800 &       N/A\\
+1) & Sieve Slits      &  19804600 &  ????\\
+2) & "Large" Collimator &       N/A &   3190717\\
+3) & "Pion" Collimator  &  -3096800 &       N/A\\
 \end{tabular}
 \end{center}
 \end{table}
+
    
 \subsection{Hazard Identification}
 
@@ -1788,7 +1991,7 @@ ladder to prevent it from falling all the way down}.
 
 A brake system has been included in the control to prevent the slit ladder
 from sliding down in case of a power failure.  However, this must not
-be relied upon for personnel safey.
+be relied upon for personnel safety.
 
 
 \section{HMS Carriage and Rotation System }
@@ -1919,9 +2122,8 @@ or too large an angle, or if it just gets pushed around inadvertently.}
 
 Hazard mitigations:
 \begin{itemize}
-\item{Guards on either side of the wheels prevent items from getting under them.}
-\item{Large pins in the floor to stop the spectrometer rotated beyond the needed angular range.}
-\item{Blinking lights on the spectrometers indicating they are in motion or that motion
+\item{Stop-blocks attached to the rails to prevent spectrometer rotation beyond the needed angular range.}
+\item{Audible alarm on the spectrometers indicating they are in motion or that motion
 is possible (controls engaged etc.)}
 \item{During a running experiment the run coordinator and work coordinator should know in advance 
 of any moves.  Moves at any other time must be cleared with the Hall work coordinator 
@@ -1931,7 +2133,7 @@ the pre-run checklist performed by the technical staff prior to closing the Hall
 a remote camera allows shift worker to inspect the area.}
 \item{Any motion that takes a spectrometer inside 14 degrees or outside \emph{X} degrees
 (\emph{X} being specified in the pre-run checklist and noted on the whiteboard during a run) 
-must be supervised by a trained Hall A technician.}
+must be supervised by a trained Hall C technician.}
 \end{itemize}
 \end{safetyen}
 
