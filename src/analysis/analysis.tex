@@ -1,64 +1,76 @@
 %--- Description of components
+% Need to setup a default online analyzer location for checking data quality
+% Add note on how to run histogrammer and provide some sample data
+% quality histograms
 
 \newcommand{\cppaver}{1.5.24}
 
 \infolevone{
 
-The standard offline analysis software for Hall A data is ``Podd'' 
-(a.k.a.\ the ``C++ Analyzer''), 
-an object-oriented C++ class package developed at
-Jefferson Lab by Hall A staff. Podd is based on the
+The standard offline analysis software for Hall C data is ``hcana'' 
+(a.k.a.\ the ``Hall C Analyzer''), 
+an object-oriented C++ class package developed
+by Hall C users and staff.  hcana
+is built on top of the Hall A analysis software ``podd'' and uses the
 ROOT~\cite{ROOTcern} programming framework, developed at CERN.
-All of ROOT's analysis and visualization tools are available from within Podd,
-plus specialized classes for Hall A physics analysis. 
-The current version of the Podd is \cppaver. Detailed information about the
+All of ROOT's analysis and visualization tools are available from within hcana,
+plus specialized classes for Hall C detectors and physics analysis. 
+More information about the
 software (downloads, documentation, etc.) can be found at
 \begin{center}
-  \url{http://hallaweb.jlab.org/podd/}.
+  \url{https://hallcweb.jlab.org/wiki/index.php/ROOT_Analyzer}.
 \end{center}
 
-Podd is modular and easily extensible.
+hcana is newly developed for the 12 GeV era and supercedes the Fortran
+based ENGINE used in the 6 GeV era for analysis of HMS and SOS data.
+This new analysis software curently replicates the algorithms of the
+ENGINE, so in principle hcana could be used to analyze 6 GeV era data and
+reproduce the results of the Fortran analyzer.
+
 Individual analysis components are designed as plug-in modules
 that can be loaded dynamically from an analysis script or otherwise as needed. 
 As a result, the scope of the data analysis is 
-largely user-configurable. Only data from those spectrometers and 
-detectors is analyzed, and only those physics calculations are carried out,
-that the user specifies. Configuration can occur at run 
+largely user-configurable. Only data from the configured spectrometers and 
+detectors are analyzed, and only the user specified physics
+calculations are carried out. Configuration can occur at run 
 time without any need for recompilation of the program.
 
-Currently supported are the analysis of the Hall A HRS spectrometers,
-the beamline instrumentation, scaler and EPICS~\cite{EPICSwww} 
-slow control data, and beam helicity information.
+Currently supported are the analysis of the Hall C HMS, SHMS (and SOS)
+spectrometers,
+%the beamline instrumentation,
+scaler and EPICS~\cite{EPICSwww} 
+slow control data.  %, and beam helicity information.
 The event decoder is compatible with the CODA~\cite{CODAwww}
 event data format described in the section on Data Acquisition. 
-Decoding of basic helicity information as well as a sophisticated
-algorithm for decoding and prediction of the G0 helicity sequence is
-possible. The following detectors can be used in either HRS spectrometer:
+%Decoding of basic helicity information as well as a sophisticated
+%algorithm for decoding and prediction of the G0 helicity sequence is
+%possible.
+The following detectors can be used in the spectrometers:
 \begin{itemize} \setlength{\parskip}{0ex}
-  \item Vertical Drift Chambers (VDCs)
-  \item Scintillators (one or more paddles with up to two PMTs each)
-  \item Cherenkov counters (arbitrary number of PMTs/mirrors, 
-        usable for both gas Cherenkovs and aerogels in each HRS)
-  \item Shower counters (shower, preshower, pion rejectors with 
-        arbitrary organization in terms of rows and columns of blocks)
-  \item Total shower counter (combination of a preshower and shower)
+  \item Horizontal Drift Chambers (DCs)
+  \item Hodoscopes (one or more planes of scintillator or quartz bars)
+  \item Gas Cherenkov counters
+  \item Aerogel counter
+  \item Shower counters (one or more planes of side readout bars and
+    optionally a fly's eye array.)shower, preshower, pion rejectors with 
 \end{itemize}
 \infolevone{
 
-The VDC code performs tracking in the focal plane and reconstruction to the
-target. The tracking algorithm has been shown to be accurate for events 
-with one cluster per plane. Noisy events with higher cluster multiplicity
-and events with more than one good track in the focal plane may not be
-reconstructed correctly by the present version of the code, but work is in
-progress to make this type of analysis also reliable.
+The Drift Chamber code performs tracking in the focal plane and is able to
+identify multiple tracks.  The THcHallCSpecrometer apparatus class
+projects these tracks back to the target, determining momentum, target
+position, and scattering angles for each track.  This class also
+selects a best or ``golden'' track using various criteria including
+track fit $\chi^2$ and information from hodoscopes.
 
 The scintillator, Cherenkov, and shower counter classes perform basic decoding,
 calibration (offset/pedestal subtraction, gain multiplication), and summing 
 (for Cherenkovs) or cluster-finding (for showers) of hits. 
-The cluster-finding algorithm of the shower class is basic and currently 
-only capable of finding a single cluster per event. These classes are largely
-generic and should be able to accommodate most new detectors of the respective 
-type, even with a different geometry and number of channels.
+%The cluster-finding algorithm of the shower class is basic and currently 
+%only capable of finding a single cluster per event. These classes are largely
+%generic and should be able to accommodate most new detectors of the respective 
+%type, even with a different geometry and number of channels.
+% Not so generic for Hall C
 
 Several beamline apparatuses are available: a dummy beam (always at zero 
 position and angle), an ``unrastered'' beam, and a ``rastered'' beam. 
@@ -67,13 +79,13 @@ can be analyzed to obtain the beam position
 on an event-by-event basis.  The BPM code currently only supports
 standard ADCs (e.g.\ LeCroy), not the older Struck readout.
 
-Plug-in libraries have been developed by users for the following equipment:
-the BigBite spectrometer (in several configurations), 
-the neutron detector of the $G_E^n$ experiment (E02-013),
-the focal-plane polarimeter (FPP) and the ring-imaging Cherenkov counter
-(RICH), which are optional detectors for the HRS, and the DVCS photon
-detector. Most of these libraries are available from the Podd web page
-cited above.
+%Plug-in libraries have been developed by users for the following equipment:
+%the BigBite spectrometer (in several configurations), 
+%the neutron detector of the $G_E^n$ experiment (E02-013),
+%the focal-plane polarimeter (FPP) and the ring-imaging Cherenkov counter
+%(RICH), which are optional detectors for the HRS, and the DVCS photon
+%detector. Most of these libraries are available from the Podd web page
+%cited above.
 
 To carry out standard post-reconstruction calculations, the following
 so-called physics modules are available:
@@ -85,7 +97,7 @@ so-called physics modules are available:
           particle 
   \item Coincidence time
   \item Reaction point (vertex position) reconstruction 
-  \item Extended target tracking corrections for the HRS
+%  \item Extended target tracking corrections for the HRS
   \item Energy loss corrections
 \end{itemize}
 There is no limit (other than machine resources) to the number of physics 
@@ -116,11 +128,18 @@ allows making decisions about an event early in the analysis,
 improving performance.  A summary of all test results is written to a
 file at the end of the analysis.
 
-Data of interest can be histogrammed and/or written to
+Data of interest that is save in global variables
+can be histogrammed and/or written to
 a ROOT Tree in the output file.  The contents of the output
 is defined dynamically at the beginning of the analysis.
 Both 1- and 2-dimensional histograms are supported. Histograms
 can be filled selectively using logical expressions (cuts).
+
+Text summaries of run and analysis information can be made with the
+PrintReport method of the THcAnalyzer class.  Using text based
+templates, similar to templates used in the old ENGINE analyzer,
+hardware scalers, parameters, statistics of cut success, and other
+information such as EPICS values can be written to ``reports.''
 
 } %end \infolevone
 
@@ -137,25 +156,30 @@ version \cppaver\ of Podd.
 \hline
 Class name & Description \\
 \hline
+\multicolumn{2}{|l}{Support} \\
+\hline
+THcAnalyzer & Hall C customized analyzer event loop \\
+THcParmList & Read and store detector and physics parameters \\
+THcFormula & Extends ThaFormula to allow access to parameters and cut
+statistics \\
 \multicolumn{2}{|l}{Apparatuses} \\
 \hline
-THaHRS     & HRS spectrometer (left or right) with VDC (``vdc'') \\
-           & and two scintillator planes (``s1'', ``s2''). \\
+THcHallCSpectrometer  & Hall C spectrometer (SHMS, HMS or SOS) \\
 THaIdealBeam & Dummy beam with zero position and angle. \\
-THaRasteredBeam & Beam with raster \\
+THcRasteredBeam & Beam with raster \\
 THaUnrasteredBeam & Beam without raster (for calibration) \\
 THaDecData   & Miscellaneous decoder raw data \\
 \hline
 \multicolumn{2}{|l}{Detectors} \\
 \hline
-THaVDC          & VDC package for HRS \\
-THaScintillator & generic scintillator \\
-THaCherenkov    & generic Cherenkov (gas or aerogel) \\
-THaShower       & generic shower counter \\
-THaTotalShower  & combination of preshower and shower \\
-THaBPM          & beam position monitor with standard ADCs \\
-THaRaster       & beam raster system \\
-THaHelicity     & beam helicity information (in-time or delayed) \\
+THcDC          & Drift Chamber Package \\
+THcHodoscope   & Set of Scintillator (or quartz) planes \\
+THcCherenkov    & Gas Cherenkov \\
+THcAerogel      & Aerogel Cherenkov \\
+THcShower       & combination of preshower and shower \\
+%THaBPM          & beam position monitor with standard ADCs \\
+THcRaster       & beam raster system \\
+%THaHelicity     & beam helicity information (in-time or delayed) \\
 \hline
 \multicolumn{2}{|l}{Physics Modules} \\
 \hline
@@ -176,7 +200,7 @@ THaGoldenTrack   & selects Golden Track from multiple reconstructed tracks \\
 THaDebugModule   & prints values of global variables for each event and waits\\
 \hline
 \end{tabular}
-\caption{Analysis modules available in version \cppaver\ of Podd}
+\caption{Analysis modules available in Podd.  Not tested with hcana.}
 \label{offl:tab:modules}
 \end{table}
 
@@ -192,7 +216,8 @@ THaDebugModule   & prints values of global variables for each event and waits\\
 
 %--- Procedures
 \infolevtwo{
-\section{Running Podd}
+\section{Running hcana}
+% Need to define where precompiled versions on DAQ machine are.
 Precompiled binaries of the latest version of the Podd are
 installed on the Hall A counting house analysis machines 
 (adaql1--10). To run Podd, log into any
@@ -288,8 +313,11 @@ involves the following steps:
 	ROOT's visualization tools are available from within Podd.
 \end{enumerate}
 
-\section{Database Files and Directories}
+\section{Parameter Database Files}
 \label{offl:sec:database}
+hcana is designed to use the same style of parameter files that were
+used for the Fortran ENGINE.
+
 Version \cppaver\ of Podd uses simple ASCII text files
 to store database information. There is usually one file for each 
 analysis module. The name of each file is composed as follows:\\
@@ -406,8 +434,8 @@ The responsible personnel are shown in table \ref{tab:offline:personnel}.
 \begin{namestab}{tab:offline:personnel}{Offline analysis: 
 authorized personnel}{%
       Offline analysis: authorized personnel.}
-  \OleHansen{\em Contact}
-  \RobertMichaels{}
-  \AlexandreCamsonne{}
+  \MarkJones{\em Contact}
+  \StephenWood{}
+  \OleHansen{}
 \end{namestab}
 }
