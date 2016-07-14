@@ -1,30 +1,53 @@
+The SHMS and HMS spectrometers each contain a set of detectors that
+trigger event readout and perform tracking and particle identification
+(PID).  The detector package in each spectrometer is similar with
+differences in part due to the different momentum ranges of the
+spectrometers.  These detectors are located in shielded detector huts
+to minimize background from the hall.  The detector huts include the
+following types of detectors, not all of which may be installed,
+depending on the needs of a particular experiment:
+\begin{itemize}
+\item[Drift Chambers]Two drift chambers, each with 6 wire planes,
+separated by about a meter.  These detectors provide tracking of
+particles exiting the spectrometer vacuum chamber.  The tracks from
+these chambers are traced, with software, back to the target to
+provide particle momentum, scattering
+angles, and target position.  They are usually the first detectors
+in the path of the detectors.  (The SHMS Noble Gas Cerenkov will
+sometimes be installed in front of the SHMS drift chambers.)
+\item[Hodoscopes]A set of 4 hodoscope planes.  A hodoscope plane
+consists of a set of long thin elements/bars, each several centimeters
+wide, that covers the acceptance of particles passing through the
+detector package.  A pair of planes, one with horizontal bars, one
+with vertical bars (S1X, S1Y) are located after the drift chambers.  A
+second pair, S2X and S2Y, are located some distance past the pair.
+The sensitive elements of these planes are scintillator material, with
+the excpetion of S2Y in the SHMS which uses quartz.  The light from
+particles passing through the bars is detected by photomultiplier
+tubes (PMTs) at the ends of each bar.  The hodoscopes, possibly in
+coincidence with other detectors, provide the trigger to the data
+acquisition system and a time reference for the drift chambers.
+They also contribute to PID by measuring the time of
+flight between the two pairs of planes and from pulse amplitude.
+\item[Gas Cerenkov detectors]Depending on momentum and index of
+refraction of the gas used, provide either discrimination between
+electrons and pions, or between pions and kaons
+\item[Aerogel Cerenkov]Contain an Aerogel radiator and a diffusion box
+  with PMTs to collect Cerenkov light.  These detectors aid in the
+  detection of kaons by  discrimination between kaons
+and protons (or at low momentum discrimination between pions and
+protons.)
+\item[Shower Counter]A large array of lead glass.  This detector is
+  last in each detector stack.  Most of the energy of electrons or
+  positrons is
+  collected in the shower counter aiding in the discrimination between
+  electrons/positrons and other particles.
+\end{itemize}
+\cite{CDR12GeV}
 
-The detector packages of the SHMS and HMS must perform at least two
-functions: tracking and
-particle identification (PID).
-A particle traversing the detector stack
-encounters two sets of drift chambers with six planes of sense
-wires in each chamber. From the chamber information both positions
-and angles in the dispersive and transverse directions can be determined.
-The information from these chambers is the principal input
-of the tracking algorithms.
+The detector packages are key to successful measurements.  Their
+proper operation should therefore be constantly monitored during
+shifts. There are normally a number of diagnostic spectra available to
+aid in this process.  Typically each collaboration customizes it's own
+set of diagnostic spectra.
 
-\sawnote{Some details have to be changed to encompase differences in SHMS.}
-The chambers are followed by two planes of hodoscopes designated S1X and S1Y.
-These plastic scintillator arrays provide the timing reference for the
-drift chambers, are used in trigger formation, and in combination
-with a second hodoscope pair, provide time-of-flight particle identification.
-These scintillators can also be used to perform crude tracking.
-
-The next element encountered by a particle is a gas threshold Cerenkov detector.
-This is used for particle identification. In the SOS spectrometer, this
-gas threshold Cerenkov detector can be replaced by an Aerogel detector,
-with a similar function.
-
-The second hodoscope pair, S2X and S2Y, is located directly behind the
-gas Cerenkov. Their function is essentially the same as that of S1X and S1Y.
-In the SOS spectrometer, an option exists to have this hodoscope pair
-be preceded by a third chamber to improve tracking.
-
-The final element in the detector stack is the lead glass shower calorimeter.
-This is used for energy determination and PID.
