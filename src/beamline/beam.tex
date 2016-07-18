@@ -23,8 +23,7 @@ C are such that special attention is paid to the following:
 \end{list}
 
 Drawings of the Hall C line from the shield wall to the target are
-show in
-shown on Figs.~\ref{fig:Cline1},~\ref{fig:Cline2} and \ref{fig:Cline3}. 
+shown in Figs.~\ref{fig:Cline1},~\ref{fig:Cline2},~ \ref{fig:Cline3}, and~ref{fig:Cline4}. 
 
 \begin{figure}
 \begin{center}
@@ -49,10 +48,18 @@ serve as beam optics elements during normal operations.}
 
 \begin{figure}
 \begin{center}
+\includegraphics[angle=0,width=15cm]{hallc_beamline_arc_alcove.pdf}
+\caption[Beamline: Hall C Beamline Overview]{Hall C beamline from green shield wall to hall entrance.}
+\label{fig:Cline3}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
 \includegraphics[angle=0,width=15cm]{ds_beamline.png}
 \caption[Beamline: Hall C Beamline Overview]{View of the beamline from
 entrance to the hall to the target scattering chamber.}
-\label{fig:Cline3}
+\label{fig:Cline4}
 \end{center}
 \end{figure}
 }
@@ -63,157 +70,135 @@ entrance to the hall to the target scattering chamber.}
 The beam entrance channel consists of 63.5 mm inner diameter stainless steel 
 tubing connected with conflat flanges. Through magnets the inner diameter of the 
 tubing is restricted to 25.4 mm. 
-%%NOTE: 'tab:beam_tab1' is in beamline/tables.tex, but this is not included anywhere
-%Sections are isolated by vacuum valves and these are listed in Table~\ref{tab:beam_tab1}. 
 Each section has a roughing port and is pumped with an ion pump. 
-The pressure is about 10$^{-6}$ Torr. There are several sections along the 
-beamline where users interface their equipment. Their individual systems 
-are tested leak tight (to $ \le 10^{-9}$ Atm cm$^3$/sec).
+The pressure is about 10$^{-6}$ Torr or better.
+}
 
 \subsection{The Beam Optics Channel}
 
-These consist of dipoles, quadrupoles, sextupoles, and 
+These consist of dipoles, quadrupoles, sextupoles (generally not used), and 
 beam correctors with their 
 standard girders and stands. Starting from the beam switch yard, there are 
 eight dipoles in the arc section which (along with five  other smaller beam 
 deflectors) bend the beam 37.5 degrees into the hall. Each dipole has a 
 quadrupole and a pair of steering magnets (correctors) associated with it. 
 After the shield wall at the entrance to the tunnel into the hall the beam is 
-essentially undeflected onto the target and into the dump.  
-
-% Note the vertical jog
+essentially undeflected onto the target and into the dump. However a small vertical
+displacement of the beam ($\approx$ 2 cm up) is implemented to
+adjust the beam height to the optical axis of the Hall C spectrometers.
 
 The beamline optics elements are designed to deliver 
 various optical tunes of the beam on to the physics target as well as 
 simultaneously deliver various optical tunes at other locations along the 
-beamline. These requirements are listed in Tables \ref{beam_tab3} and \ref{beam_tab4}. 
-For the basic beamline we 
-are able to deliver beam onto the hall C target in the achromatic
-mode. 
+beamline. During normal operations, it is possible to deliver beam
+with a focus at the physics target in the hall and at the interaction
+point of the Compton polarimeter. It is not possible to simultaneously
+achieve a focused beam at the M\o ller polarimeter target.
+
+During normal operations, the beam is delivered with an achromatic tune.
+For measurement of the beam energy, a dispersive tune is used. The nominal
+Hall C beam properties (achromatic tune) are listed in Table \ref{beam_tab3}. 
  
 \begin{table}[hp]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|} \hline
-{\bf Mode} & {\bf Spot Size} & {\bf Dispersion} & {\bf Position} & {\bf
-Size} \\
-& {\bf 4$\cdot\sigma_{x,y}$} & {\bf $\eta$} & {\bf Stability} & {\bf
-Stability} \\ \hline
-Achromat & 140$\mu$m & 0 & 50$\mu$m & 50$\mu$m \\ \hline
-Dispersive & $\propto \eta\delta$ & 4m to 12m & 50$\mu$m & 50$\mu$m \\
-\hline
-Defocussed & 0 to 3mm & 0 & $\pm$10\% & $\pm$10\% \\ \hline
+\begin{tabular}{|c|c|c|c|} \hline
+{\bf Emittance}  & {\bf Energy Spread} & {\bf spot size}  & {\bf Halo}  \\
+   (nm-rad)       &   $\sigma$ (\%)     & $\sigma$ ($\mu$m)&  (\%) \\ \hline 
+$\epsilon_x <$ 10 &  $<$ 0.05           & $\sigma_x<$ 400  &  $<$0.01 \\
+$\epsilon_y <$ 5  &  $<$ 0.03           & $\sigma_y<$ 200  &        \\ \hline
 \end{tabular}
 \end{center}
-\caption[Beamline: Optics Requirements Target]{ Line C Optics and Beam Requirements at Target}
+\caption[Beamline: Hall C Beam nominal properties at target]{Hall C Beam nominal properties at target}
 \label{beam_tab3}
 \end{table}
 
-\newcounter{footnotetmp1}
-\setcounter{footnotetmp1}{\value{footnote}}
-\stepcounter{footnotetmp1}
-\newcounter{footnotetmp2}
-\setcounter{footnotetmp2}{\value{footnotetmp1}}
-\stepcounter{footnotetmp2}
-\begin{table}[h]
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|} \hline
-{\bf Mode} & {\bf Spot Size} & {\bf Dispersion} & {\bf Position} & {\bf Size} \\
-& {\bf $4\cdot{}\sigma_{x,y}$} & {\bf $\eta$} & {\bf Stability} & {\bf Stability} \\ \hline
-Energy-eP  {\color{red}\footnotemark[\arabic{footnotetmp1}]} & $>$100$\mu$m & 0 & 50$\mu$m & 50$\mu$m \\ \hline
-Moller Pol.{\color{red}\footnotemark[\arabic{footnotetmp1}]} & $>$250$\mu$m & 0 & 50$\mu$m & 50$\mu$m \\ \hline
-Compton Pol.  & $>$80$\mu$m & 0 & 50$\mu$m & 50$\mu$m \\ \hline
-Energy-arc {\color{red}\footnotemark[\arabic{footnotetmp1}]~\footnotemark[\arabic{footnotetmp2}]} && 15m & 50$\mu$m & 50$\mu$m \\ \hline
-\end{tabular}
-\end{center}
-\caption[Beamline: Optics Requirements Other]{ Line C Optics and
-         Beam Requirements at Other Locations.
-}
-\label{beam_tab4}
-\end{table}
-\addtocounter{footnote}{2}
-\footnotetext[\value{footnotetmp1}]{Destructive measurements.}
-\footnotetext[\value{footnotetmp2}]{Build dispersion in arc section with all 
-             magnetic elements except dipoles turned off.}
-
-Build dispersion in arc section with all magnetic elements except
-dipoles turned off.
-
 \subsection{Beam Diagnostic Elements}
 
-These consist of beam position monitors (BPMs), beam current monitors,  wire 
-scanners (superharps) and beam loss monitors. 
-The wire scanners are fabricated by Saclay (French 
-collaboration) and four have been installed along the beamline, two before 
-the arc section and two after the arc section. They are essential for the 
-beam energy determination by the arc method. Another two wire scanners are
-installed on the bench just before the target to determine the beam 
-position and direction of the beam at the target point with high precision 
-and also measure the emittance of the incident beam. They are also used to  
-absolutely calibrate the two associated beam position monitors located  in 
-front of the target. 
+The key beam diagnostic elements consist of beam position
+monitors (BPMs), beam current monitors (BCMs), and wire 
+scanners (harps). Hall C uses harps similar to those used throughout
+the CEBAF accelerator - there are several harps placed in the Hall C
+beamline which provide both absolute position and beam size information.
+The harps at 3C07 and 3C17 are used as part of the beam energy measurement
+procedure.  The harp at 3C20 provides information relevant for the Compton
+and M\o ller polarimeters. Finally the harps on the ``Hall C'' girder just before
+the target (3CH07A and 3H07B) provide position information for calibration of the
+BPMs and beam size information. All the harps in the Hall C beamline are controlled
+by accelerator. When harp scans are required for the experiment in the hall, shift
+workers should contact MCC, request a scan of the relevant harp, and request that
+they post the result in the electronic logbook.
 
 To determine the position and the direction of the beam on the experimental 
-target point, two Beam Position Monitors (BPMs) are located at distances 7.524 m 
-(IPM1H03A) and 1.286 m (IPM1H03B) upstream of the target position. 
+target point, three Beam Position Monitors (BPMs) are located at distances
+3.71 m (IPM3H07A), 2.25 m (IPM3H07B) and 1.23 m (IPM3H07C) upstream of the target position. 
 The BPMs consist of a 4-wire antenna array of open ended thin wire striplines 
 tuned to the fundamental RF frequency of 1.497 GHz of the beam ~\cite{bi:bar90}. The 
 standard difference-over-sum technique is then used ~\cite{bi:HW} to determine the 
 relative position of the beam to within 100 microns for currents
 above 1 $\mu $A. The absolute  position of the BPMs can be calibrated with respect to the 
-scanners (superharps) which are located adjacent to each of the BPMs (IHA1H03A 
-at 7.353 m and IHA1H03B at 1.122 m upstream of the target). 
-\infolevone{The schematic of the  readout electronics is shown in Figure ~\ref{fig:bpmel}.}
-The position information from the 
-BPMs can be recorded in three different ways:
-}
+superharps which are located adjacent to each of the BPMs (IHA3H07A 
+at 3.46 m and IHA1H07B at 1.55 m upstream of the target).
 
-\infolevone{
-\begin{figure}[hp]
-\begin{center}
-%\includegraphics[angle=0,width=15cm]{BPM_fig}
-{\linespread{1.}
-\caption[Beamline: BPM Readout Electronics]{Schematic of the BPM readout
-electronics}
-\label{fig:bpmel}}
-\end{center}
-\end{figure}
-}
+The BPMs are typically read out in two ways.
 
 \infolevone{
 1. The averaged position over 0.3 seconds is logged into the EPICS~\cite{EPICSwww} database (1 
-Hz updating frequency) and injected into the datastream every 3-4 seconds, 
+Hz updating frequency) and injected into the datastream every few seconds, 
 unsynchronized but with an reference timestamp. From these values we can 
 consider that we know the average position of the beam calculated in the EPICS 
 coordinate system which is left handed.
 
-2. Approximately once a shift (or more often if requested by the experimenters) 
-a B-scope procedure ~\cite{bi:TP} can be performed using the same EPICS electronics 
-which then gives the peak-to-peak variation of the beam.
-
-3. Event-by-event information from the BPMs are recorded in the CODA datastream
+2. Event-by-event information from the BPMs are recorded in the CODA datastream
 from each of the 8 BPM antennas (2x4) from which the position of the beam can be 
 reconstructed. However, these raw values belong to a parallel electronics chain 
 whose constants have to be retrieved by calibrations to the EPICS or scanner 
-data. 
+data.
+
+Figure~\ref{fig:bpm_readout} shows a schematic of how the BPMs are read out for use
+in the Hall C data acquisition.
+
+\begin{figure}
+\begin{center}
+\includegraphics[angle=0,width=15cm]{bpm_electronics_chain.pdf}
+\caption{Readout chain for the beam position monitors in Hall C.}
+\label{fig:bpm_readout}
+\end{center}
+\end{figure}
+
 
 \subsection{Beam Exit Channel}
+% add figure for ds beamline?
 
-\sawnote{Replace this section with description of Hall C beamline.
-Will need to include discussion of the HB fringe fields and shielded beam
-pipe.}
-After the target vacuum chamber, which was built by
-the University of Virginia, there is an exit beam pipe which 
-transfers the scattered beam onto the dump tunnel under vacuum. This exit beam 
-pipe is made of a thin walled aluminum spiral corrugated pipe of welded 
-construction. The largest diameter is 36 inches with a 0.164 inches wall 
-thickness and the smallest diameter is 6 inches with a 0.042 inches wall 
-thickness. The whole assembly is rather light (approximately 800 kg) and is 
-supported by H shaped adjustable stands. To prevent possible linear collapse 
-of the larger diameter sections under vacuum load, four aluminum channels of 
-total cross-sectional area of 3'' are welded to its side. A vacuum of 
-10$^{-5}$ Torr is maintained with a turbomolecular pump. The exit face of this 
-pipe has a 12'' port and is connected to the diffuser with a Beryllium 
-window.
+After the target vacuum chamber, there is an exit beam pipe which 
+transfers the scattered beam onto the dump tunnel under vacuum. The exit beam pipe
+will have more than one configuration due to the need to accommodate the use of the smallest
+SHMS angle in some cases as well as the need to incorporate magnetic shielding to
+prevent the beam from being deflected due to stray fields from the SHMS.
+
+The downstream beam pipe has an overall length of about 90 feet from the exit of the
+scattering chamber to the dump entrance. The portion of the pipe closest to the dump
+entrance is made of several sections of 24-inch diameter aluminum tube. Some sections
+of this 24-inch pipe can be replaced with sections to be used as beam position monitors
+(BPMs). Closer to the target, the beam pipe steps down to an 18-inch diameter tube. The combined
+length of the 18 and 24 inch diameter sections in about 44 feet.
+
+Moving upstream the next section of pipe has a 6 inch diameter and is about 23 feet long. The
+16-feet long section between the scattering chamber exit and the 6-inch diameter pipe is the region
+that undergo the most potential configuration changes. Depending on the minimum angles
+required for the SHMS and HMS, the beam pipe diameter can vary from 1.5 to 4 inches. As noted
+earlier, special magnetic shielding will be required when the SHMS is at small angles (typically
+less than 10 degrees), depending on the momentum.
+
+An overview of the downstream Hall C beamline is shown in Fig.~\ref{fig:ds_beamline}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[angle=0,width=15cm]{hallc_ds_beamline_eng.pdf}
+\caption{Schematic of the beam pipe that runs between the Hall C scattering chamber and the
+beam dump entrance.}
+\label{fig:ds_beamline}
+\end{center}
+\end{figure}
 
 }
 
@@ -228,8 +213,8 @@ The FSD system is a network of permissive signals which terminate at the
 electron gun and chopper 1. The permissive to the gun and chopper
 1 may be inhibited by any device connected to an FSD mode. Devices connected to the 
 FSD system include vacuum valves, RF systems, Beam loss systems, beam current 
-monitors, beam dumps, and particular to Hall A, the target motion mechanism 
-and the raster (value and derivative).
+monitors, beam dumps, and particular to Hall C, the target motion mechanism 
+and the raster.
 
 The gun control system includes software program which monitors beam 
 operating conditions and the state of the FSD and BLM systems. the program 
@@ -265,7 +250,7 @@ diagnostic devices (BPMs, scanners, Beam Loss Monitor, viewers) necessary for
 the transport of the beam are controlled by Machine Control Center (MCC) 
 through EPICS~\cite{EPICSwww}, except for special elements which are addressed in the 
 subsequent sections. The detailed safety operational procedures for the Hall 
-A beamline should be essentially the same as the one for the CEBAF machine 
+C beamline should be essentially the same as the one for the CEBAF machine 
 and beamline.\\ 
   
 \noindent{}Personnel who need to work near or around the beamline should keep in mind the potential hazards:
@@ -286,12 +271,8 @@ volume and thin windows requires hearing protection once it has been evacuated.
 Signs are posted by RadCon for any hot spots along the beamline and
 RadCon must be notified before work is done in a posted area.
 
-\sawnote{Is this true in Hall C?  What magnets in Hall C require
-Lock and Tag?}
-Some magnets, as the M{\o}ller spectrometer elements, are covered with plastic
-sheets for electric safety. Any access to these magnets requires
-the ``Lock and Tag'' procedure~\cite{EHScebaf} and the appropriate training,
-including the equipment-specific one. \\
+Where appropriate (such as for the M\o ller polarimeter magnets),
+magnet leads are covered with plastic guards for electrical safety. 
 
 \noindent{}Additional safety information is available in the following documents:
 \begin{list}{--}{\setlength{\itemsep}{-0.15cm}}
@@ -305,7 +286,7 @@ including the equipment-specific one. \\
 
 Since the beamline requires both accelerator and physics personnel to maintain
 and operate and it is very important that both groups stay in contact that any 
-work on the Hall A beamline is coordinated.
+work on the Hall C beamline is coordinated.
 
 \begin{namestab}{tab:beam:personnel_beam}{Beam line: authorized personnel}{%
    Beamline physics division and accelerator division points-of-contact.}
