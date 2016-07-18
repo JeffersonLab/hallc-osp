@@ -4,22 +4,28 @@
 
 %%% This is lifted from the Hall A manual
 
-The Beam Current Monitor (BCM) is designed for stable, low noise, non-intercepting 
-beam current measurements. The primary system consists of an Unser monitor and two rf cavities (bcm1 and bcm2), 
-with associated electronics and a data acquisition system. An additional three RF cavities are also
-available for use for most experiments, although must be removed for certain configurations of
-the beamline (e.g. during polarized target experiments that require a slow raster system). There is also
-a bcm (bcm17) placed upstream of the Hall C Compton polarimeter on the 3C17 girder. This bcm is used
-primarily for current measurements for the Hall C polarimeters.
-The Unser monitor, bcm1, and bcm2 are wrapped in thermal blankets for temperature stabilization and are
-located 7.7 meters upstream of the target. The additional rf cavity triplet is enclosed in a thermally stabilized
-box and is located at the end of the blue platform that extends from the Hall C beam way, about 13 meters
-upstream of the target. In the standard configuration, an additional bcm is placed immediately upstream
-of the target; this bcm is controlled/read out for purposes of machine protection (to monitor beam loss) and
-is not considered part of the Hall C current measurement system for experiments.
+The Beam Current Monitor (BCM) is designed for stable, low noise,
+non-intercepting beam current measurements. The primary system
+consists of an Unser monitor and two rf cavities (bcm1 and bcm2), with
+associated electronics and a data acquisition system. An additional
+three RF cavities are also available for use for most experiments,
+although must be removed for certain configurations of the beamline
+(e.g. during polarized target experiments that require a slow raster
+system). There is also a bcm (bcm17) placed upstream of the Hall C
+Compton polarimeter on the 3C17 girder. This bcm is used primarily for
+current measurements for the Hall C polarimeters.  The Unser monitor,
+bcm1, and bcm2 are wrapped in thermal blankets for temperature
+stabilization and are located 7.7 meters upstream of the target. The
+additional rf cavity triplet is enclosed in a thermally stabilized box
+and is located at the end of the blue platform that extends from the
+Hall C beam way, about 13 meters upstream of the target. In the
+standard configuration, an additional bcm is placed immediately
+upstream of the target; this bcm is controlled/read out for purposes
+of machine protection (to monitor beam loss) and is not considered
+part of the Hall C current measurement system for experiments.
 
-All electronics for reading out the Hall C bcms, as well as the temperature controllers, are
-located in the Counting House.
+All electronics for reading out the Hall C bcms, as well as the
+temperature controllers, are located in the Counting House.
 
 %The readout chain is slightly different for the different sets of
 %bcms. The rf cavities on the Unser girder (bcm1 and bcm2) are readout using a 100 kHz
@@ -58,30 +64,35 @@ stable cavities are then used to determine the beam current and charge
 for each run.
 
 The two resonant rf cavity monitors on either side of the Unser
-Monitor (bcm1 and bcm2) are stainless steel cylindrical high Q ($\sim 500$)
-waveguides which are tuned to the frequency of the beam (1.497 GHz)
-resulting in voltage levels at their outputs which are proportional to
-the beam current. Each of the rf output signals from the two cavities
-are sent upstairs to the counting house where the rf output is converted
-to 100 kHz signals (by the ``downconverters'') and fed into an RMS-to-DC
-converter board consisting of a 20 kHz bandpass filter to eliminate
-noise, amplified and sent to a V2F (via a pre-amplifier which adds a 2.5 V offset).
-The amplification of the RMS-to-DC converter is manually adjustable
-to provide optimal linearity for the relevant beam current range.
-The output of the V2F modules is sent to the data acquisition for fast readout
-in scalers. A copy of the V2F output is also sent to a nearby slow-controls
-VME crate for processing and integration into the slow EPICS data stream.
+Monitor (bcm1 and bcm2) are stainless steel cylindrical high Q ($\sim
+500$) waveguides which are tuned to the frequency of the beam (1.497
+GHz) resulting in voltage levels at their outputs which are
+proportional to the beam current. Each of the rf output signals from
+the two cavities are sent upstairs to the counting house where the rf
+output is converted to 100 kHz signals (by the ``downconverters'') and
+fed into an RMS-to-DC converter board consisting of a 20 kHz bandpass
+filter to eliminate noise, amplified and sent to a V2F (via a
+pre-amplifier which adds a 2.5 V offset).  The amplification of the
+RMS-to-DC converter is manually adjustable to provide optimal
+linearity for the relevant beam current range.  The output of the V2F
+modules is sent to the data acquisition for fast readout in scalers. A
+copy of the V2F output is also sent to a nearby slow-controls VME
+crate for processing and integration into the slow EPICS data stream.
 
-The bcm triplet further upstream of the Unser/bcm1/bcm2 girder (bcma, bcmb, and bcmc), as well as bcm17,  make use
-of rf cavities of the same geometry and properties as bcm1 and bcm2. In this case,
-however, the readout scheme is a bit different. the rf signals from bcma,bcmb, and bcmc are
-sent to the counting house where they are processed using a digital down converter
-with onboard ADC, FPGA, and DAC. This module provides an analog signal which can be
-sent to an ADC or V2F for integration in the data acquisition. The readout electronics are controlled via
-EPICS (in particular the gain settings), and can also provide direct EPICS readout.
+The bcm triplet further upstream of the Unser/bcm1/bcm2 girder (bcma,
+bcmb, and bcmc), as well as bcm17, make use of rf cavities of the same
+geometry and properties as bcm1 and bcm2. In this case, however, the
+readout scheme is a bit different. the rf signals from bcma,bcmb, and
+bcmc are sent to the counting house where they are processed using a
+digital down converter with onboard ADC, FPGA, and DAC. This module
+provides an analog signal which can be sent to an ADC or V2F for
+integration in the data acquisition. The readout electronics are
+controlled via EPICS (in particular the gain settings), and can also
+provide direct EPICS readout.
 
-Absolute calibration of the rf cavities with uncertainties of 100-200~nA is possible
-depending on how much time is devoted to calibration with respect to the Unser monitor.
+Absolute calibration of the rf cavities with uncertainties of
+100-200~nA is possible depending on how much time is devoted to
+calibration with respect to the Unser monitor.
 
 \begin{safetyen}{0}{0}
 \subsection{Safety Information}
