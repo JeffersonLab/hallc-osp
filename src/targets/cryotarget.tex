@@ -19,7 +19,8 @@ these loops is used as a spare, and contains $^{4}$He gas usually
 pressurized up to $\sim$30 psia. The other two loops are usually used
 for liquid hydrogen and deuterium targets.  Each loop can have one or
 two target cells, which is again dependent on experiment requirements.
-Below the loops, solid targets such as carbon foils can be added.  A
+Below the loops, solid targets such as carbon foils can be added.
+\infolevone{A
 typical configuration of cryogenic and solid targets is shown in
 Fig.~\ref{fig:LoopCAD}.
 
@@ -39,6 +40,7 @@ Fig.~\ref{fig:LoopCAD}.
   hydrogen inlet and outlet manifolds.}
 \label{fig:LoopCAD}
 \end{figure}
+}
 
 A wealth of information about the Hall C cryotarget system is
 available at \url{https://userweb.jlab.org/\~smithg/target/Qweak/}.
@@ -148,9 +150,14 @@ may alarm when the beam goes from on to off or from off to on, if the
 high power heater does not respond quickly enough to the change in the
 beam heat load, or if there is insufficient reserve heater power
 available. The ALH can also repeatedly alarm if there are noisy analog
-channels. %\begin{safetyen}{0}{0} If the AH alarms repeatedly or the
+channels.
+%\begin{safetyen}{0}{0}
+If the AH alarms repeatedly or the
 cause of the alarm is not clear, the target operator should contact
-the on-call target expert. The ALH GUI and its secondary GUIs are
+the on-call target expert.
+\end{safetyen}
+\infolevone{
+The ALH GUI and its secondary GUIs are
 shown in Fig.~\ref{fig:ALHGui}.
 
 \begin{figure}[!htb]
@@ -171,8 +178,7 @@ shown in Fig.~\ref{fig:ALHGui}.
 \label{fig:ALHGui}
 \end{figure}
 
-\end{safetyen}
-
+}
 \infolevone{
 \subsection{Target Motion and Fast Raster}
 
@@ -192,7 +198,6 @@ for the new target. MCC should also perform this check, but the target
 operator is the first line of defense. Finally, the target operator
 must also insure that adjustments to the cooling power are made, if
 necessary, in response to the new target and/or beam current.
-}
 
 \begin{safetyen}{0}{0} 
 The intrinsic diameter of the electron beam is typically only 100
@@ -221,6 +226,7 @@ and the target. As a result there is a much more robust relationship
 between the raster magnet currents and the rastered beam size at the
 target.
 \end{safetyen}
+}
 
 
 \infolevone{
@@ -250,6 +256,7 @@ indicate that this vacuum space must be pumped out again. A minimum
 mass flow of 6 or 7 g/s is needed to keep the transfer lines cold.
 }
 
+\infolevone{
 \subsection{Checklist}
 
 The Hall C target experts and the JLab target group tracks the state
@@ -258,6 +265,7 @@ of the target. To facilitate this task
 the charts and the main target page screen must be
 captured to the HCLog at least once per shift.
 %} Do we really need this to be performed? The epics dataloger is more useful for monitoring the system.
+}
 
 \infolevone{
 \subsection{Target Operators}
@@ -366,11 +374,11 @@ in the Hall C Counting House as well, in case the expert on call cannot be reach
 
 \infolevone{
 \section{Safety Assessment}
-}
+
 \label{sec:target-cryo-safety}
 The Hall C target safety assessment document resides on the target
 group's web page at
-\url{https://polweb/hallc/Cryotarget/Target%20Safety%20Assessment%20Document1.5.doc}.
+\url{https://polweb.jlab.org/hallc/Cryotarget/Target\%20Safety\%20Assessment\%20Document1.5.doc}.
   This is the document which contains the safety analyses, detailed
   calculations, and mitigations of the hazards identified for the
   cryotarget. It dates from Feb. 25, 2004. More recent and applicable
@@ -381,25 +389,25 @@ group's web page at
 Cryotarget installation, maintenance, and repair is performed
 exclusively by the JLab target group (not by users).  The task hazard
 analysis worksheet covering such work in the scattering chamber is
-\url{https://polweb/hallc/Cryotarget/In%20chamber%20work.doc}, and
+\url{https://polweb.jlab.org/hallc/Cryotarget/In\%20chamber\%20work.doc}, and
   that for disconnecting the target is found here:
-  \url{https://polweb/hallc/Cryotarget/Disconnect%20Target.doc}.  A
+  \url{https://polweb.jlab.org/hallc/Cryotarget/Disconnect\%20Target.doc}.  A
     guide and checklist used by the target group and occasionally the
     target experts which describes the procedures for determining what
     state the target is in, pumping and purging operations, and warmup
     and cooldown of the targets is at
-    \url{https://polweb/hallc/Cryotarget/Target-operation-manual.pdf}.
+    \url{https://polweb.jlab.org/hallc/Cryotarget/Target-operation-manual.pdf}.
 
 Target operation is the responsibility of the system owner but, for
 practical purposes is the domain of the staff and users on a given
 experiment. The users' guide to general operation of the Hall C
 cryotarget, prepared by the target group but somewhat dated (March,
 2003), is available at
-\url{https://polweb/guides/ctarg/CTARG_MAN.html}. The resource
+\url{https://polweb.jlab.org/guides/ctarg/CTARG_MAN.html}. The resource
 \url{https://userweb.jlab.org/~smithg/target/Qweak/} is a more recent
 guide (Feb., 2014) for the general user.
 % DGM update this with more correct information from C Keith. Is there a Hall C wiki?
-
+}
 
 \subsection{Hazards}
 
@@ -411,7 +419,7 @@ years of experience using it at Jefferson Lab. Hazards, mitigation
 measures, and causes and corrective measures associated with past
 failures are described in the ``Hydrogen Target Safety Assessment
 Document'' at
-\url{https://polweb/hallc/Cryotarget/Target%20Safety%20Assessment%20Document1.5.doc}.
+\url{https://polweb.jlab.org/hallc/Cryotarget/Target%20Safety%20Assessment%20Document1.5.doc}.
 \subsection{Mitigations}
 
 \paragraph{Flammable Gas}
@@ -804,9 +812,9 @@ the computer. This allows one to place the desired target in the beam.
 Limit switches and hard stops are installed to ensure the target cannot
 move outside the allowable range.
 \end{description}
-}
 
 Although strip charts are running on the target operator's work station, it can be useful to look further back in time when diagnosing potential problems, or simply answering the question ``Is this normal?''. To this end a simple-to-use archiver interface is provided to interrogate and plot target EPICS variables as a function of time at \url{https://hallcweb.jlab.org/targetlog/}. 
+}
 
 \infolevone{
 \subsection{Checklist}
@@ -830,11 +838,11 @@ hydrogen loop.
 \end{itemize}
 }
 
-%\infoleveqnull{
-%\paragraph{Further Reading}More detailed
-%information about the mitigations discussed above can can be 
-%found in the full Hall C operations manual~\cite{HallCosp}.
-%}
+\infoleveqnull{
+\paragraph{Further Reading}More detailed
+information about the mitigations discussed above can can be 
+found in the full Hall C operations manual~\cite{HallCosp}.
+}
 
 
 \subsection{Responsible Personnel}
@@ -857,17 +865,27 @@ targets contain liquid. These operators are trained by one of the
 %\label{tab1}
 %\end{table}
 
-%\begin{namestab}{tab:cryotarg:personnel-con}{Cryo Target: personnel
-%and contacts}{Cryo target: authorized personnel and contacts. ``W.B.''
-%stands for the white board in Counting House.} \namestabheader{Hall
-%C Technicians} \TechonCall{Vacuum} \AndyKenyon{Vacuum} \namestabheader{Hall
-%C Physicists} \CryotargonCall{Cryotarget}
-%\GregSmith{Cryotarget}\SilviuCovrig{Cryotarget}
-%\JianPingChen{Cryotarget}
-%\namestabheader{JLab Cryo-Target Group} \DaveMeekins{} \ChristopherKeith{}
-%\namestabheader{Central Helium Liquefier (CHL) Experts} \CryoonCall{ESR}
-%\CHLgroup{ESR} \end{namestab}
 
-%}
+\infoleveqnull{
+\begin{namestab}{tab:cryotarg:personnel-con}{Cryo Target: personnel
+and contacts}{Cryo target: authorized personnel and contacts. ``W.B.''
+stands for the white board in Counting House.}
+\namestabheader{Hall C Technicians}
+\TechonCall{Vacuum}
+\AndyKenyon{Vacuum}
+\namestabheader{Hall A/C Physicists}
+\CryotargonCall{Cryotarget}
+\GregSmith{Cryotarget}
+\SilviuCovrig{Cryotarget}
+\JianPingChen{Cryotarget}
+\namestabheader{JLab Cryo-Target Group}
+\DaveMeekins{}
+\ChristopherKeith{}
+\namestabheader{Central Helium Liquefier (CHL) Experts}
+\CryoonCall{ESR}
+\CHLgroup{ESR}
+\end{namestab}
+}
+
 
 
