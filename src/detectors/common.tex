@@ -2,14 +2,25 @@
 This section describes systems that are common to the detectors in both
 spectrometers.
 
-\subsection{CAEN High Voltage System}
+\subsection{High Voltage Supplies and Control}
 
 \paragraph{Overview}
 
+All the detector elements in the SHMS and HMS require the use of High Voltage. The
+high voltage supplies for the detectors are located in the
+electronics room and second floor of the counting house. They are connected to
+the detector shield houses through multiconductor high voltage patch systems,
+and to the detectors through coaxial cables with SHV connectors.
+During experiments the control of the high voltage supplies is
+done remotely via any of the computers at the console 
+the Hall~C counting house.
+
+As a general rule no work should be done on detectors which are under
+High Voltage and
+High Voltage cables should never be removed or installed while the supply is on.
+
 The CAEN Distributed High Voltage System is responsible for
-providing high voltage power to all HMS and SHMS detector systems
-including phototubes for hodoscopes, Cerenkov detectors, and shower
-counters as well as wire voltages for drift chambers. 
+providing high voltage power to all HMS and SHMS detector systems.
 This system is a
 networked system made up of individual crates (Controllers)
 each of which can hold several independent high voltage modules
@@ -56,10 +67,10 @@ display panel on the individual Crates) or remotely by either a
 connected Terminal (RS232) or VME CAEN net interface card (Model V288).
 
 
-\begin{figure}
-\includegraphics[height=4.5in]{CAENHV.pdf}
-\caption{Generic CAEN High Voltage System setup\label{fig:caen_setup}}
-\end{figure}
+%\begin{figure}
+%\includegraphics[height=4.5in]{CAENHV.pdf}
+%\caption{Generic CAEN High Voltage System setup\label{fig:caen_setup}}
+%\end{figure}
 
 HV channel assignments currently in effect are indicated in 
 two files ("group\_map" and
@@ -526,56 +537,4 @@ system. Normally, the actual temperature in the refrigerator is
 indicated on the front panel of the controller. The controller should
 be set to maintain a temperature of 2$^\circ$\,C.
 
-
 %=====================================================================
-\subsection{Hall C Laser Pulser System}
-The Hall C laser pulser sytem provides light pulses
-in the visible  blue scintillation region to monitor
-the gain stability of the HMS and SOS shower counters and scintillators,
-and, at a later stage, the neutron detector of the $G_{En}$ experiment.
-
-\paragraph{UV Laser System}
-We use a nitrogen Laser that provides UV laser pulses at 337 nm
-from 1 to 50 Hz repetition rate. The output power is 250 $\mu$J.
-It is located in a designated area in the Counting House of Hall C.
-The laser is enclosed in an aluminum box where the laser light is directed
-onto a scintillation fiber after passing through two optical filters
-to optimize the light output. 
-The laser light is absorbed in the scintillation fiber
-and converted to visible blue scintillation light. Both ends of the
-scintillation fiber are coupled using CT connectors, mounted on an
-aluminum casing, to regular
-1 mm diameter multimode plastic optical fibers. One fiber output is
-connected to a PIN diode to monitor the light output; the other
-fiber is brought downstairs into Hall C where it is connected to 
-a distribution box (1:24) located in the cupboard below the pivot. From
-this distribution box 4 fibers are running to the HMS spectrometer and
-4 to the SOS spectrometer, where they
-are connected again to distribution boxes (1:64). The individual
-outputs of the final distribution box are connected to the scintillators
-and lead glass shower counters. The light pulses in the detector
-produce a trigger in the data acquisition system and ADC and TDC
-information is read out. Normalizing the peak positions of the light 
-pulses to the PIN diode ADC value is a tool to monitor the gain of
-each photo multiplier tube throughout the experiments.
-
-\paragraph{Laser Operation} 
-In order to turn on the nitrogen laser the right half of the top
-plate of the aluminum box needs to be removed. Inside the box 
-the laser and the optics is mounted on a single aluminum board.
-The lasing part of the laser is confined in the left part of the box
-with a separation in the central region of the box. Due to this separation
-no UV laser light can escape from this left part of the box,
-even during operation, so that the user can safely remove and install the
-top plate above the right half of the laser casing.
-The laser itself has a security key that needs 
-to be in a vertical position when the power switch is pressed. After
-2 minutes of warmup-time an orange light turns on indicating that
-it is possible now to turn the key into its horizontal position.
-After this it takes 15 seconds until the laser actually turns on.
-In the event of a power failure the laser will turn off and will not
-turn on again after power is restored. It is necessary to turn the key
-back to its vertical position and to reset the safety system of the laser.
-The laser can now be turned on again by switching the key back to its
-horizontal position. The pulse frequency of the laser can be regulated by
-turning the black knob at the rear of the laser casing.
