@@ -282,6 +282,7 @@ call should be contacted.
 
 \infolevone{
 \section{Features Common to Both Spectrometers}
+}
 
 \subsection{Vacuum Windows}
 
@@ -421,9 +422,9 @@ causing it to miss the beam dump, unless the schemes designed to prevent this ar
 
 The main dipole is the dispersive element in each spectrometer system. It 
 determines the central momentum of the spectrometer.
-The present operations envelope states that the HMS dipole power supply may not be
-operated at currents above 1300 Amps. This corresponds to a central
-momentum of about 4~GeV/c. 
+%The present operations envelope states that the HMS dipole power supply may not be
+%operated at currents above 1300 Amps. This corresponds to a central
+%momentum of about 4~GeV/c. 
 
 
 
@@ -471,7 +472,7 @@ screens located in the Hall~C counting house.
 
 All of the magnets were originally designed to be cryostable, meaning that they
 cannot quench unless the level of liquid helium drops below the coils. Testing of
-the HMS magnets up to their 4~GeV/c settings has shown that this design goal
+the HMS magnets up to 4~GeV/c settings has shown that this design goal
 was achieved. Nevertheless, the energy stored in the field of each magnet is sufficient 
 to cause an unrecoverable quench if all of it were dumped into the magnet. 
 Therefore, every superconducting spectrometer magnet in Hall~C, even though 
@@ -512,7 +513,7 @@ will sometimes use controls that are local to the power supplies.
 In the event that any problems arise during operations of the magnets
 of either the HMS or the SHMS,
 one of the qualified responsible personnel listed in 
-Table~\ref{tab:spec:personnel_magnet} should be consulted.  This includes any prolonged
+Table~\ref{tab:spec:personnel_technical} should be consulted.  This includes any prolonged
 or serious problem with the source of magnet cryogens (the ESR).
 On the weekend and after hours there
 will be a designated individual on call for magnet services. This person should be
@@ -702,7 +703,7 @@ short (1-2 hours) or much longer.  If the recovery is short do nothing!
 If the recovery is long then it can be beneficial to make some
 adjustments in Hall~C.  This requires an access and a knowledgeable
 individual: the on-call Hall~C magnet responsible person
-should be summoned. Refer to Table~\ref{tab:spec:personnel_magnet}.
+should be summoned. Refer to Table~\ref{tab:spec:personnel_technical}.
 \item{\bf 3}\hskip0.1in Single System Failures
 \item{\bf 3.1}\hskip0.1in Single System Loss of LN$_2$
 \item{}\hskip0.3in If a single system is observed losing LN$_2$ you can
@@ -712,7 +713,7 @@ is extremely low.  They can go for 24 hours without a refill. Remember that the
 HB magnet on the SHMS uses no LN2, so do not let that confuse you.
 \item{\bf 3.2}\hskip0.1in Single System Loss of LHE Level
 \item{}\hskip0.3in This is usually caused by a single computer failure or
-components failure.  Call the on-call magnet responsible person (Table \ref{tab:spec:personnel_magnet})
+components failure.  Call the on-call magnet responsible person (Table \ref{tab:spec:personnel_technical})
 and plan an access to Hall~C. The dipole reservoir will go empty in 1 hour so a quick reaction is
 necessary.  The quads take much longer, 4 hours or more to empty
 allowing more time to react.  All of the magnets have low level
@@ -1082,21 +1083,6 @@ spectrometer and the beam pipes or their stands.
 %of the PLC limit switches.
 
 
-\subsection{Personnel Trained for Manual Spectrometer Rotation}
-
-The spectrometer motors may only be manually controlled by trained personnel. if it
-is necessary to rotate the spectrometer manually, contact one of the trained
-personnel listed in Table~\ref{tab:spectrometers:personnel_rotate}.
-At least two people are required for manual spectrometer rotation: one to
-run the motors and at least one spotter. Prior to rotating the spectrometer
-a visual inspection of the area must be made to insure that there
-is nothing in the spectrometer's path or on the rails. During rotation
-the spotter should pay special attention to
-the cables which run from the
-spectrometer to the target motor controller to make sure that
-nothing is hung up or stretching.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \infoleveqnull{\section{Spectrometer Rotation}
@@ -1108,7 +1094,6 @@ Include statement that angle limits are set by experiment and that
 movements to small angles may need to be done by experts.
 }
 
-
 %
 %
 Since the Hall C spectrometers each weigh in excess of \sawnote{XXX}
@@ -1117,9 +1102,12 @@ adhered to.   During operations, the spectrometers are certified
 to allow remote rotation by shift crews within prescribed limits.  In
 the absence of this certification, the spectrometers may only be
 rotated by trained technical staff.
+}
+
 
 \begin{safetyen}{0}{0}
-\subsection{Hazards}
+\infolevone{\subsubsection{Hazards}}
+\infoleveqnull{\subsection{Hazards}}
 
 Hazards include:
 \begin{itemize}
@@ -1131,7 +1119,8 @@ or too large an angle, or if it just gets pushed around inadvertently.}
 \item{Tearing out of cables etc. physically attached to the superstructure}
 \end{itemize}
 
-\subsection{Mitigations}
+\infolevone{\subsubsection{Mitigations}}
+\infoleveqnull{\subsection{Mitigations}}
 
 Hazard mitigations:
 \begin{itemize}
@@ -1150,7 +1139,8 @@ must be supervised by a trained Hall C technician.}
 \end{itemize}
 \end{safetyen}
 
-\subsection{Responsible Personnel}
+\infolevone{\subsubsection{Responsible Personnel}}
+\infoleveqnull{\subsection{Responsible Personnel}}
 
 Following the experimental run plan, as posted in the counting house
 by the run coordinator, shift workers are allowed to rotate the HRS
@@ -1174,6 +1164,20 @@ require a hard reset.
    \AndyKenyon{}
    \JoeBeaufait{}
 \end{namestab}
+
+\infolevone{
+\subsection{Personnel Trained for Manual Spectrometer Rotation}
+
+The spectrometer motors may only be manually controlled by trained personnel. if it
+is necessary to rotate the spectrometer manually, contact one of the trained
+personnel listed in Table~\ref{tab:spectrometers:personnel_rotate}.
+At least two people are required for manual spectrometer rotation: one to
+run the motors and at least one spotter. Prior to rotating the spectrometer
+a visual inspection of the area must be made to insure that there
+is nothing in the spectrometer's path or on the rails. During rotation
+the spotter should pay special attention to
+the cables which run from the
+spectrometer to the target motor controller to make sure that
+nothing is hung up or stretching.
 }
 
-}
