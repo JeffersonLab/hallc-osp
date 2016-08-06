@@ -784,8 +784,10 @@ Vacuum system responsible personnel are listed in Table ~\ref{tab:spectrometers:
 
 
 \section{Spectrometer Slit Systems}
-\label{sec:hms_slit}
+\label{sec:slit}
 
+\subsection{HMS}
+\label{sssec:hms_slit}
 The HMS slit system is installed on the gate valve housing mounted to the
 front face of Q1. It consists of a vacuum box with a slit ladder
 mounted into it. The slit ladder has space for three separate slits,
@@ -812,19 +814,20 @@ HMS collimators is denoted in Table~\ref{tab:apertures}.
 \begin{center}
 \caption{Apertures of Collimators\label{tab:apertures}}
 %\vspace{\baselineskip}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-{} & {} & {} & {} & {} & {} \\
-HMS				& d$\Omega$ 	& Horizontal 	& Vertical 		& Shape 			& Note \\
-{} 				& (msr) 		& (mr) 		& (mr) 		& {} 				& {} \\
-{} & {} & {} & {} & {} & {} \\ \hline
-{}Need Description	& 6.74 		& $\pm$ 27.5 	& $\pm$ 70.0 	& Octagonal, Flared 	& Quads Nominal \\
-{}	 			& 6.74 		& $\pm$ 27.5 	& $\pm$ 70.0 	& Octagonal, Flared 	& Quads Backward \\
-{} & {} & {} & {} & {} & {} \\ \hline
+{} & {} & {} & {} & {} \\
+HMS & d$\Omega$ & Horizontal & Vertical & Shape \\
+{}  & (msr) 	& (mr) 	     & (mr) 	& {} 	\\
+{} & {} & {} & {} & {} \\ \hline
+Large Collimator  & 6.74 & $\pm$ 27.5 	& $\pm$ 70.0 	& Octagonal, Flared 	\\
+``Pion'' Collimator&  	& $\pm$	& $\pm$  	& Octagonal, Flared 	\\
+{} & {} & {} & {} & {} \\ \hline
 %SOS & 7.55 & $\pm$ 57.5 & $\pm$ 37.5 & Octagonal, Flared & \\
 %SOS & 3.98 & $\pm$ 32.5 & $\pm$ 35.0 & Octagonal, Flared & \\
-SHMS			& d$\Omega$ 	& Horizontal 	& Vertical 		& Shape 			& Note \\
-{} 				& (msr) 		& (mr) 		& (mr) 		& {} 				& {} \\
+SHMS	& d$\Omega$ 	& Horizontal 	& Vertical 		& Shape 	\\
+{} 	& (msr) 	& (mr) 		& (mr) 		& {} 	\\
+Collimator &   4         & $\pm$ 24      &  $\pm$ 40     & Octagonal, Flared \\
 \hline
 \end{tabular}
 \end{center}
@@ -836,6 +839,8 @@ veto counter (to prevent punch-through of hadrons) and/or to increase
 the collimator thickness. Two circular quick-connect flanges are
 added for feed-through of possible light guides.
 
+\subsection{SHMS}
+\label{sssec:shms_slit}
 A similar remotely-operated collimator box is installed on the SHMS between the
 HB and Q1 magnets. The collimator ladder assembly within this box may be positioned
 at three settings. The top position (accessed when the assembly is at its lowest
@@ -850,7 +855,8 @@ Both sieves and octagonal collimator are
 made of Mi-Tech\texttrademark{} Tungsten HD-17 (Density 17 g/cc. 90\%~W, 6\%~Ni, 4\%~Cu).
 
 Because the SHMS has both a horizontal bend (HB magnet) and a vertical bend (main Dipole
-magnet), a second sieve collimator is required for optics calibration. It is placed immediately
+magnet), a second sieve collimator is helpful for optics calibration and understanding the magnets. 
+It is placed immediately
 upstream of the HB magnet entrance. Two options are provided: a conventional passive
 sieve collimator and the so-called \textit{active sieve} which is a detector based on Gas Electron 
 Multipliers (GEMs).  A photo of the passive sieve options is shown in Fig.~\ref{fig:HB_Sieve_Photo}
@@ -873,50 +879,77 @@ and the dimensions and hole pattern are shown in Fig.~\ref{fig:HB_Sieve_Layout}.
 \caption{Upstream Sieve Slits that go on the front of the HB magnet of the SHMS \label{fig:HB_Sieve_Layout}}
 \end{figure}
 
-\subsection{Operation of the HMS Slit System}\label{sssec:slit_control}
+\subsection{Operation of the Slit System}\label{sssec:slit_control}
+The HMS and SHMS slit systems are controlled by a remote control system consisting of 
+motor/actuators that slide the slits in place. Resolvers specify the exact position of the slits.
+The resolver position of the slits is relative number of counts from the home position. The home position
+is set by a homing procedure that is programmed into the controller that sets the zero position by moving the
+slit to a position that activates the physical home switch. Once this homing procedure is complete, then
+the slits can be moved to surveyed positions that have been programmed. The home position for HMS and SHMS slit system
+does not mean that the slits are moved out of the way. For the HMS is is possible to move the slits so that
+they are out of the way ({\it All Out}), but for the SHMS there is no such position for the slits. 
+EPICS drivers have been written for 
+normal operation of the slits by users and non-experts and operation of the slits through the EPICS 
+screens is described below. Upper and lower limit switches are on the slit system drive shaft to keep the
+slits from being moved too far in either direction. There are also software limits.
+The control box is located downstairs in Hall C. In the control box, there is a driver 
+for the HMS and one for the SHMS. If power is lost to the control box, then the brake engages
+on the motor that drives the slits. On the front of the control box is 
+a red  emergency power shutoff button. The control box should only be opened by trained experts.
 
-{\bf IN 2016 EPICS DRIVERS AND SCREENS ARE BEING WRITTEN FOR 
-THE COLLIMATOR MOTION CONTROLS. THE TEXT BELOW WILL NEED TO BE UPDATED.}
+EPICS drivers have been written for normal operation of the slits by users and non-experts. The
+EPICS screens are accessed through the accelerator {\bf jmenu}. Instructions for access the 
+  {\bf jmenu} will be given in the Hall C How-tos. 
+From the  {\bf jmenu}, the HMS and SHMS slit system EPICs controls can be accessed on The Hall C Operations Menu
+which is open from {\bf jmenu $\rightarrow$ Standalone Menus $\rightarrow$ HallC}. On the Hall C Operations Menu under
+{\it Experiment Specific} are {\it HMS Coll. Motion Control} and {\it SHMS Coll. Motion Control}. Clicking the 
+respective title will bring up the EPICS screens shown in Fig.~\ref{fig:normal-coll-epics}.  Fig.~\ref{fig:normal-coll-epics}
+shows the HMS and SHMS slit controls in normal operation. In normal operation, the homing procedure has been completed
+as indicated by the orange rectangles next to {\it Home position found/reference point point set} and {\it Home routine finished}.
+With the homing procedure completed, the user can moved to the other slit positions by clicking on the labeled button. For the 
+HMS slit system, the slits can be moved so that they are out of the acceptance by clicking on the {\it All Out} button. 
+It is not possible to move the SHMS slit out of the acceptance.  
+\begin{figure}
+\includegraphics[width=.45\textwidth]{HMS_EPICS_pioncoll}
+\includegraphics[width=.45\textwidth]{SHMS_EPICS_centersieve}
+\caption{HMS and SHMS slit system screens in normal operation. \label{fig:normal-coll-epics}}
+\end{figure}
+In Fig.~\ref{fig:moving-coll-epics}, the EPICS screens are show when the slits are moving. The velocity should be around 1000 rpm and 
+the current less than 2 amps ( typically the reading fluctuates between 0 and 1). If the current is above 2 amps, 
+then click the {\it Stop Motion} button and contact the expert.
+\begin{figure}
+\includegraphics[width=.45\textwidth]{HMS_EPICS_moving}
+\includegraphics[width=.45\textwidth]{SHMS_EPICS_moving}
+\caption{HMS and SHMS slit system screens when the slits are moving. \label{fig:moving-coll-epics}}
+\end{figure}
+The option of experts moving the slits to an arbitrary position
+is available for the EPICS screen. The conversion is 327680 counts is one mm. The mostly likely use for this option is during the 
+taking of optics data when one wants data with the sieve slit moved by half the distance between holes to get more vertical angles.
 
-A remote control system consisting of motor/actuators exists to slide
-the slits into place. Resolvers specify the exact position of the
-slits.  The control box is located downstairs in Hall~C, behind the
-blue power supply racks. On the front face there are four buttons for
-each spectrometer. These indicate the three different slit positions
-and the ``home" position, which denotes that no slit is used at all
-(slit ladder in the up position).  Brake cables are added to prevent
-the slit ladder from falling in case of a power loss. Next to this an
-emergency button is included to electrically shut down the control
-system.
+The EPICS controls are done through an soft IOC called {\it  iocsofthmsco} and {\it iocsoftshmsco}. If EPICS screens are white then the IOC
+needs to be rebooted. Another reason that soft IOC would need to be reboot would be if the soft IOC has lost communication with the driver.
+In the case , the user could not move the slit and the text on the Warnings and Faults windows is in light grey color. Only the MCC operator can
+reset the soft IOCs by accessing {\bf jmenu $\rightarrow$ Operations $\rightarrow$ Control Systems $\rightarrow$ Reboot $\rightarrow$ HallC}. The user can
+call MCC to reset the soft IOCs.
 
-{\bf After a power cycle the HMS slit moves itself to the {\it HOME} position,
-returning a reading of 0. Thus, after a power failure or other cycle, the slit
-must be commanded to a meaningful position using the commands described below.}
-
-
-Normally, the system is operated remotely. Connect to the controller
-using terminal server hctsv7, port 3:
-
-\begin{minipage}{6in}
+If there is a power outage, the brakes are engage in the motor that drives the slits. Once power is restored then the user needs to do the
+following steps to get the slit system back in normal operation mode.
 \begin{enumerate}
-\item telnet hctsv7 2003
-\item type \texttt{\\B} to connect to HMS, \texttt{\\A} for SOS. (Must be UPPER CASE)
-\item {\tt P PFB} gives readback of the current position (see Table \ref{tab:col_pos})
-\item To {\em MOVE} the collimators:
-   \begin{itemize}
-	\item {\tt EN} - to enable motion.
-	\item {\tt RUN 10} - follow instructions (see slit numbers and postions at bottom)
-	\item After you have reached the correct slit, disable the motor by typing {\tt 1}
-
-   \end{itemize}
-\item If necessary, \texttt{K} (kill) is the opposite of \texttt{EN}
-\item Get rid of your session by typing \texttt{ctrl-]} (both pushed together), then
-at the telnet prompt, type \texttt{quit}.
+\item Ask MCC to reboot the soft IOC for the HMS and SHMS, {\it  iocsofthmsco} and {\it iocsoftshmsco}.
+\item Access the HMS and SHMS EPICS screens.
+\item On the EPICS screens, click on the {\it Reset} button. this runs an initialization program which loads parameters into the driver. The EPICS screen should look like Fig.~\ref{fig:red-screen-epics}. The red warning is to remind the user to execute the homing procedure.
+\item On the EPICS screens, click on the {\it Homing} button. This executes the homing program which defines the home position and is needed before moving to other position. 
+\item When the homing procedure is successful then the rectangles next to {\it Home position found/reference point point set} and {\it Home routine finished} will be orange. 
+\item Click on button to move slit to desired position.
 \end{enumerate}
-\end{minipage}
+\begin{figure}
+\includegraphics[width=.45\textwidth]{HMS-EPICS-red-screen}
+\caption{HMS EPICS screen when power restore but before the homing procedure as been executed. \label{fig:red-screen-epics}}
+\end{figure}
 
-Don't forget to get rid of your session. If you do not close your session nobody
-else can communicate with the slit controllers.
+
+
+
 
 %\begin{table}[!ht]\
 %\caption{Slit Collimator Positions\label{tab:col_pos}}
@@ -931,18 +964,6 @@ else can communicate with the slit controllers.
 %\end{center}
 %\end{table}
 
-\begin{table}[!ht]\
-\caption{Slit Collimator Positions\label{tab:col_pos}}
-\begin{center}
-\begin{tabular}{rlrr}
-   	&                  		&     HMS   	& SHMS			\\ \hline
-1) 	& Sieve Slit 1   		&  19804600 	&  (Mark Jones)	\\
-?) 	& Sieve Slit 2   		&       N/A 		&  (Mark Jones)	\\
-2) 	& "Large" Collimator	&       N/A 		&  (Mark Jones)	\\
-3) 	& "Pion" Collimator  	&  -3096800	&   N/A			\\
-\end{tabular}
-\end{center}
-\end{table}
 
    
 \subsection{Hazard Identification}
@@ -969,7 +990,7 @@ cause serious damage to body parts.
 A sign will be posted which indicates the presence of a high magnetic
 field ( this is standard JLab safety signage). The exact wording is
 `` High Magnetic Field - No Pacemakers or Credit Cards." There are also
-flashing red lights located on the HMS carriage indicating that the
+flashing red lights located on the HMS and SHMS carriage indicating that the
 magnet power supplies are energized. Be careful with tools (are they magnetic?)
 when you work on the slit boxes with the red lights in a flashing state.
 
@@ -983,8 +1004,7 @@ plug of the gate valve, such that the gate valve closes.
 In case you need the gate valve to assume a default open position without
 power, first relieve the air pressure
 with power on, and verify that the default position of the gate valve has
-changed to ``open" by removing the power. Paul Hood (x7849) or Mike Fowler
-(x7162) can be contacted for more information.
+changed to ``open" by removing the power. 
 
 When installing the slit ladder, be careful when you work with your hands
 under the slit ladder (like when you are bolting the slit box to the
