@@ -11,7 +11,7 @@ Essentially, the only activities that require the removal of the hut
 wall are the installation or removal of an entire detector. The
 hut wall may only be removed by Hall~C approved, and trained crane
 operators and requires
-several people.  Walter Kellner, the Hall~C work coordinator,  
+several people.  Walter Kellner, the Hall~C work coordinator,
 must be contacted if the hut wall needs to be removed.
 
 \subsection{HMS Shield House Door}
@@ -110,24 +110,39 @@ Counting House via these lights.
 
 
 \subsection{Drift Chambers}
-
-\paragraph{Overview}
-
-The drift chambers provide accurate measurements of the particles
+The first detectors encountered by particles passing through the HMS
+are a pair of drift chambers.  These chambers
+provide accurate measurements of the particles
 position and angles in the detector hut. This information can be combined
 with a knowledge of the spectrometer optics to infer the trajectory of the
 particles at the target.
 
-The planes are designated X,Y,U,V,Y$'$, and X$'$.
-X and X$'$ wires measure position along the dispersive direction.
-Y and Y$'$ wires measure in the transverse direction while
-the U and V planes are inclined at fifteen degrees with respect to the
-X planes.
+Two sets of drift chambers will be available for the HMS.  The
+original set of chambers, described below
+(Section~\ref{sec:legacydriftchambers} and new set of chambers of
+design very similar to the drift chambers in the SHMS.
 
-In addition to High Voltage the drift chambers have amplifier discriminator
-cards which require Low Voltage. These Low Voltage supplies
-(built by {\em Accopian}) are
-in racks in the shield house. They are not computer controlled.
+Independent of type of chamber, the old and new style chambers are
+instrumented in a similar fashion.
+
+The chambers have field shaping wires (and in the case of the new
+drift chambers, foils on each side of each sense wire plane) that are
+operated at negative high voltage supplied by CAEN high voltage, low
+current, power supplies located in the electronics room of the
+counting house.  The high voltage can be controlled through a GUI on
+the console computers as described in section~\ref{sec:highvoltage}.
+
+Each anode/sense wire has its own electronic readout through
+Nanometrics preamplifier/discriminator cards or LeCroy Corporation LRS
+2735DC cards which are interchangeable with the Nanometrics cards.
+The discriminator outputs from the cards, each of which instruments 16
+sense wires are connected to CAEN V1190 multi-hit TDCs located in the
+SHMS electronics hut.
+The discriminator cards are powered by +5V and -5V Acopian power
+supplies that are
+located in the HMS hut.  In total, several 10s of amps of both positive
+and negative voltage current are supplied.  The supplies are not
+computer controlled.
 
 The thresholds of the discriminators are held by a third set of supplies
 which are located upstairs in the counting house. This control
@@ -135,12 +150,34 @@ is in the left side of the far left hand set of blue racks (near the disk drives
 electronics bay of the Hall~C counting house.
 
 The amplified and discriminated signals from the chambers are fed
-to the starts of {\em LeCroy} Model 1877 Fastbus pipeline TDC's. These
+to the {\em CAEN} Model V1190 VME pipeline TDC's. These
 TDC's are located in the detector hut in an electronics rack on the
 far side (from the door) of the detector mounting stand.
 %The hazards associated with electronics crates are discussed in
 %\cite{bi:arr95}.
 
+
+\subsubsection{New HMS Drift Chambers}
+The new HMS drift chambers, built in 2016, are of a similar design to the SHMS
+drift chambers, described in section~\ref{sec:shmschambers}.  These chambers
+cover an active area of approximately 100 cm in the dispersion (vertical)
+direction and 50 cm in the horizontal dimension.   As with the SHMS
+drift chambers, the planes in the first chamber are ordered
+($U$, $U^{\prime}$, $X$, $X^{\prime}$, $V^{\prime}$, $V$).  The second
+chamber is identical and oriented in the same manner.
+
+\subsubsection{Legacy Drift Chambers}
+\lable{sec:legacydriftchambers}
+\paragraph{Overview}
+
+
+The planes are designated X,Y,U,V,Y$'$, and X$'$.
+X and X$'$ wires measure position along the dispersive direction.
+Y and Y$'$ wires measure in the transverse direction while
+the U and V planes are inclined at fifteen degrees with respect to the
+X planes.
+
+% See if this can be removed as there is a gas handling section
 The chambers are filled with a mixture of Argon, Ethane and Isopropyl Alcohol
 ($\approx$ 49.5 $\%$, 49.5 $\%$  and $1\%$ by weight respectively).
 The gas bottles are in the bottle racks behind the gas shed. The gas shed
@@ -177,7 +214,7 @@ operated slightly above atmospheric pressure.  The gas flow through
 the two chambers can be varied and is typically set at 1000 cc/min
 when flushing (full purge in about 2.5 hours) and 400 cc/min when operating
 at low to moderate charged particle rates.  The chambers are connected
-in parallel for gas flow as shown in Figure~\ref{fig:5.1}.  There are flow meters 
+in parallel for gas flow as shown in Figure~\ref{fig:5.1}.  There are flow meters
 connected
 to the exit line of each chamber.  The gas flow control electronics
 and gas handling system (GHS) are located in the gas shed just outside
@@ -221,9 +258,12 @@ this document).
 \paragraph{Electronics Operating Procedures}
 
 The readout electronics associated with the HMS drift chambers are all
-commercial products from LeCroy Research Systems, Nanometrics, Kinetic Systems,
-and BiRa Corporation.  There are 544 electronics channels per chamber for
-a total of 1088 readout channels.  These anodes are read out using LRS 2735DC
+commercial products from LeCroy Research Systems, Nanometrics, CAEN
+and Wiener.  There are 544 electronics channels per chamber for
+a total of 1088 readout channels.  (588 per chamber, 1176 total
+for the new chambers).
+
+These anodes are read out using LRS 2735DC
 and Nanometrics N-277 preamplifier/discriminator cards mounted directly
 on the chambers.  Each chamber has both types of cards, however each plane
 (of six total planes per chamber) has only one type of card.  The
@@ -263,10 +303,10 @@ that the power is delivered properly to the chamber electronics.
 Only formally authorized person may alter drift chamber high voltage.
 There are four different voltages per chamber which must be turned on at the
 proper time and monitored throughout the experiment.  {\bf MAKE SURE THAT
-GAS IS FLOWING THROUGH THE CHAMBERS AND THAT THERE ARE 
-EDGE 
+GAS IS FLOWING THROUGH THE CHAMBERS AND THAT THERE ARE
+EDGE
 CARDS MOUNTED
-ON ALL READOUT CHANNELS BEFORE TURNING ON HIGH VOLTAGE.}  
+ON ALL READOUT CHANNELS BEFORE TURNING ON HIGH VOLTAGE.}
 The high voltage
 power supplies are the CAEN supplies located in relay rack CH03B17 in
 the counting house electronics room.  The
@@ -289,22 +329,22 @@ connector on the chamber.}
 \item {Make sure that there is gas flow, particularly Ar gas.}
 \item {Make sure high voltage cables are properly connected to
 chamber.}
-\item {Turn on high voltage, using the EPICS GUI in the counting house, 
+\item {Turn on high voltage, using the EPICS GUI in the counting house,
 to proper settings.}
 \end{enumerate}
 
-The CAEN power supplies, when operated remotely, are controlled by the
-EPICS control system.  To operate, log on to vxworks, get the high
-voltage monitors (use the rightmost mouse button to bring up the menu)
-and choose the chamber voltage group.  Each high voltage channel is
-independently controlled.
+%The CAEN power supplies, when operated remotely, are controlled by the
+%EPICS control system.  To operate, log on to vxworks, get the high
+%voltage monitors (use the rightmost mouse button to bring up the menu)
+%and choose the chamber voltage group.  Each high voltage channel is
+%independently controlled.
 
 In general all of the voltages and gas flow should be left on, even when
 no data is being collected.  The gas supply should be checked periodically,
 approximately once every shift.  The gas bottles' supply is depleted
 after about 2 weeks at the nominal (400 cc/min) flow rate.
 In the case of a HV trip, try cycling the CAEN power supplies.  If this fails, call
-one of the responsible persons listed in the Responsible Personnel Section 
+one of the responsible persons listed in the Responsible Personnel Section
 of the \htmladdnormallinkfoot{ESAD}{http://www.jlab.org/Hall-C/document}.
 
 
@@ -330,7 +370,7 @@ material are as follows:
 	The specific dimensions for the scintillator elements in the HMS
 are found in Table~\ref{tab:tof_scintillators}.
 \begin{table}
-\caption{Dimensions (at 70~F.) of the scintillators for the HMS TOF system. 
+\caption{Dimensions (at 70~F.) of the scintillators for the HMS TOF system.
 \label{tab:tof_scintillators}}
 \begin{center}
   \begin{tabular}{ccccc}
@@ -363,7 +403,7 @@ In desperation, ``spares" can be taken from the edges of the acceptance. In the
 HMS, S1X16 or S2X16 contain little or no useful data, and similarly for S1Y01
 or S1Y10.
 
-	The light guide material is UVT lucite.  Wrapping material for the SOS scintillator elements was one layer of 
+	The light guide material is UVT lucite.  Wrapping material for the SOS scintillator elements was one layer of
 aluminized mylar (aluminum side facing inward), followed by two layers of
 tedlar for light tightness. The HMS elements were wrapped in aluminum foil,
 followed by one layer of tedlar.
@@ -420,9 +460,9 @@ where the index of refraction $n = c/u$ and $\beta = v/c$, with $c$
 the speed of light in vacuum, $u$ the speed of light in the medium,
 and $v$ the speed of the particle.
 
-The index of refraction allows one to control the threshold particle velocity 
-$v_{T}=u=c/n$ below which there is no Cerenkov light produced, and above which there 
-is Cerenkov light produced.  For a gas, the quantity $n-1$ is proportional to the pressure, 
+The index of refraction allows one to control the threshold particle velocity
+$v_{T}=u=c/n$ below which there is no Cerenkov light produced, and above which there
+is Cerenkov light produced.  For a gas, the quantity $n-1$ is proportional to the pressure,
 so adjusting the pressure of the gas allows one to select the
 threshold velocity. Adjusting the threshold velocity actually allows one to select particles of
 different mass.  Given the same momentum, two particles of different mass
@@ -442,7 +482,7 @@ program can be found in \cite {bi:tank}, \cite {bi:wind}.
 
 The tank is mounted on the detector rails using a three point
 alignment scheme. The rails are easily capable of supporting the
-weight of the tank without deformation.  
+weight of the tank without deformation.
 The gas handling system for the tank
 is designed to enable the tank to be filled with
 pure gas, CO2 or N$_2$, at the desired operating
@@ -546,16 +586,16 @@ to allow this work at the angle of the detector rails.
 The HMS \Cerenkov\ Detector operates either as an $e/\pi$ or $\pi/p$
 discriminator. Each mode has a unique set of procedures to prepare the tank
 for operation. The nomenclature used in the description of these operation
-procedures refers to Figure~\ref{fig:gas}, showing the gas handling system. Components 
+procedures refers to Figure~\ref{fig:gas}, showing the gas handling system. Components
 shown
 inside the dashed box of Figure~\ref{fig:gas}, are all located on the Gas Control Panel.
 
 \paragraph{$e/\textbf{\pi}$ Procedures}
-For both $e/\textbf{\pi}$ and $p/\textbf{\pi}$ separation, the procedure 
+For both $e/\textbf{\pi}$ and $p/\textbf{\pi}$ separation, the procedure
 has been to run with 0.4 to
 0.9 (?) atmospheres of C4F10.  This is just a small modifiction to the
 current p/pi procedures write-up described in the next section,
-with the HMS running sub-atmospheric instead of supra-atmospheric. 
+with the HMS running sub-atmospheric instead of supra-atmospheric.
 
 $e/\textbf{\pi}$ running can also be accomplished using a nitrogen fill.
 This mode of operation requires the tank to be filled with approximately
@@ -599,7 +639,7 @@ The fill should take approximately 30 minutes.  The detector should NEVER
 be left unattended during a fill.  Frequently check the pressure in the tank
 and be aware when the pressure nears one atmosphere.  DO NOT let the pressure
 exceed one atmosphere under any circumstances; doing so risks damage to all of
-the equipment and personnel in the detector hut.  This pump/fill procedure is usually 
+the equipment and personnel in the detector hut.  This pump/fill procedure is usually
 repeated at least once to insure the
 purity of the gas.
 
@@ -696,7 +736,7 @@ indexed installed in the detector.
 
 
 \begin{table}
-\caption{Momentum threshold above which pions, kaons and protons will 
+\caption{Momentum threshold above which pions, kaons and protons will
 produce Cerenkov light in Aerogel's with various indices of refraction.
 \label{tab:hms_aerogel}}
 \begin{center}

@@ -19,26 +19,28 @@ the angles and positions particles at the target.
 \end{center}
 \end{figure}
 
-The drift chamber package consists of two identical chambers, with 6 planes
-of wires each.  (Figure~\ref{chamberpair})  Each wire plane consists
-of a set of alternating 20 
-$\mu\textrm{m}$ gold tungsten sense (anode) wires and 80 $\mu\textrm{m}$ field
-wires, separated by 0.5cm.  A cathode plane of copper coated mylar is
-located between each wire plane, before the first wire plane and after
-the last wire plane.
-In planes labled $X$ and $X^{\prime}$, the
-wires are horizontal.  In the $U$ and $U^{\prime}$ planes the wires
-are rotated $60^{\circ}$ relative to the $X$ planes while in the $V$
-and $V^{\prime}$ planes the wires are rotate by $-60^{\circ}$.  The
-first chamber consists of planes ordered as ($U$, $U^{\prime}$, $X$,
-$X^{\prime}$, $V^{\prime}$, $V$) while the second chamber's plane
-ordering is ($V$, $V^{\prime}$, $X^{\prime}$, $X$, $U^{\prime}$,
-$U$).  The $V^{\prime}$, $X^{\prime}$, and $U^{\prime}$ planes are
-offset from the unprimed planes by 0.5 cm.  The active area of each
-chamber is $80~\textrm{cm}\times 80~\textrm{cm}$ which has been set to
-machine the active area for particles in the SHMS focal plane.
-Further details about the design and construction of the drift
-chambers are in the SHMS Drift Chambers
+The drift chamber package consists of two identical chambers, with 6 planes of
+wires each.  (Figure~\ref{chamberpair})  Each wire plane consists of a set of
+alternating 20  $\mu\textrm{m}$ gold tungsten sense (anode) wires and 80
+$\mu\textrm{m}$ field wires, separated by 0.5cm.  A cathode plane of copper
+coated mylar is located between each wire plane, before the first wire plane and
+after the last wire plane. In planes labled $X$ and $X^{\prime}$, the wires are
+horizontal.  In the $U$ and $U^{\prime}$ planes the wires are rotated
+$60^{\circ}$ relative to the $X$ planes while in the $V$ and $V^{\prime}$ planes
+the wires are rotated by $-60^{\circ}$.  The
+$V^{\prime}$, $X^{\prime}$, and $U^{\prime}$ planes are offset from the unprimed
+planes by 0.5 cm.
+The first chamber consists of planes
+ordered as ($U$, $U^{\prime}$, $X$, $X^{\prime}$, $V^{\prime}$, $V$).  The
+second chamber, while of identical design to the first chamber is rotated by
+$180^{\circ}$ about the vertical access, so the plane ordering is
+($V$, $V^{\prime}$, $X^{\prime}$, $X$, $U^{\prime}$, $U$).  Note however,
+this rotation results in the $U$ ($V$) planes in first chamber being parallel
+to the $V$ ($U$) planes in the second chamber.
+The active area of each chamber is $80~\textrm{cm}\times
+80~\textrm{cm}$ which has been set to match the active area for particles in
+the SHMS focal plane. Further details about the design and construction of the
+drift chambers are in the SHMS Drift Chambers
 reference~\cite{howto:shms_drift_chambers}.
 
 The drift chambers 50/50 mixture (by weight) of Ethane/Argon as a
@@ -59,9 +61,9 @@ Nanometrics preamplifier/discriminator cards or LeCroy Corporation LRS
 2735DC cards which are interchangeable with the Nanometrics cards.
 The discriminator outputs from the cards, each of which instruments 16
 sense wires are connected to CAEN V1190 multi-hit TDCs located in the
-SHMS electronics hut.  
+SHMS electronics hut.
 The discriminator cards are powered by +5V and -5V Acopian power
-supplies that are 
+supplies that are
 located in the SHMS electronics hut.  The supply currents are several
 10s of amps for the positive and negative supplies.
 The discriminator thresholds for these cards are controlled by a power
