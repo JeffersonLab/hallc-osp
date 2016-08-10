@@ -1,3 +1,4 @@
+\infolevone{
 \section{Common Systems}
 This section describes systems that are common to the detectors in both
 spectrometers.
@@ -6,20 +7,68 @@ spectrometers.
 \label{sec:highvoltage}
 
 \paragraph{Overview}
+}
+\infoleveqnull{
+\section{Detector High Voltage}
+}
+All of the detector systems in Hall C use high voltages, from hundreds to
+several thousand volts, to either power photomultiplier tubes or maintain
+electric fields around sense wires in drift chambers.
+These include scintillators, drift chambers,
+scintillators, shower detectors, and aerogel Cherenkovs.
 
+\begin{safetyen}{0}{0}
+\subsection{Hazards}
+
+The personnel hazard with these devices is the high voltage.
+This same hazard can
+damage phototubes if voltage is left on when tubes are exposed to room
+lighting.
+
+\subsection{Mitigations}
+\begin{itemize}
+  \item All user configurable high voltage cabling/patching is made with
+  coaxial cables rated for high voltage with SHV connectors.
+  \item Turn off high voltage and remove SHV cables from phototubes
+  or drift chambers before handling.
+  \item Current limits are set on power supplys to trip high voltage in case
+  of shorts or shocks.
+  \item External metal parts of detectors such as mu-metal shields are wrapped
+  with electrical tape.  Exposed metal parts are grounded through both the HV
+  cable and signal cable grounds.
+\end{itemize}
+
+\subsection{Responsible Personnel}
+
+The individuals responsible for the operation
+of the trigger counters are shown in Table \ref{tab:scin:personnel}.
+
+\begin{namestab}{tab:scin:personnel}{Trigger counters responsible personnel} {%
+      Trigger counters responsible personnel.}
+  \DaveMack{\em Contact}
+  \StephenWood{}
+  \MahlonLong{}
+  \JoeBeaufait{}
+  \JackSegal{}
+\end{namestab}
+\end{safetyen}
+
+\infolevone{
+% The next two should be combined with the
 All the detector elements in the SHMS and HMS require the use of High Voltage. The
 high voltage supplies for the detectors are located in the
 electronics room and second floor of the counting house. They are connected to
 the detector shield houses through multiconductor high voltage patch systems,
 and to the detectors through coaxial cables with SHV connectors.
 During experiments the control of the high voltage supplies is
-done remotely via any of the computers at the console 
+done remotely via any of the computers at the console
 the Hall~C counting house.
 
 As a general rule no work should be done on detectors which are under
 High Voltage and
 High Voltage cables should never be removed or installed while the supply is on.
 
+\subsection{High Voltage Configuration and Operation}
 The CAEN Distributed High Voltage System is responsible for
 providing high voltage power to all HMS and SHMS detector systems.
 This system is a
@@ -36,7 +85,7 @@ and \ref{tab:hv_cards_new}.  A given crate may have a mix of card
 types, although cards can not be exchanged between SY403 and SY4527 crates.
 
 \begin{table}
-\caption{Specifications of SY403 High-Voltage Cards used in Hall~C Detector 
+\caption{Specifications of SY403 High-Voltage Cards used in Hall~C Detector
 Systems\label{tab:hv_cards}.}
 \begin{center}
 \begin{tabular}{ccccc}
@@ -50,7 +99,7 @@ Systems\label{tab:hv_cards}.}
 \end{table}
 
 \begin{table}
-\caption{Specifications of SY4527 High-Voltage Cards used in Hall~C Detector 
+\caption{Specifications of SY4527 High-Voltage Cards used in Hall~C Detector
 Systems\label{tab:hv_cards_new}.}
 \begin{center}
 \begin{tabular}{ccccc}
@@ -71,7 +120,7 @@ direct/local control are available for the two different crate types.
 %\caption{Generic CAEN High Voltage System setup\label{fig:caen_setup}}
 %\end{figure}
 
-HV channel assignments currently in effect are indicated in 
+HV channel assignments currently in effect are indicated in
 two files (``group\_map'' and
 ``channel\_map'') in the directories \$EPICSHL/HV/hms\_all (for HMS) and
 \$EPICSHL/HV/shms\_all (for
@@ -88,7 +137,7 @@ Operation of the EPICS graphical interfaces is described in the CAEN
 HV Operation Howto~\cite{howto:CAEN_HV_operation}.
 
 In case of a dead high voltage channel, the high voltage cable for a
-given detector element can be moved 
+given detector element can be moved
 to a spare high voltage channel, if available.  (The channel\_map
 file, described above shows which channels are in use.)  Care must be
 taken to always use the correct type of HV (positive vs. negative,
@@ -158,14 +207,29 @@ different from 0 (i.e. 1-99)}
 \item{One should refrain from any local operation of crates when the
 EPICS system is active.}
 \end{itemize}
+}
 
+\infolevone{
 \subsection{The Wire Chamber Gas Mixing System}
 \label{sec:chambergas}
 % (BDS) Largely pulled from detailed gas_system_HOWTO document
+}
+\infoleveqnull{
+\section{Detector Gas Supply System}
+}
 
-The Hall~C wire chamber gas mixing system exists in the gas shed located
-to the left of the counting house in the parking lot between the counting house
-and the accelerator service building (building 96C).  The main
+The Hall~C wire chamber gas mixing system is located in the gas shed located
+to the left of the counting house (when facing the counting house)
+in the parking lot between the counting house
+and the accelerator service building (building 96C).  The SHMS gas sysystem for
+the SHMS nobel gas Cerenkov is also located in this shed.
+The gas cylinders in use are along the outside of the Gas Shed
+in a fenced area. There are racks next to the Gas Shed for storage
+of full gas cylinders.  Hall C currently uses ethane, argon, ethanol,
+carbon dioxide, nitrogen and neon.
+\infolevone{
+
+The main
 component of the system is a single MKS 647 menu driven 4-channel
 controller that maintains the mix proportions and pressure regulation of the
 gas supplied to the wire chambers.  Gas flow is
@@ -243,7 +307,7 @@ Channel 2   & ON       &                   Press ``ON 2'' (\em Ethane) \\
 Channel 3   & OFF      &                   Press ``OFF 3'' (\em not in use) \\
 Channel 4   & OFF      &                   Press ``OFF 4'' (\em not in use) \\ \hline
 \multicolumn{2}{|c|}{\bf Pressure Transducer} & {\it Pressure Setup}  \\
-Controller  & STD      &                   \\ 
+Controller  & STD      &                   \\
 Range F.S.  & 1000 Torr&                   \\ \hline
 \multicolumn{2}{|c|}{\bf MFC Valve Controls     } & {\it Mode Selection} (Fig. \ref{fig:mode_selection}) \\
 Channel 1   & PID      &                                   \\
@@ -283,7 +347,7 @@ The initial menu upon startup is the {\bf Main Menu}
 Display} menu (Fig.~\ref{fig:user_display}). It shows the amount of
 each gas currently flowing, the total gas flow, and the current
 delivery pressure. This display also shows which of several possible
-pre-defined gas mixtures is selected. These mixtures are configured 
+pre-defined gas mixtures is selected. These mixtures are configured
 on the {\bf Gas Composition} screen, Fig. \ref{fig:gas_composition}.
 For normal operation, we use
 only mixture {\bf \#1}, (number shown on the lower-right of the
@@ -323,13 +387,13 @@ may be configured from the {\bf Pressure Control} screen
       \begin{enumerate}
       \item [5.1] RANGE SELECTION (Fig.~\ref{fig:range_selection})
       \item [5.2] GAS SELECTION (Fig.~\ref{fig:gas_selection})
-      \item [5.3] MODE SELECTION (Fig.~\ref{fig:mode_selection}) 
+      \item [5.3] MODE SELECTION (Fig.~\ref{fig:mode_selection})
       \item [5.4] ZERO ADJUST
       \item [5.5] TRIP LIMITS
       \item [5.6] GAS COMPOSITION (Fig.~\ref{fig:gas_composition})
       \end{enumerate}
    \item [6] SYSTEM SETUP
-   \item [7] PRESSURE SETUP 
+   \item [7] PRESSURE SETUP
    \item [ ]
    \item [9] INFORMATION
    \item [0] POWER OFF
@@ -437,7 +501,7 @@ channel, to show which mass flow valves are enabled.  ``ON'' must be
 displayed in the bottom row of the Extended Display menu for gas to be
 flowing in a particular channel.
 
-For gas to flow, two conditions must be met: 
+For gas to flow, two conditions must be met:
 \begin{enumerate}
 \item Each channel (1 and 2) must be enabled by pressing ``ON'' and then the
   desired channel number.
@@ -458,7 +522,7 @@ bottles when the bottle content drops below about 10\% of its
 capacity.  For argon, the bottle content is directly indicated by the
 bottle pressure: a new bottle usually contains 2000 to
 3000~psig. Argon bottles should be changed whenever the bottle
-pressure is found to be below about 200~psig. 
+pressure is found to be below about 200~psig.
 
 Ethane bottles, on the
 other hand, contain liquefied ethane. Thus the bottle pressure is just
@@ -468,7 +532,7 @@ will not tell you how much ethane is left in the bottle until it reads
 zero! Instead, we measure the ethane content by observing the weight
 of the bottle and comparing it to the weight when the bottle was
 full. A standard B-size cylinder contains about 32~pounds of ethane.
-The ethane cylinders on the manifold sit on scales which have been 
+The ethane cylinders on the manifold sit on scales which have been
 pre-set to indicate the net weight of ethane in the bottle.
 Numbers in the green portion of the dial indicate ethane remaining.
 If the indicator points to the red portion of the dial, the bottle
@@ -512,10 +576,53 @@ remain closed during normal operation.
 
 To keep the alcohol temperature (and thus the vapor pressure) constant,
 the alcohol bubbler is housed in a refrigerator which is controlled by
-an electronic temperature regulator having 1$^\circ$C sensitivity. The 
+an electronic temperature regulator having 1$^\circ$C sensitivity. The
 controller is located on a shelf in the right-hand rack of the gas mixing
 system. Normally, the actual temperature in the refrigerator is
 indicated on the front panel of the controller. The controller should
 be set to maintain a temperature of 2$^\circ$\,C.
 
 %=====================================================================
+}
+\begin{safetyen}{0}{0}
+\infolevone{\section{Safety Information}}
+\label{sec:hallc-det-gasalarms}
+
+\subsection{Hazards}
+
+Some of the gases that are used are flammable.  Also, the gas bottles
+are under high pressure and can become missiles.
+
+\subsection{Mitigations}
+
+The bottles are located in a fenced area next to the gas shed with the bottles
+secured so that they can not fall.
+
+In Counting Room C there are two alarm panels associated with the gas
+systems for the detectors.  They are located on the far left end of the
+control console, mounted one above the other.  The upper panel is a
+Gas Master flammable gas monitoring system.  The lower panel is a gas
+systems status indicator.  The Gas Master system will go into alarm if
+elevated levels of flammable gas are present in either of the Detector
+Shielding Huts or the Gas Shed.
+The gas systems status will
+alarm if any of a number of faults are detected in the Hall C Wire-chamber
+Gas System.  The LED for the specific fault will turn red to indicate which
+fault caused the alarm.
+Response to an alarm should be to contact the personnel listed below.
+
+\subsection{Responsible Personnel}
+
+Maintenance of the gas systems is routinely performed by the Hall c
+technical staff.  Shift personnel are not expected to be responsible
+for maintaining the detector gas systems (see Table \ref{tab:gas:personnel}
+for the names of persons to be contacted in case of problems).
+
+\begin{namestab}{tab:gas:personnel}{Gas for wire chambers: authorized personnel
+}{%
+      Responsible personnel for detector gas system.}
+  \TechonCall{\em Contact}
+  \BradSawatzky{}
+  \JackSegal{}
+\end{namestab}
+\end{safetyen}
