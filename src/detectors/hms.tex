@@ -177,36 +177,7 @@ Y and Y$'$ wires measure in the transverse direction while
 the U and V planes are inclined at fifteen degrees with respect to the
 X planes.
 
-% See if this can be removed as there is a gas handling section
-The chambers are filled with a mixture of Argon, Ethane and Isopropyl Alcohol
-($\approx$ 49.5 $\%$, 49.5 $\%$  and $1\%$ by weight respectively).
-The gas bottles are in the bottle racks behind the gas shed. The gas shed
-is located in the parking lot to the left of the counting house when one is facing the counting
-house between the counting house and the accelerator
-service building.  The alcohol is placed in the gas
-by bubbling the gas through a refrigerated bubbler. This bubbler is
-located in the gas shed.
-
-There are gas log books that must be completed each shift.
-When a bottle is near empty it should be changed.
-Care should be used when handling high pressure gas bottles as the
-potential energy stored in such a bottle is tremendous.
-Gas bottles can only be changed by authorized personnel.
-
-The gas mixing system is in the gas shed. The mixing is accomplished
-by an electronic system. The flow rates of the gases can be read off the
-LCD display of the flow meter located in the gas panel rack in the shed.
-This information must be entered in the gas log book along with the bottle contents.
-Only authorized personnel should make adjustments to the gas flow system.
-All permanent members
-of the Hall~C physics and engineering staff may change gas bottles.
-
-As is true for all detector systems, in case you note a loss of power
-during experiment conditions, check the VESDA panel in the Hall~C counting
-house to see whether there is a potential fire before resetting (also
-see the section on ``Fire" at the beginning of this chapter).
-
-\paragraph {Gas Flow Operating Procedures}
+\paragraph {Gas System Operating Procedures}
 
 The HMS drift chambers use a 50:50 mixture (by weight) of argon and
 ethane gas.  Each chamber has a volume of about 120 liters.  Each is
@@ -214,46 +185,17 @@ operated slightly above atmospheric pressure.  The gas flow through
 the two chambers can be varied and is typically set at 1000 cc/min
 when flushing (full purge in about 2.5 hours) and 400 cc/min when operating
 at low to moderate charged particle rates.  The chambers are connected
-in parallel for gas flow as shown in Figure~\ref{fig:5.1}.  There are flow meters
-connected
-to the exit line of each chamber.  The gas flow control electronics
-and gas handling system (GHS) are located in the gas shed just outside
-of the Hall~C counting house.  The gas cylinders are kept just outside of
-this shed.  Both the argon and ethane cylinders have regulators (the ethane
-cylinder must use a CGA-350 regulator since it is a combustible gas) for
-reading the gas pressure in the bottle (high pressure) and in the line (low
-pressure).  However, the ethane
-in the cylinder is a liquid, so that the WEIGHT of the cylinder is important
-for monitoring the amount of ethane remaining.  The ethane
-cylinder sits on a 'bathroom scale' for this reason.  An empty cylinder
-(standard size) weighs 110 lbs.
+in parallel for gas flow as shown in Figure~\ref{fig:5.1}.  There are flow
+meters connected to the exit line of each chamber.
 
 \begin{figure}
 \includegraphics[height=7.5in]{HMSdriftch.pdf}
 \caption{The Gas Handling System for the HMS Drift Chambers. \label{fig:5.1}}
 \end{figure}
 
-\begin{center}
-{\bf Procedure}
-\end{center}
-
-\begin{enumerate}
-\item {Visually check that the gas flow lines are connected to the two
-HMS chambers.}
-\item {Check gas pressure and amount in gas cylinders (Ar and C$_2$H$_6$).}
-\item {Turn on the gas flow on the MKS controller in the gas hut.}
-\item {Set flow through channels three and four to 800 sccm each
-(for purging).}
-\item {After about 15 minutes, the oil bubbler in the gas hut should
-indicate flow.}
-\item {The flow rates as read on the flow meters at the chambers should
-indicate very low flow (0.3 or so).}
-\end{enumerate}
-
-The above settings are for 400 sccm flow through each chamber.  The gas
-cylinders should be changed when about 90\% used.  The gas handling system
-parameters should be checked every shift (see the checklist at the end of
-this document).
+The gas flow control electronics
+and gas handling system (GHS) are located in the gas shed just outside
+of the Hall~C counting house.  See section~\ref{sec:chambergas} for details.
 
 \paragraph{Electronics Operating Procedures}
 
@@ -263,11 +205,12 @@ and Wiener.  There are 544 electronics channels per chamber for
 a total of 1088 readout channels.  (588 per chamber, 1176 total
 for the new chambers).
 
+%FIXME BDS: do the HMS chambers still use both LRS and Nanometric cards?
 These anodes are read out using LRS 2735DC
 and Nanometrics N-277 preamplifier/discriminator cards mounted directly
 on the chambers.  Each chamber has both types of cards, however each plane
 (of six total planes per chamber) has only one type of card.  The
-digitized signals are sent to FASTBUS TDC inside of the detector hut
+digitized signals are sent to VME CAEN 1190 TDCs inside of the detector hut
 via twisted pair cable.  The low voltage (preamplifier) power supplies
 (the Acopian supplies)
 are in the 13 inch blue rack at the rear of the detector hut.  The
@@ -283,11 +226,10 @@ house.
 \begin{enumerate}
 \item {Turn on low voltage power supplies (the Acopian Supplies).}
 \item {Turn on threshold voltage power supply to appropriate setting.}
-\item {Turn on the FASTBUS power supply if it is not already on.}
+\item {Turn on the VME Crate power supply if it is not already on.}
 \end{enumerate}
 
-It is important that the Acopian power supplies be turned on {\bf BEFORE} the
-FASTBUS supplies or the FASTBUS crate will hang up.  The threshold voltage
+The threshold voltage
 can be controlled locally in the detector hut or remotely in the
 counting house. There is approximately a one volt drop in the threshold
 voltage line in going from upstairs in the counting house to
@@ -324,7 +266,7 @@ source per {\em chamber}.
 \end{center}
 
 \begin{enumerate}
-\item {Make sure a 2735DC card or a grounding plate is on each instrumented
+\item {Make sure an amplifier/discrimator card or a grounding plate is on each instrumented
 connector on the chamber.}
 \item {Make sure that there is gas flow, particularly Ar gas.}
 \item {Make sure high voltage cables are properly connected to
