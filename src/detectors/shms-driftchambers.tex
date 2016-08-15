@@ -1,3 +1,76 @@
+% This infolevnull section is just for the ESAD.  We should try to
+% merge it with the text.  The infolevnull section applies
+% to both SHMS and HMS chambers
+\infoleveqnull{
+\section{Drift Chambers}
+The Drift Chambers in the HMS and SHMS spectrometers
+provide a
+precise ($\pm 125~\mu$m) measurement of the position and angle of
+incidence of particles at the respective spectrometer focal planes.
+This
+information may be combined with the knowledge of the spectrometer
+optics to determine the position and angle of the particles in the
+target.
+
+Operation of the Hall C drift chambers requires the application of both High Voltage
+(HV) across the chambers themselves and Low Voltage (LV) across the
+preamplifier/discriminator cards, which are mounted on the sides of
+the drift chabmers.
+The chamber gas is a combination of argon (Ar) and flammable ethane
+(C$_2$H$_6$) which is bubbled through alcohol.  Gas is routed from
+bottles located next to the Hall C gas shed, through the gas mixing
+system in the gas shed, to the chambers in the spectrometer detector
+huts.
+
+\subsection{Hazards}
+
+The following hazards are associated with the chambers:
+
+\begin{description}
+\item {\bf The High Voltage System}
+CAEN SY403 high voltage/low current power supplies provide high
+voltages to the chambers in the range of -1.5 kV to -2.5 kV.
+\item{\bf Explosive Gas} The Ar~C$_2$H$_6$ chamber gas is explosive
+and must be handled accordingly.  Further, gas flow should be maintained
+for at least 24 hours prior to the enabling of HV.
+\item{\bf High Pressure Gas Bottles} The gas used in the chambers
+is supplied in high pressure ($\ge$ 2000 psi) gas bottles. This
+confined high pressure gas represents a tremendous (potentially lethal)
+amount of stored energy.
+\end{description}
+
+
+\subsection{Mitigations}
+
+For the HV, red HV RG-59/U cables good to 5 kV with standard SHV
+connectors are used to connect the power supply to the chamber
+high voltage distribution splitters on each chamber.
+A given chamber draws a current
+from  50--100 nA.  When servicing the chambers, the HV for that
+element must be turned off and disconnected.
+
+The high pressure gas bottles are stored far from the equipment in
+a controlled
+area as discussed in the Hall C gas handling section of the
+operations manual.
+
+
+\subsection{Responsible Personnel}
+
+The individuals responsible for the operation
+of the VDC are shown in Table \ref{tab:dc:personnel}.
+
+\begin{namestab}{tab:dc:personnel}{DC responsible personnel}{%
+      DC responsible personnel.}
+  \JoeBeaufait{}
+  \JackSegal{}
+  \MahlonLong{}
+  \BradSawatzky{}
+\end{namestab}
+
+}
+
+
 \infolevone{
 % Details needed
 % Nominal HV settings
