@@ -5,7 +5,8 @@ Experimental Physics and Industrial Control System
 (EPICS)~\cite{EPICSwww}
 %\htmladdnormallinkfoot{}{\url{http://www.aps.anl.gov/epics}}
  architecture monitors and commands
-the various Hall C systems. The basic components of the system are:
+various Hall C systems and the accelerator.
+The basic components of the system are:
 \begin{itemize}
 \item Input/Output Controllers (IOCs) - Systems containing single
 board computers (SBCs) and I/O modules
@@ -17,12 +18,13 @@ systems such as Raspberry PIs.
 \item Operator Interfaces (OPI) - Computers capable of executing
 EPICS tools to interact with the IOCs.
 The four most used tools in Hall C are (a)
-a Web-enabled version of the Motif-based Display Editor/Manager (MEDM)~\cite{MEDMwww},
-(b) StripTool and, (c) a signal archiver.
-MEDM is the main interface used for monitoring and controlling both the hall and accelerator
+the Extensible Display Manager (EDM)~\cite{EDMwww},
+(b) StripTool, (c) a signal archiver, and (d) an alarm handler.
+EDM is the main interface used for monitoring and controlling both the hall and accelerator
 equipment. StripTool allows to monitor
 the behavior of one or more signals as a function of time.
-The signal archiver keeps a record of a selected set of signals.
+The signal archiver keeps a record of a selected set of signals.  The
+alarm handler alerts operators to situations requiring attention.
 \item Boot Servers - IOCs load the various
 software components needed to perform their functions from these machines (i.e. operating system,
 signal database and controls algorithms).
@@ -30,12 +32,15 @@ signal database and controls algorithms).
 %\item Local Area Network (LAN) - the communication path joining the IOCs, OPIs and various servers.
 \end{itemize}
 
-In addition equipment controlled with EPICS, Hall C uses an industrial
+In addition to equipment controlled with EPICS, Hall C uses an industrial
 control system, composed of Allen Bradley PLCs (Programmable Logic
 Controllers) and commercial OPI software.  This system is used to
 control the cryogenics, magnets and motion of the HMS and SHMS
 spectrometers.  This system is described in
-section~\ref{sec:spectrometercontrols}.
+section~\ref{sec:spectrometercontrols}.  The system includes an interface to
+EPICS making spectrometer information available to standard EPICS tools and
+to give the PLC based control systems access to cryogenic plant information
+available in EPICS.
 
 } %\infolevone
 \obsolete{ % comment out until in better shape
@@ -66,5 +71,14 @@ Refer to spectrometer chapter for information on that control system.
 Note that spectrometer information is availabe as readonly EPICS so
 that spectrometer information can be read, displayed and logged with
 EPICS tools.
+
+List the following EPICS Systems
+  High Voltage control -> HV section
+  Target Controls -> Target Chapter
+  Collimator controls -> Collimator section
+  Spectrometer motion, fields, cryogenics -> spectrometer chapter + howtos?
+  Beam current measurement
+  Reset panel (Raspberry Pi)
+  App developer howto (if we do one)
 
 } % \infolevtwo
