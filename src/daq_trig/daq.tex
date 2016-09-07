@@ -93,15 +93,15 @@ analysis with the C++ analyzer \texttt{hcana} and online analysis software.
 
 \par
 In the counting room we have various computers
-for DAQ, analysis, and controls.  The controls
-subnet is the responsibility of
-J. Gomez and is documented in another chapter.
-The DAQ computer's names are denoted by \mycomp{adaqlN}, where
-N is a number.  adaql1 and l2 are Linux computers for
-running DAQ while \mycomp{adaql3,4}... and higher
-are for analysis. A new computer has been installed and will be used for the
-Left HRS DAQ it is named adaq1 we plan to have adaq2 installed for Right HRS soon.
-The Linux PCs are administered mostly by Ole Hansen.
+for DAQ, analysis, and controls.  (Control systems are described
+in Chapter~\ref{chap:controls}.)
+The DAQ computer's names are denoted by \mycomp{cdaqlN} and \mycomp{hcdeskN},
+where N is a number.
+%  adaql1 and l2 are Linux computers for
+%running DAQ while \mycomp{adaql3,4}... and higher
+%are for analysis. A new computer has been installed and will be used for the
+%Left HRS DAQ it is named adaq1 we plan to have adaq2 installed for Right HRS soon.
+%The Linux PCs are administered mostly by Ole Hansen.
 
 \par
 To reboot the Linux machines, first hit \mycomp{Ctrl-Alt-F1}
@@ -111,21 +111,22 @@ If power fails for a prolonged time,
 you must shutdown before the UPS fails.
 
 
-\section{DAQ checklist}
-Things to check before experiment starts
-\begin{enumerate}
-\item blaster test transfer rate
-\item BPM cabling
-\item BCM cabling
-\item timestamp cabling
-\item raster cabling
-\item check portservers
-\item check reset
-\item check trigger latch is connected
-\item helicity if needed
-\item scalers
-\item synchronization time stamp
-\end{enumerate}
+%\section{DAQ checklist}
+%Things to check before experiment starts
+%\begin{enumerate}
+%\item blaster test transfer rate
+%\item BPM cabling
+%\item BCM cabling
+%\item timestamp cabling
+%\item raster cabling
+%\item check portservers
+%\item check reset
+%\item check trigger latch is connected
+%\item helicity if needed
+%\item scalers
+%\item synchronization time stamp
+%\end{enumerate}
+% A list should be in the section below
 
 \section{Beginning of Experiment Checkout}
 
@@ -398,22 +399,24 @@ Then do a Cold Start (see section above).
 
 \section{Electronic Logbook and Beam Accounting}
 
-Two tools are available for logging information
+Two major tools are available for logging information
 by the shift workers: \hskip 0.05in
-(1) The Electronic Logbook ``halog'', and
+(1) The Electronic Logbook ``hclog'', and
 \hskip 0.05in
-(2) The Hall Beam--Time Accounting Table.
+(2) The Hall Beam--Time Accounting tool.
 
 \par
 The electronic logbook is a web-based
-repository of logbook data.  There are
-two ways to make entries:  One can use
-the halog GUI (type \mycomp{halog} and make your
+repository of logbook data available at
+\url{https://logbooks.jlab.org/book/hcloghttps://logbooks.jlab.org/book/hclog}.
+There are
+several ways to make entries:  One can use
+the hclog GUI (type \mycomp{hclog} and make your
 entry), or one may use a script
 to insert a file.
 Some data from EPICS
 and scalers, among other things, are inserted
-automatically into halog on each start-of-run
+automatically into hclog on each start-of-run
 and each end-of-run.  These data also get
 written into files with the run number in
 their name in \mycomp{/epics/runfiles}.
