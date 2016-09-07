@@ -1,7 +1,4 @@
 \infolevone{
-\section{Common Systems}
-This section describes systems that are common to the detectors in both
-spectrometers.
 
 \subsection{High Voltage Supplies and Control}
 \label{sec:highvoltage}
@@ -213,3 +210,32 @@ different from 0 (i.e. 1-99)}
 EPICS system is active.}
 \end{itemize}
 }
+
+\subsubsection{High Voltage System Checkout}
+\label{sec:highvoltagecheckout}
+
+Before starting an experiment, or before using the high voltage system to
+test detectors, proper functioning of the HV supplies and EPICS controls
+should be verified with this checklist.
+\begin{itemize}
+  \item{Check EPICS: Using the EPICS Control system as described in the CAEN HV
+  Operation Howto~\cite{howto:CAEN_HV_operation}, verify that voltage set
+  points and current/voltage limits are read by the control system.}
+  \item{Verify Operation: For the detector(s) of interest, individually
+  turn on each channel.  Verify that the channel reaches the desired
+  set voltage.  If the readback voltage exceeds the set voltage by more
+  than a few volts
+  (Overvoltage), or fails to reach full voltage (Undervoltage), immediately
+  turn off the channel, report the observation in the logbook and consult
+  an expert.}
+  \item{Verify Limits: Make a backup of HV settings.  For each channel in the
+  detector, set a current limit below the current being drawn by the detector
+  channel.  Verify that each channel trips.  Similarly, set a maximum voltage
+  for each channel below the set point and verify that the voltage limit
+  is enforced.  (This may change voltage set points, so they may need to
+  be restored from backup.)  Consult an expert if any channels fail to trip
+  on overcurrent or if maximum voltage is not enfored.}
+  \item{Interlocks: If any high voltage systems are interlocked with other
+  systems, verify that assertion of the interlock signal turns off high
+  voltage.}
+\end{itemize}
