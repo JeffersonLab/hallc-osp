@@ -2,8 +2,13 @@
 \section[Target Chamber]{Target Chamber}
 \label{sec:target_chamb}
 
-The cryotargets and the associated solid targets (see
-Sec.~\ref{sec:targets-overv}) are contained in a special target
+The cryotargets and the associated solid targets
+\ifdefined\PIVOTOSP
+(see Chapter 3 of the Hall C Standard Equipment Manual~\cite{HallCosp})
+\else
+(see Sec.~\ref{sec:targets-overv})
+\fi
+are contained in a special target
 chamber consisting of a large evacuated cylinder in two stacked
 sections.
 
@@ -21,7 +26,7 @@ luminosity. The relevant JLab drawing numbers are 67153-E-56001 to
 67153-E-56020, although as described below, the window design has
 changed dramatically. Note that the portal to JLab drawings
 is \url{https://misportal.jlab.org/jlabDocs/search.seam}.
- 
+
 The chamber vacuum is isolated from the atmosphere by a thin aluminum
 window. The nominal vacuum is typically a few times $10^{-6}$ Torr
 warm, and about a decade less with a cold cryotarget. Operation with
@@ -52,7 +57,7 @@ plagued the old design.
 
 The new design also greatly reduces the mass next to the beam axis at
 the scattering chamber exit.
-%The exit beam pipe is supported mechanically by a pair of struts that attach to the window frame, with the design goal to minimize the amount of material close to the beam axis. 
+%The exit beam pipe is supported mechanically by a pair of struts that attach to the window frame, with the design goal to minimize the amount of material close to the beam axis.
 The mass associated with the 2 $in$ thick chamber wall and window
 frames near the beam axis is essentially replaced as a source of
 background by the thinner compression flange/nut on the window, which
@@ -146,10 +151,10 @@ into the vacuum and is sealed by a large diameter bellows.
 %of 6 inches and the inter-ridge spacing as a width,
 %then stress formulas predict that the 0.016 $in$
 %material would reach ultimate stress at a pressure higher than 35 PSID
-%(for both over-pressure and under-pressure). 
-%There is a gate valve between the 
-%scattering chamber and the beam entrance (exit) 
-%pipe. Both 
+%(for both over-pressure and under-pressure).
+%There is a gate valve between the
+%scattering chamber and the beam entrance (exit)
+%pipe. Both
 %valves will be closed automatically in the
 %event that the chamber vacuum begins to rise and an FSD will be caused
 %( this is done via a relay output of the scattering
@@ -168,7 +173,7 @@ into the vacuum and is sealed by a large diameter bellows.
 %The loud noise from the rupture could hurt
 %one's ears if not protected. Therefore when the chamber is under vacuum,
 %protective covers are optionally put on when practicable during controlled access. These must be taken off
-%for data taking. 
+%for data taking.
 %For restricted access, the protective covers are required
 %to be on when the chamber is under vacuum. Before switching from controlled
 %access to restricted access, the protective covers must be installed by designated Hall C technicians.
@@ -185,7 +190,7 @@ into the vacuum and is sealed by a large diameter bellows.
 %opposite sides of the ring that vacuum connect the chamber to each HRS.
 %The height of the aluminum ring shown is 36.0 $in$, which is
 %designed to accommodate the mounting flanges.
-%The stainless steel base ring 
+%The stainless steel base ring
 %is 11.50 $in$ in height with
 %one pump-out 6 $in$ diameter port  and with
 %seven 4 $in$ viewing and electrical feed-through ports.
@@ -273,7 +278,7 @@ and gate valve can be used with a port on the top half of the chamber
 to improve the vacuum in the chamber.  Still further improvement in
 vacuum has been achieved using an Alcatel turbomolecular drag pump as
 a backing pump in addition to the induction-motor-driven
-%hydrogen-safe (Class I, Division 2, Group B) 
+%hydrogen-safe (Class I, Division 2, Group B)
 mechanical pump normally on the turbopump exhaust. The gate valves isolate the turbopumps if the pressure in the scattering chamber rises above a threshold value. The chamber vacuum is read by a cold cathode gauge. This gauge is turned off in the event of poor vacuum in the chamber because it can arc above about $10^{-2}$ Torr. In addition, the chamber is equipped with a thermocouple vacuum gauge, a Convectron gauge, and a Barksdale DX1-A3SS vacuum switch.
 
 %Vacuum pumps on the beamline upstream and downstream of the scattering chamber can also help maintain %vacuum in the scattering chamber. However they can also be a source of leaks. Furthermoer, the performance of the ion pumps on the upstream beamline is greatly degraded if helium or hydrogen leaks are present on the cryotarget.
@@ -308,10 +313,9 @@ The target chamber may pose several hazards:
 \begin{list}{\arabic{enumi}.~}{\usecounter{enumi}\setlength{\itemsep}{-0.15cm}}
   \item {\bf Rupture of vacuum windows}. This hazard is mitigated by
     lexan covers on the vacuum windows, installed by the hall
-    technicians either at the beginning of a ``restricted access''
-    period
-        %(see Sec.\ref{sec:Access}), or sometimes during ``controlled
-    access'' if access to the target chamber area is needed.
+    technicians when access to
+    the target chamber area is needed or at the start of a long
+    down period.
     Installation and removal of the window covers is included in the
     technician's checklists.  When the chamber is under vacuum, it is
     mandatory to use ear protection in the chamber vicinity. The
@@ -326,21 +330,34 @@ The target chamber may pose several hazards:
     and/or transport. Targets which have been surveyed and released by
     the RCG are stored either in RCG storage areas or the target
     group's RCA storage cabinets in the EEL building.
-        
-\item {\bf Pivot Access} Access to the pivot where the scattering
-  chamber is located is restricted. A control document and access list
-  are posted on the ladder going up to the pivot. A rope and sign are
-  strung across the entrance to the ladder to remind people of this
-  requirement. Fall protection during controlled access is provided by
-  requiring those on the access list to wear a fall-protection harness
-  tethered to an approved anchor point when on the pivot. Railings
-  must be installed on the pivot during restricted access, at which
-  point a harness is not required.
+
+\item {\bf Pivot Access} The pivot area where the scattering
+  chamber is located is located about 10 feet off the floor and is
+  at the same level as and is directly accessible from the first level
+  of the SHMS carriage.  This area is restricted
+  to authorized personell
+  when the scattering chamber
+  is under vacuum (with or without a full target) or when full railing
+  coverage (passive fall protection) is not in place.  A control
+  document~\cite{PivotOSP} and authorized personell access list
+  are posted at the entrance to the pivot area.  A rope and sign strung
+  across the SHMS carriage near the pivot
+  mark this entrance to remind people of the restrictions.
+  Hearing protection is required in pivot area when the scattering chamber
+  is under vacuum.
+  Active fall protection and approriate training when in the pivot area.
+  Railings are installed on the pivot between run periods, at which
+  point active fall protection is not required.
 
 \end{list}
 
-Some other safety issues are discussed in the cryo-target chapter (see
-Sec.~\ref{sec:target-cryo-safety}).
+Some other safety issues are discussed in
+\ifdefined\PIVOTOSP
+chapter 3 of the Standard Equipment Manual~\cite{HallCosp}.
+\else
+the cryo-target chapter~\ref{sec:targets-cryo-safety}.
+\fi
+
 %and also in the polarized target chapter (see Sec.~\ref{sec:target-he3-general}).
 
 %\begin{safetyen}{10}{15}
@@ -361,4 +378,3 @@ and shall be operated by the JLab target group.
 \end{safetyen}
 }
 %
-
