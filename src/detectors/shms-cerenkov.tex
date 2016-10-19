@@ -262,49 +262,62 @@ is pumped down to ~1 millitorr, then refilled with C$_4$F$_8$O (C$_4$F$_{10}$)
 gas.
 
 Because the operating pressure is slightly subatmospheric, a pump and fill
-procedure is employed.  First make sure that:
+procedure is employed.
 
-{
-  %FIXME BDS (Add valve names, verify steps in detector hut)
-\color{red}
-Detailed Fill procedure to be documented.
-}
+%FIXME BDS (Add valve names, verify steps in detector hut)
+\begin{enumerate}
+  \item Initial Prep
+  \begin{enumerate}
+    \item Ensure that the HGC Remote Fill Valve is CLOSED.
+    \item If you will changing the radiator gas, then ensure Valve
+      \textbf{MV9902} is also CLOSED.  This is the main cut-off valve
+      downstream of the 3-way valve on the supply gas panel under the stairs on
+      the SHMS carriage.\label{hgc:step:changegas}
+    \item Rotate the 3-way valve to connect the radiator gas you require to the
+      downstream system.
+    \item Leave the cut-off valve closed for now.
+  \end{enumerate}
 
-% FIXME BDS (Add valve names, verify steps in detector hut)
-% \begin{itemize}
-% \item Valves {\bf TBD} are closed.
-% \end{itemize}
-% The tank is now ready to be evacuated.
-% \begin{itemize}
-%   \item Turn on the pump.
-%   \item Slowly open {\bf TBD}.  This evacuates the pump line.
-%   \item Open very slowly {\bf TBD}.  Since this valve connects the pump line to
-%     the detector volume, the pump will work very hard.  Meter this valve so that
-%     the pump is never under extreme stress.  It will take approximately
-%     20~minutes to pump down the tank.
-%   \end{itemize}
-%   The tank can now be filled.
-%   \begin{itemize}
-%   \item Locate the boiloff manifold on the walkway on the top level of the
-%     spectrometer, at the gap between Q3 and the dipole.
-%   \item Turn the valve on this manifold open slightly so that the flow meter
-%     barely registers a flow.
-%   \item Connect the remaining end of the Tygon tubing to the vent of valve
-%   {\bf V3} with a hose clamp.
-%   \item Open valve {\bf V3}.
-%   \item Increase the flow on the flow meter.  Do not exceed 100~cfpm.
-%   \item When {\bf G3} or {\bf EPG} reach the operating pressure, close the
-%     manifold valve.
-%   \item Close {\bf V3}.
-% \end{itemize}
+  \item The tank is now ready to be evacuated.
+  \begin{enumerate}
+    \item Turn ON the pump.  (This pump is oil-free and does not require a trap.)
+    \item Very \emph{slowly} open the HGC Remote Pump-out Valve.  Since this
+      valve connects the pump line to the detector volume, the pump will work
+      hard.  Meter this valve so that the pump is never under extreme stress.  It
+      will take approximately 20~minutes to pump down the tank.
+      %FIXME BDS (may need to update this number after procedure is tested)
+    \item Monitor the HGC Digital Pressure readback and close the HGC Remote
+      Pump-out Valve when you have reached $\approx 1 10^{-3}$ Torr.
+      %FIXME BDS (may need to update this number after procedure is tested)
+    \item CLOSE the HGC Remote Pump-out Valve.
+    \item Turn OFF the pump.
+    \item Monitor the HGC Digital Pressure readback for a few moments and ensure
+      it is stable!
+  \end{enumerate}
 
-The fill should take approximately 30 minutes.  The detector should
-NEVER be left unattended during a fill.  Frequently check the pressure
-in the tank and be aware when the pressure is near to one atmosphere.
-DO NOT let the pressure exceed one atmosphere under any circumstances;
-doing so risks damage to all of the equipment and personnel in the
-detector hut.  This pump/fill procedure is usually repeated at least
-once to ensure the purity of the gas.
+  \item The tank can now be filled.
+  \begin{enumerate}
+    \item If required due to Step~\ref{hgc:step:changegas}, \emph{slowly} open
+      the cut-off valve on the gas supply manifold under the SHMS stairs.
+      Monitor the flow-meter on the same panel and ensure that you do
+      \textbf{NOT} see any flow beyond that needed to pressurize the lines to
+      the distribution panel in the SHMS detector hut.
+    \item Slowly open the HGC Remote Fill Valve and monitor the Digital Flowmeter
+      \emph{and} Digital pressure readbacks.  A reasonable flow is 20~cfpm.
+    \item Monitor the HGC Digital Pressure readback and close the HGC Remote
+      Fill Valve when you have reached the desired operating pressure.
+    \item CLOSE the HGC Remote Fill Valve.
+    \item If the tank will remain at this pressure for an extended period
+      (\emph{i.e.} over a week, then CLOSE the main cutoff valve at the supply
+      panel under the SHMS carriage stairs (\textbf{MV9902}).
+  \end{enumerate}
+\end{enumerate}
+
+The fill should take approximately 30 minutes.  The detector should NEVER be
+left unattended during a fill.  Frequently check the pressure in the tank and
+be aware when the pressure is near to one atmosphere.  \textbf{DO NOT let the
+  pressure exceed one atmosphere under any circumstances; doing so risks damage
+to all of the equipment and personnel in the detector hut.}
 
 % \paragraph{$e$/$\bf{\pi}$ Procedures}
 % The procedure for $e$/$\bf{\pi}$ separation runs with 0.2 to
@@ -316,7 +329,6 @@ once to ensure the purity of the gas.
 % 13.5~psia of $\rm{N_2}$. The boiloff from the spectrometer magnets is a
 % perfect source of clean, dry Nitrogen, and is normally used to fill the
 % \Cerenkov\ tank.
-
 
 
 }%\infolevone{
