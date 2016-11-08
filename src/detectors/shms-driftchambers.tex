@@ -122,7 +122,12 @@ reference~\cite{howto:shms_drift_chambers}.
 The drift chambers 50/50 mixture (by weight) of Ethane/Argon as a
 drift gas which
 flows across all of the wire planes.  The system that delivers this
-gas is described in section~\ref{sec:chambergas}.
+gas is described in
+\ifdefined\SHMSDCOSP
+section 5.1.2 of the Hall C Standard Equipment Manual~\cite{HallCosp}.
+\else
+section~\ref{sec:chambergas}.
+\fi
 
 The high voltage for the SHMS drift chambers is supplied by CAEN
 high voltage, low current, power supplies in the electronics room of
@@ -130,7 +135,11 @@ the counting
 house and can be controlled through a GUI on the console computers.
 The operating voltages for the chambers are a nominal -1800V (foil) and -1800V
 (potential wires).  Control of the high voltage system is described in
+\ifdefined\SHMSDCOSP
+section 5.1.1 of the Hall C Standard Equipment Manual~\cite{HallCosp}.
+\else
 section~\ref{sec:highvoltage}.
+\fi
 
 Each anode/sense wire has its own electronic readout through
 Nanometrics preamplifier/discriminator cards or LeCroy Corporation LRS
