@@ -1,0 +1,7 @@
+12/14/2016
+
+Include somewhere a comment about trip current for HV.  Perhaps in
+safety highlighted or a startup procedure.  Trip dwell time must not
+be infinite.  No more than a few seconds.
+
+Look at Controls chapter some more.  Make sure jmenu command is spelled out.
