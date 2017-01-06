@@ -128,6 +128,66 @@ you must shutdown before the UPS fails.
 %\end{enumerate}
 % A list should be in the section below
 
+\section{Trigger Logic}
+Each photomultiplier and drift chamber wire in the HMS and SHMS detectors
+is digitized with a flash ADC, a TDC or both.  Many of these detectors are
+used to make HMS, SHMS, or coincidence triggers, causing readout of these
+digitized signals.  An block diagram overview of this DAQ/Trigger system is
+show in Fig.~\ref{fig:trig_overview}.  Schematics for the electronics for
+the various detectors are show in Figs.~\ref{trig_hodoscopes},
+\ref{trig_hms_shower}, \ref{trig_shms_preshower} and
+\ref{trig_aerogel_cherenkov}.
+
+\begin{figure}
+\includegraphics[width=6in]{trig_overview.png}
+\caption{\label{fig:trig_overview}
+Overview of the SHMS trigger and DAQ.  The HMS trigger is similar.
+The HMS drift chamber TDCs are in the detector hut, while the Flash ADCs
+for the HMS shower counter are located in the counting room.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{trig_hodoscopes.png}
+\caption{\label{fig:trig_hodoscopes}
+Schematic of trigger and DAQ for the HMS and SHMS hodoscopes.  The CAMAC
+L4564 modules are used to make logical ORs of each plane.  These OR'd signals
+are then used, with other detectors, to make a user configurable event trigger.
+}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{trig_hms_shower.png}
+\caption{\label{fig:trig_hms_shower}
+Schematic of the HMS Shower counter DAQ and trigger.  The PSh HI, PSh LO,
+and Sh LO signals are used, with other detectors, to make a user
+configurable event trigger.
+}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{trig_shms_preshower.png}
+\caption{\label{fig:trig_shms_preshower}
+Schematic of the DAQ and trigger for the SHMS Pre-Shower layer of the
+SHMS shower detector.  The
+PSh HI and PSh LO signals are used, with other detectors, to make a user
+configurable event trigger.  The flash ADCs for the the 224 shower counter
+blocks behind the pre-shower are also located in the SHMS Electronics Hut.
+These blocks are not used in the trigger.
+}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in]{trig_aerogel_cherenkov.png}
+\caption{\label{fig:trig_aerogel_cherenkov}
+Schematic of the DAQ and trigger for the Aerogel and Gas Cherenkov
+detectors in the HMS and SHMS.  The Trig signals (SHMS Aero, HMS Aero,
+HMS Gas CH, SHMS NGC, and SHMS HGC) are used, with other detectors, to
+make a user configurable event trigger.
+}
+\end{figure}
+
+
+
 \section{Beginning of Experiment Checkout}
 
 \par
