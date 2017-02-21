@@ -4,7 +4,31 @@
 \renewcommand{\dirfig}[0]{spectrometers/figs}
 \renewcommand{\dircur}[0]{spectrometers}
 
-\input{spectrometers/spectrometers.tex}
+% TODO:
+%  Add a bit more detail about detectors in the HMS hut
+%  Table of SHMS performance specifications in SHMS section
+%  HMS window details in ``Vacuum Windows in Hall C'' table
+% Check the statement:
+%    The HMS entrance window is located near the pivot and has a center-to-center
+%   bolt hole diameter of $10.5$ inches.
+
+\infoleveqnull{\section{Hall C Spectrometers}}
+\infolevone{
+\input{spectrometers/intro.tex}
+\input{spectrometers/hms.tex}
+\input{spectrometers/shms.tex}
+}
+\input{spectrometers/safety.tex}
+\infoleveqnull{
+\input{spectrometers/shmsfringe.tex}
+}
+\infolevone{
+\input{spectrometers/common.tex}
+\input{spectrometers/magnets.tex}
+\input{spectrometers/vacuum.tex}
+\input{spectrometers/collimators.tex}
+}
+\input{spectrometers/rotation.tex}
 
 % The following needs to be integrated into the spectrometer chapter.
 % So far it is just an overview and a bunch of example screens

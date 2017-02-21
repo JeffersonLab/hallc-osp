@@ -1,0 +1,148 @@
+\section{Spectrometer Carriage and Rotation Systems}
+
+The Carriage is the support structure of the spectrometer.
+
+Each entire spectrometer can be rotated. Rotation is driven by motors mounted
+near one of the sets of wheels. These motors are controlled by synchronous
+pulse width modulated drives which are mounted near the bottom of the shield
+house steps on the HMS, and under the rear of the SHMS structure.
+
+\infolevone{
+The spectrometer angles are found using a reference plumb bob and/or TV camera
+attached at a known location under the rear of each spectrometer.
+This camera is focused on survey marks scribed into plates which are attached to
+the rail on the floor. Using the scribe plates and a vernier scale, the angles of the
+spectrometers may be determined with a resolution of approximately $0.01^{\circ}$.
+}
+
+Since the Hall C spectrometers each weigh hundreds of
+tons, it is very important that all safety precautions are carefully
+adhered to.   During operations, the spectrometers are certified
+to allow remote rotation by shift crews within prescribed limits.  In
+the absence of this certification, the spectrometers may only be
+rotated by trained technical staff.
+
+
+\begin{safetyen}{0}{0}
+\subsection{Hazards}
+
+Hazards include:
+\begin{itemize}
+\item{Knocking items over during spectrometer movement.}
+\item{The wheels crushing things (including fingers and toes) on the floor in the path of the
+spectrometer}
+\item{Damaging the beamline or other equipment on theq floor if one goes to too small
+or too large an angle.  There is
+only a small gap between the rear of the SHMS shield house and the shielding wall
+behind it.}
+\item{Tearing out of cables etc. physically attached to the superstructure}
+\item{Elevated platforms on the spectrometer carriages.}
+\item{Magnetic fields.  Spectrometer magenets may be energized under either
+local or remote control.}
+\end{itemize}
+
+\subsection{Mitigations}
+Hazard mitigations:
+\begin{itemize}
+	\item{Stop-blocks attached to the rails to prevent spectrometer rotation beyond
+	the needed angular range for each experiment.}
+	\item{During experiments, the spectrometers are certified for rotation by
+	shift crews within specied angle ranges.  Spectrometer movement at other times
+	may only be performed by authorized personnel.}
+	\item{Hand rails are installed to prevent falls.  Access is only allowed to
+	areas on the carriage protected by hand rails.}
+	\item{Hard hats may be required under certain conditions when working on or
+	near the spectrometer carriages.}
+	\item{Magnetic fields hazards are indicated by either red flashing lights and/or
+	illuminated \textbf{Magnet on} signs.}
+\end{itemize}
+\end{safetyen}
+
+\infolevone{
+\subsection{Remote Rotation}
+
+Prior to the start of experiment operations, Hall-C staff will certify that the spectrometers
+are configured for safe remote rotation by verifying all required clearances and
+implementing interlocks, mechanical stops, or administrative controls, as appropriate.
+Refer to the section of this manual on \emph{Controls} to find instructions for
+rotating the spectrometers. The cameras enable remote readout of the HMS/SHMS
+spectrometer angles using the survey marks on the floor.
+The wide-lens and zoom cameras located at the entrance and
+the exit of Hall~C should be used to visually search for obstructions
+before and during remote rotation.
+
+Limit switches are installed at forward
+and backward angles which prevent HMS (SHMS) from rotating to angles more forward than
+10.6 (5.5) degrees and wider than 85 (40) degrees. To obtain more forward or wider
+angles an access is needed, and rotation has to occur manually
+downstairs with spotters. Hard limit switches will be installed to prevent
+the spectrometer from rotating out of maximum allowed range.
+
+In case the spectrometers are rotated to more forward angles, pay special
+attention to possible interferences of HMS and SHMS, and interference between either
+spectrometer and the beam pipes or their stands.
+
+%Remote rotation  is accomplished via the PLC located in the Hall.  It
+%is currently installed in the HMS shield hut for protection from
+%radiation.  Commands can be issued to the PLC (Texas Instruments 5000), which executes these commands
+%following algorithms stored in its memory. An EPICS screen is now
+%used to talk to the PLC.  The advantages of using the PLC are:
+%
+%\begin{itemize}
+%\item{No direct access by users to the algorithms, preventing unsafe
+%rotation attempts (instead, the algorithms have to be loaded locally into
+%the PLC).}
+%\item{Rotation of both HMS and SOS by the same smart controller, enabling
+%security checks of both angle decoders. This renders a better handle on the
+%minimum allowed angle between the two spectrometers.}
+%\item{Automatic slower rotation speeds (if desired) if close to desired angle
+%when using proximity switches.}
+%\end{itemize}
+%
+%The PLC communicates directly with the control electronics of several limit
+%switches, proximity switches, and decoders. Next to the limit switches
+%also hard limit switches will be installed on the floor to mitigate failure
+%of the PLC limit switches.
+}%\infolevone
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\infolevone{\subsubsection{Responsible Personnel}}
+\infoleveqnull{\subsection{Responsible Personnel}}
+
+Following the experimental run plan, as posted in the counting house
+by the run coordinator, shift workers are allowed to rotate the
+Hall C Spectrometers
+following guidelines of the standard equipment manual.  In the event
+of a problem getting the spectrometers to rotate the run coordinator
+should notified.  If the run coordinator is unable to solve the
+problem, and with the run coordinators concurrence, qualified
+personnel should be notified to repair the problem (see
+Table~\ref{tab:spectrometers:personnel_rotate}).
+
+\begin{namestab}{tab:spectrometers:personnel_rotate}{Spectrometer Rotation: authorized personnel}{%
+      List of Spectrometer Rotation responsible personnel where ``W.B.'' stands for the white board
+      in the counting house.}
+   \TechonCall{\em Contact}
+   \MikeFowler{}
+	 \SteveLassiter{}
+   \WalterKellner{}
+   \AndyKenyon{}
+   \JoeBeaufait{}
+\end{namestab}
+
+\infolevone{
+\subsection{Personnel Trained for Manual Spectrometer Rotation}
+
+The spectrometer motors may only be manually controlled by trained personnel. if it
+is necessary to rotate the spectrometer manually, contact one of the trained
+personnel listed in Table~\ref{tab:spectrometers:personnel_rotate}.
+At least two people are required for manual spectrometer rotation: one to
+run the motors and at least one spotter. Prior to rotating the spectrometer
+a visual inspection of the area must be made to insure that there
+is nothing in the spectrometer's path or on the rails. During rotation
+the spotter should pay special attention to
+the cables which run from the
+spectrometer to the target motor controller to make sure that
+nothing is hung up or stretching.
+}
