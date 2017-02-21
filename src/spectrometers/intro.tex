@@ -4,21 +4,46 @@
 high resolution and high accuracy nuclear physics experiments.  These
 spectrometers transport and detect charged particles that are scattered or produced
 in beam-target interactions.
+\ifdefined\SHMSMAGNETSOSP
+In this document we discuss the features and safe operation of
+the Super High Momentum Spectrometer, or SHMS.
+After this introduction and overview of the SHMS, the
+SHMS (and the legacy HMS - High Momentum Spectrometer)
+are discussed together as a series of subsystems.
+This document
+\else
 In this chapter
 we discuss the features and safe operation of these spectrometers,
 the High Momentum Spectrometer, or HMS,
-and Super High Momentum Spectrometer, or SHMS.  These spectrometers
+and Super High Momentum Spectrometer, or SHMS.
+These spectrometers
 share many common features.  After this
 introduction and overviews of the individual spectrometers, the
 spectrometers are discussed together as a series of subsystems.
 This chapter covers the ``mechanical'' subsystems of the spectrometers.
+This chapter
+\fi
+covers the ``mechanical'' subsystems of the spectrometers.
 The detector packages and
-shield houses are discussed in Chapter~\ref{chap:detectors}.
+shield houses are discussed in
+\ifdefined\SHMSMAGNETSOSP
+Chapter 5 of the Hall C Standard Equipment Manual~\cite{HallCosp}.
+\else
+Chapter~\ref{chap:detectors}.
+\fi
 
-Both the HMS and the SHMS are designed around a series of superconducting magnets,
+\ifdefined\SHMSMAGNETSOSP
+The SHMS is
+\else
+Both the HMS and the SHMS are
+\fi
+designed around a series of superconducting magnets,
 including quadrupoles and dipoles, followed by a set of particle detectors.  The first
 magnet on the SHMS is a horizontal-bending (HB) dipole that bends particles
-away from the beam-line. The HMS does not have a horizontal bender.
+away from the beam-line.
+\ifdefined\SHMSMAGNETSOSP\else
+The HMS does not have a horizontal bender.
+\fi
 The primary purpose of the quadrupole magnets is to increase the flux of
 charged particles entering the main dipole magnets and to focus the orbits of the
 charged particles into the detector huts.
@@ -29,15 +54,23 @@ determine the momentum of each particle. Other detectors provide accurate timing
 to trigger the readout of all detector data, or they measure a particle's speed
 or total energy so that we can determine its mass.
 
-Each spectrometer is built on a rotatable support structure or ``carriage".
+\ifdefined\SHMSMAGNETSOSP
+The SHMS
+\else
+Each spectrometer
+\fi
+is built on a rotatable support structure or ``carriage".
 These ride on steel
 wheels and rails and rotate around the pivot. Experiments using the HMS or
 SHMS place their experimental targets along the beamline above the pivot.
 The support structures carry the weight of the magnets and detectors, and keep
 them aligned to one-another and pointed at the target. On the SHMS, the shield
 house and all of the
-other spectrometer equipment are also carried by the support structure. The
+other spectrometer equipment are also carried by the support structure.
+\ifdefined\SHMSMAGNETSOSP\else
+The
 HMS has a separate carriage that supports the weight of the shield house.
+\fi
 
 During beam operations a many particles are scattered and
 produced in the target. A few of these enter one of the spectrometers. Most of
