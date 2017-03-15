@@ -61,6 +61,7 @@ dummy := $(shell if [ $(INFOLEVEL) -ne 3 ]; then echo "\renewcommand{\infoleveqt
 dummy := $(shell if [ $(INFOLEVEL) -ne 2 ]; then echo "\renewcommand{\infoleveqtwo}[1]{}%" ; fi >> currinfolevel.tex)
 dummy := $(shell if [ $(INFOLEVEL) -ne 1 ]; then echo "\renewcommand{\infoleveqone}[1]{}%" ; fi >> currinfolevel.tex)
 dummy := $(shell if [ $(INFOLEVEL) -ne 0 ]; then echo "\renewcommand{\infoleveqnull}[1]{}%" ; fi >> currinfolevel.tex)
+dummy := $(shell if (git branch); then git branch --verbose | grep "*" | awk '{print "\\newcommand{\\GITINFO}[0]{Branch: "$$2", Commit: "$$3"}"}' >> currinfolevel.tex; fi)
 
 #$(error .config dir= $(srcdir) lev=$(lev))
 TEXINPUTS =.:$(srcdir1):$(srcdir1)/common:$(srcdir1)/$(top):
