@@ -45,7 +45,9 @@ for \\ Experimental Hall C Base Equipment}
 %\centerline{{\sl Info level \infolevel}}
 %\date {Dec 31, 1999}
 \ifdefined\GITINFO
-\date{{\today}\\\texttt{\GITINFO}}
+\date{{\GITDATE}\\\texttt{\GITINFO}}
+\else
+\date{{\today}}
 \fi
 \setcounter{tocdepth}{3}
 \end{titlepage} 
