@@ -62,6 +62,7 @@ dummy := $(shell if [ $(INFOLEVEL) -ne 2 ]; then echo "\renewcommand{\infoleveqt
 dummy := $(shell if [ $(INFOLEVEL) -ne 1 ]; then echo "\renewcommand{\infoleveqone}[1]{}%" ; fi >> currinfolevel.tex)
 dummy := $(shell if [ $(INFOLEVEL) -ne 0 ]; then echo "\renewcommand{\infoleveqnull}[1]{}%" ; fi >> currinfolevel.tex)
 dummy := $(shell if (git branch); then git branch --verbose | grep "*" | awk '{print "\\newcommand{\\GITINFO}[0]{Branch: "$$2", Commit: "$$3"}"}' >> currinfolevel.tex; fi)
+dummy := $(shell if (git log -1); then git log -1 --date=default | grep "Date: " | awk '{m["Jan"]="January";m["Feb"]="February";m["Mar"]="March";m["Apr"]="April";m["May"]="May";m["Jun"]="June";m["Jul"]="July";m["Aug"]="August";m["Sep"]="September";m["Oct"]="October";m["Nov"]="November";m["Dec"]="December";print "\\newcommand{\\GITDATE}[0]{"m[$$3]" "$$4", "$$6"}"}' >> currinfolevel.tex; fi)
 
 #$(error .config dir= $(srcdir) lev=$(lev))
 TEXINPUTS =.:$(srcdir1):$(srcdir1)/common:$(srcdir1)/$(top):
