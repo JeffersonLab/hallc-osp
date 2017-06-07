@@ -195,7 +195,7 @@ blocking of inputs without removing cables and for the setting of coincidence
 conditions such as 3/4. The output width on this unit may be adjusted for
 appropriate overlap with the other spectrometer. This module also has a
 single veto which can be used for coincidences or anti coincidences with a
-Cerenkov signal. The other inputs to this logic unit are three signals
+Cherenkov signal. The other inputs to this logic unit are three signals
 from the shower counter (PRLO, PRHI, and SHLO).
 
 In this Logic unit S1 is ANDed with S2 to give the scintillator time of flight
@@ -203,10 +203,10 @@ signal STOF, while the remaining four scintillator signals S1X, S2X, S1Y and S2Y
 are ANDed together with a coincidence level of 3/4 generating the SCIN
 signal. Next the STOF and SCIN signals are ANDed with PRLO (one of the shower
 counter signals) with a coincidence level of 2/3, this is vetoed by the
-anti Cerenkov signal to give ELLO (electron low). Similarly, the SCIN ANDed with
+anti Cherenkov signal to give ELLO (electron low). Similarly, the SCIN ANDed with
 PRHI and SHLO from the shower counter give  ELHI (electron high). These two
 (ELLO and ELHI) are then ORed to generate the ELREAL (electron real). The SCIN
-is also vetoed by the Cerenkov to give the PION trigger. See Figure~\ref{fig:hms_trig_logic}.
+is also vetoed by the Cherenkov to give the PION trigger. See Figure~\ref{fig:hms_trig_logic}.
 
 The PION trigger is
 prescaled as desired using a prescaling circuit which is essentially two gate
@@ -381,13 +381,13 @@ The histograms hprsum\_prlo,hprsum\_prhi, and hshsum\_shlo show PRSUM
 and SHSUM with cuts based on the trigger signals PRLO,PRHI, and SHLO (you can
 use hthreshold.kumac to view all of them)
 
-\paragraph{Cerenkov, Beginning of Run Hardware Checkout}
+\paragraph{Cherenkov, Beginning of Run Hardware Checkout}
 
 \begin{description}
 \item{[~HMS: 7,1-3(1)~~~~SOS: 5,1-6(2)~]}
 \end{description}
 
-Remove zero offset from cerenkov fan-in (see Calorimeter).
+Remove zero offset from Cherenkov fan-in (see Calorimeter).
 
 \begin{description}
 \item{[~HMS: 7,1-4(1)~~~~SOS:5,1-7(4)~]}
@@ -487,7 +487,7 @@ set the delays to the coincidence trigger again, in order to insure that the
 HMS and SOS triggers arrive within the coincidence window (step D4). For
 fairly large changes in particle velocity (singles or coincidence experiments)
 it may be necessary to adjust the delays in the trigger (steps D1 and D2) since
-the cerenkov and shower counter signals may come up several ns later (with
+the Cherenkov and shower counter signals may come up several ns later (with
 respect to the scintillators) for a slower particle. It may also be necessary
 to adjust the ADC gates (step D6)(the TDC's should have enough slop to allow
 for the time difference).
