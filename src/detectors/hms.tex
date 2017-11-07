@@ -117,10 +117,10 @@ position and angles in the detector hut. This information can be combined
 with a knowledge of the spectrometer optics to infer the trajectory of the
 particles at the target.
 
-Two sets of drift chambers will be available for the HMS.  The
-original set of chambers, described below
-(Section~\ref{sec:legacydriftchambers} and new set of chambers of
-design very similar to the drift chambers in the SHMS.
+The HMS wire chambers, installed in 2017, are of a design
+very similar to the drift chambers in the SHMS.  The original chambers
+(Section~\ref{sec:legacydriftchambers}), are in storage and serve as
+spares.
 
 Independent of type of chamber, the old and new style chambers are
 instrumented in a similar fashion.
@@ -158,13 +158,21 @@ far side (from the door) of the detector mounting stand.
 
 
 \subsubsection{New HMS Drift Chambers}
-The new HMS drift chambers, built in 2016, are of a similar design to the SHMS
-drift chambers, described in section~\ref{sec:shmschambers}.  These chambers
+The new HMS drift chambers, built in 2016 and installed in 2017,
+are of a similar design to the SHMS
+drift chambers, described in section~\ref{sec:shmschambers}.
+The differences between the HMS and SHMS drift chambers are
+described in the HMS Drift Chambers references~\cite{howto:hms_drift_chambers}.
+These chambers
 cover an active area of approximately 100 cm in the dispersion (vertical)
 direction and 50 cm in the horizontal dimension.   As with the SHMS
 drift chambers, the planes in the first chamber are ordered
 ($U$, $U^{\prime}$, $X$, $X^{\prime}$, $V^{\prime}$, $V$).  The second
-chamber is identical and oriented in the same manner.
+chamber, but rotated about the vertical axis.  Thus the ordering of
+the planes is ($V$, $V^{\prime}$, $X^{\prime}$, $X$,
+$U^{\prime}$,$U$).  Because of this rotation though, the wires in the
+$U$ lanes of the first chamber are parallel to the $V$ planes of the
+second chamber.
 
 \subsubsection{Legacy Drift Chambers}
 \label{sec:legacydriftchambers}
@@ -289,9 +297,11 @@ In general all of the voltages and gas flow should be left on, even when
 no data is being collected.  The gas supply should be checked periodically,
 approximately once every shift.  The gas bottles' supply is depleted
 after about 2 weeks at the nominal (400 cc/min) flow rate.
-In the case of a HV trip, try cycling the CAEN power supplies.  If this fails, call
-one of the responsible persons listed in the Responsible Personnel Section
-of the \htmladdnormallinkfoot{ESAD}{http://www.jlab.org/Hall-C/document}.
+In the case of a HV trip, try cycling the CAEN power supplies.  If
+this fails, call
+one of the responsible persons listed in the Responsible Personnel
+listed in the Drift Chamber Section of
+the \htmladdnormallinkfoot{ESAD}{https://hallcweb.jlab.org/safety-docs/current/ESAD.pdf}.
 
 
 
