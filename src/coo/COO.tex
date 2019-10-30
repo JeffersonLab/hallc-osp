@@ -1,8 +1,10 @@
 \documentclass[10pt]{article}
 \usepackage{tabularx,graphicx,layout}
 \usepackage{hyperref}
+\usepackage{lineno}
 
 \begin{document}
+\linenumbers
 %
 % Name of file: coo.tex
 % Orignal Authors 1999 Elton Smith
@@ -32,7 +34,7 @@
 %
 %
 % Hall C definitions for Standard COO input
-\input{coo_hallc_defs.tex}
+\input{coo_a1nd2n_hallc_defs.tex}
 
 \begin{center}
 \Large
@@ -60,7 +62,7 @@ collaborations of scientists to carry out basic research in nuclear physics
 and related disciplines. This research must be conducted
 in a manner that ensures that environmental, health and safety (EH\&S)
 concerns receive the highest consideration. At the same time the programmatic
-goals of the laboratory require that it produce the highest quality physics
+goals of the laboratory require that it produces the highest quality physics
 results efficiently.
 
 Guidance on how to balance thoughtful, measured EH\&S concerns with efficient
@@ -81,9 +83,10 @@ understood, and followed by all members of the collaboration. }
 %******************************************************************************
 \section{Documentation}
 
-This experiment uses the standard \HALL\ equipment.
+This experiment uses the standard \HALL\ equipment, the Moller polarimeter, and a polarized
+$^3$He target.
 All of the procedures to be used during the course of the experiment are contained in the following
-documents\footnote{The process is documented at \url{https://www.jlab.org/user_resources/PFX} }:
+documents\footnote{The process is documented at \url{http://www.jlab.org/user_resources/PFX} }:
 
 %\begin{description}
 \begin{itemize}
@@ -111,7 +114,8 @@ hereafter be referred to as the COO. The Experiment Safety Assessment
 Document shall hereafter be referred to as the ESAD, and the
 Radiation Safety Assessment Document shall be referred to as the RSAD.
 The ESAD and COO may also be available on the WWW at an experiment-specific
-web site. {\bf The COO, the ESAD and the RSAD are required reading for
+web site\footnote{https://hallcweb.jlab.org/experiments/A1n}.
+{\bf The COO, the ESAD and the RSAD are required reading for
 shift personnel.}
 
 A full description of the physics motivation for the experiments, collaboration
@@ -134,16 +138,20 @@ current in the following JLab safety training:
 
 \item \HALL\ Safety Awareness Walk-Through ( \AWARENESS\ )
 
+\item Conduct of Operations (SAF 120)
+
 \end{itemize}
 
  All experiment personnel are
 required to have radiation badges in their possession during their shifts.
 The Safety Awareness Walk-Through will
 emphasize hazards that are typical of normal Hall operations.
-Hazards  peculiar to the current experimental setup are addressed in the appendices
+Hazards peculiar to the current experimental setup are addressed in the appendices
 of this document.
 In addition, all shift personnel will be trained in the safety procedures to be
-followed for access to the Hall. This
+followed for access to the Hall during restricted or contolled access
+periods (see Appendix~\ref{app:exp_req} for special requirements during 
+the ``laser lockdown'' period). The Hall access 
 training will include a brief discussion of the purpose and operation of the
 Personnel Safety System (PSS) for the Hall.
 Individuals within the collaboration may be required to have other equipment
@@ -155,10 +163,10 @@ In addition, experiment personnel must familiarize themselves with the
 sections of the JLab EH\&S Manual relevant for their work in the Hall.
 A reference copy of this
 document is available in the main hallway of the Counting House. It is also
-available via \url{https://www.jlab.org/ehs/ehsmanual/}.
+available via \url{http://www.jlab.org/ehs/ehsmanual/index.html}.
 
 Finally, JLab Lock and Tag\footnote{The EH\&S Manual provides Lockout/Tagout
-information in Chapter 6110 at \url{https://www.jlab.org/ehs/ehsmanual/manual/6110.html}.}
+information in Chapter 6110 at \url{http://www.jlab.org/ehs/ehsmanual/manual6110.html}.}
 training is required for all staff/users who will be
 performing maintenance on electrical and mechanical equipment which
 cannot be physically and verifiably isolated from an energy
@@ -176,7 +184,7 @@ found in Figure \ref{HALLCHART}.
 
 \begin{figure}
 %\vspace{180mm}
-\includegraphics[width=\textwidth]{coo_HallCorg}
+\includegraphics[width=\textwidth]{coo_a1nd2n_HallCorg}
 %
 % Make a selection for a given Hall
 %
@@ -342,7 +350,7 @@ The Hall Work Coordinator's responsibilities are:
 \item to determine if the scheduled activities in the hall can be done safely.
 These activities shall be coordinated with the Physics Division Liaison
 and the Run Coordinator.   Tasks should also be inputted into the work task
-lists \url{https://www.jlab.org/listsites/}.
+lists \url{http://www.jlab.org/listsites/}.
 
 \item to ensure that workers are properly trained, are familiar with all
 significant hazards, and are aware of all applicable work control
@@ -606,7 +614,7 @@ information required for safe entry into the hall. This information will
 include a succinct, one page safety summary covering the hall's current
 safety hazards and mitigating measures (to be read by all persons working
 in the hall), active Operational Safety Procedures (OSPs) and Temporary
-Operational Safety Procedures (TOSPs), required temporary work permits
+Operational Safety Procedures, required temporary work permits
 (e.g., Radiation Work Permits), current activities in the hall, points of
 contact, and required training and safety equipment.
 
@@ -655,7 +663,7 @@ control documents, and educational or other
 safety measures (such as escorts) that are needed.
 
 The ATLis should be used for coordinating the cross divisional work activities
-\url{https://www.jlab.org/listsites/}.
+\url{http://www.jlab.org/listsites/}.
 
 \subsection{Control of Equipment and System Status}
 The operation of the standard experimental equipment is documented in the
@@ -731,7 +739,7 @@ introductions of new or updated documentation and procedures.
 %
 % comment out the appropriate file
 %
-\input{coo_hallc_appendix.tex}
+\input{coo_a1nd2n_hallc_appendix.tex}
 %\input{coo_hallb_appendix.tex}
 %\input{coo_hallc_appendix.tex}
 
