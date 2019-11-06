@@ -1,7 +1,8 @@
+
 % Cryogenic Targets
-\infoleveqnull{
-\section{Cryogenic Target System}
-}
+%\infoleveqnull{  % Disable in ESAD
+%\section{Cryogenic Target System}
+%}
 
 \infolevone{
 \section{Procedure for Normal Running of the Hall C Cryogenic Targets}
@@ -12,6 +13,7 @@ Hall C cryogenic targets.
 \subsection{Introduction }
 }
 
+\infolevone{
 The Hall C cryotarget system allows for multiple configurations
 depending on the requirements of the experiment(s). In the standard
 configuration, the system has three separate target loops. One of
@@ -20,6 +22,7 @@ pressurized up to $\sim$30 psia. The other two loops are usually used
 for liquid hydrogen and deuterium targets.  Each loop can have one or
 two target cells, which is again dependent on experiment requirements.
 Below the loops, solid targets such as carbon foils can be added.
+}
 \infolevone{A
 typical configuration of cryogenic and solid targets is shown in
 Fig.~\ref{fig:LoopCAD}.
@@ -42,6 +45,7 @@ Fig.~\ref{fig:LoopCAD}.
 \end{figure}
 }
 
+\infolevone{                    % Disable in ESAD
 A wealth of information about the Hall C cryotarget system is
 available at \url{https://userweb.jlab.org/\~smithg/target/Qweak/}.
 At that location links to the target training talk can be found, as
@@ -50,7 +54,7 @@ system (GUIs), a FAQ, descriptions of the essential responsibilities
 and how-tos for the target, the operational restrictions (current and
 raster limits) for each target, the slow controls archiver, and much
 more.
-	
+}	
 
 \infolevone{
 During normal operation, the hydrogen and/or deuterium targets shall
@@ -133,6 +137,7 @@ information about the selected target and the lifter.
 \subsection{Alarm Handler}
 }
 
+\infolevone{                    % Disable in ESAD
 \begin{safetyen}{0}{0} 
 It is \emph{mandatory} to have an audible alarm handler, ALH, running
 at all times when the target gas has been condensed.  Further, it is
@@ -156,6 +161,7 @@ If the AH alarms repeatedly or the
 cause of the alarm is not clear, the target operator should contact
 the on-call target expert.
 \end{safetyen}
+}
 \infolevone{
 The ALH GUI and its secondary GUIs are
 shown in Fig.~\ref{fig:ALHGui}.
@@ -409,6 +415,7 @@ guide (Feb., 2014) for the general user.
 % DGM update this with more correct information from C Keith. Is there a Hall C wiki?
 }
 
+\infolevone{                    % Disable in ESAD
 \subsection{Hazards}
 
 The cryogenic hydrogen and deuterium targets present a number of
@@ -419,12 +426,12 @@ years of experience using it at Jefferson Lab. Hazards, mitigation
 measures, and causes and corrective measures associated with past
 failures are described in the ``Hydrogen Target Safety Assessment
 Document'' at
-\url{https://polweb.jlab.org/hallc/Cryotarget/Target%20Safety%20Assessment%20Document1.5.doc}.
+\url{https://polweb.jlab.org/hallc/Cryotarget/Target\%20Safety\%20Assessment\%20Document1.5.doc}.
 \subsection{Mitigations}
 
 \paragraph{Flammable Gas}
+}
 \label{sec:targ-flammablegas}
-
 \infolevone{
 Hydrogen and deuterium are colorless, odorless gases and hence not
 easily detected by human senses. Hydrogen air mixtures are flammable
@@ -451,7 +458,7 @@ panels.  The large storage tanks are located outside the Hall at the
 rear of the counting house.
 }
 
-
+\infolevone{                    % Disable in ESAD
 The basic idea behind safe handling of any flammable or explosive
 gas is to eliminate oxygen (required for burning) and to prevent exposure
 to any energy source that could cause ignition. In the Hall C environment,
@@ -483,7 +490,7 @@ by system experts.
 %inputs). 
 
 %xxx
-
+}
 
 \infolevone{ 
 \paragraph{Electrical Installation}
@@ -589,7 +596,7 @@ in the hydrogen system.
 
 
 
-
+\infolevone{                    % Disable in ESAD
 \paragraph{Gas Handling System}
 
 The most important aspect of hydrogen safety is to minimize the possibility
@@ -610,10 +617,11 @@ D$_{2}$. The return line gauges are designated PI130, H$_{2}$ and
 PI139, D$_{2}$. The gas tanks are viewed with both pressure transducers
 (PT133 for hydrogen and PT142 for deuterium) and pressure gauges (PI123
 for hydrogen and PI112 for deuterium).
-
+}
 
 \end{safetyen}
 
+\infolevone{                    % Disable in ESAD
 If the pressures significantly deviate either from one another or
 from the normal operating pressure, the target operator shall call
 the target-expert-on-call. When they differ from one another, it often
@@ -680,7 +688,7 @@ of 1.5 psig using the 4 atm He system.  The scattering chamber and
 pump/purge vacuum pumps are also exhausted to this line. Thus any
 vented target gas is placed in an inert environment until it is
 released outside of Hall C.
-
+}
 \infolevone{
 The scattering chamber provides secondary containment in the event
 of a cell rupture. Therefore, the scattering chamber itself has a
@@ -690,6 +698,7 @@ relief path is also exhausted to the hydrogen vent line. A series
 of valves and controls allow for the safe removal and exhaust of hydrogen
 from the scattering chamber should a cell burst.
 }
+\infolevone{                    % Disable in ESAD
 
 \paragraph{Scattering Chamber Vacuum}
 
@@ -706,7 +715,7 @@ this calculation conservatively indicates that the relief path and
 safety devices limit the maximum developed pressure in the cell to
 less than the 120 psi for all credible overpressure conditions as
 required by ASME B31.3 322.6.3.
-
+}
 \infolevone{
 \paragraph{Temperature Regulation}
 
@@ -740,7 +749,7 @@ discussion of target temperature regulation is available in Reference
 }
 %XXX
 
-
+\infolevone{                    % Disable in ESAD
 \paragraph{Target Freezing}
 
 Solid hydrogen is more dense than the
@@ -750,7 +759,7 @@ the system will become clogged with hydrogen ice, making the behavior
 of the system during a warm-up unpredictable. For
 this reason, the relief route bypasses the heat exchanger and should
 not freeze during any credible scenario. 
-
+}
 \infolevone{ 
 The coolant flow through the three target heat exchangers
 is connected in parallel for the three target loops. The entire target
@@ -762,6 +771,7 @@ usually about 20 K.
 The targets are temperature regulated by IOC heater PID loop.
 }
 
+\infolevone{                    % Disable in ESAD
 In the unlikely event that the target temperature drops too low, an
 alarm will sound and the target operator shall turn down the corresponding
 J-T valve(s) or apply auxiliary heater power. Target temperature
@@ -784,6 +794,7 @@ scattering chamber containing only 12000 STP $l$ of target gas when
 all three targets are full. As the scattering chamber is located in
 the middle of Hall C (i.e. not in a confined area) and the total Hall
 C  volume is 26,000 m$^{3}$ (40,000 m$^{3}$ for Hall A), the ODH hazard is minimal. In the event that all the H2 was released into the hall, the oxygen content would drop from 21.0\% to 20.99\%.
+}
 
 \infolevone{
 \paragraph{Controls}
@@ -838,13 +849,14 @@ hydrogen loop.
 \end{itemize}
 }
 
-\infoleveqnull{
-\paragraph{Further Reading}More detailed
-information about the mitigations discussed above can can be 
-found in the full Hall C operations manual~\cite{HallCosp}.
-}
+%\infoleveqnull{  % Disable in ESAD
+%\paragraph{Further Reading}More detailed
+%information about the mitigations discussed above can can be 
+%found in the full Hall C operations manual~\cite{HallCosp}.
+%}
 
 
+\infolevone{                    % Disable in ESAD
 \subsection{Responsible Personnel}
 
 The principle contacts for the cryogenic targets were listed in table~\ref{tab:cryotarg:personnel-con}.
@@ -886,6 +898,5 @@ stands for the white board in Counting House.}
 \CHLgroup{ESR}
 \end{namestab}
 }
-
-
+}
 
