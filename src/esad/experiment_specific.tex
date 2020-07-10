@@ -1,0 +1,94 @@
+\chapter{Experiment Specific Equipment}
+\label{chap:expspecific}
+
+
+
+\section{Overview}
+For Experiment E12-11-107, the HMS and SHMS spectrometers will detect electrons in coincidence with the dedicated Large Acceptance Detector (LAD) which detects protons and neutrons. LAD will be calibrated and monitored using a laser system. Two GEM tracking planes will be located on the target platform to provide additional tracking information on the recoil particle. The standard Hall C scattering chamber is rotated 30$\deg$ compared to its nominal setup so that a larger, 15-in. GEP window can be used on the SHMS side to act as a window for the LAD detectors. 
+
+The general hazards and hazards associated with the Hall C base
+equipment are discussed in Chapters~\ref{chap:generalhazards}
+and~\ref{chap:hallspecificequipment} of this ESAD and in the Jefferson
+Lab Hall C Standard Equipment Manual~\cite{HallCosp}.
+
+LAD is constructed from refurbished CLAS TOF scintillators used during the 6-GeV era. The scintillators are arranged in three sections with the backward two sections consisting of double scintillator planes (five planes in total). LAD is located on the SHMS side of Hall C between the SHMS and the beamline covering scattering angles from 90$\deg$- 157$\deg$. LAD is located at 5.2-6.1~m from the target. The scintillators are readout through a total of 110 3~in. PMTs using FADCs. The electronics are kept in the SHMS hut. 
+
+Two GEM chambers will be used on the target platform next to the scattering chamber. The plane closest to the target will be located at 0.65~m from the target with an active area of $1\times 0.45$~m$^2$, and the second plane will be located at 0.85~m from the target with an active area of $1.3\times 0.57$~$m^2$. The GEM trackers will cover 67$\deg$ of the in-plane region and 34$\deg$ of the out-of-plane region.  
+
+The laser calibration system consists of a Photonics STV-01E-140 picosecond pulse laser with a wavelength of 355~nm, several splitters, reference photodiode and a fiber distribution system. All of these components are in
+a sealed, light-tight box. The output of the laser is about 51 $\mu$J per pulse at
+0.3~ns width (FWHM) which will be attenuated and distributed to all fiber
+outputs having an output of about 100 fJ. The fibers are connected via a patch panel to each scintillator bar.
+
+%%TODO:
+The GEMs, LAD and LAD laser calibration system, and the modified target chamber and their hazards and mitigations, and operations are fully described in the Operational Safety Procedure ``Operational Safety Procedure for LAD" (LAD OSP), ``Operational Safety Procedure for the GEM detectors in Hall C" (GEM OSP),``Laser Safety Procedure for the LAD laser system" (LAD laser OSP), and ``Operational Safety Procedure for the rotated scattering chamber and GEP window for the Hall C target" (HAPPEX target OSP). Work on these
+systems is limited to authorized personnel (Table~\ref{tab:personnel_threehe}).
+
+
+\subsection{Hazards}
+Hazards to personnel and equipment include the following:
+\begin{itemize}
+\item Exceeding the recommended high voltage values applied to the detectors.
+\item Exceeding the recommended voltage values applied to readout electronics. 
+\item Exceeding the gas flow rates/input pressures to the detectors leading to the rupture of the detectors.
+\item Laser hazard related to the laser calibration system and its connection with fibers to the scintillator bars when work is being performed. 
+\item Personnel eye sight damage due to exposure to infrared laser light
+\end{itemize}
+
+\subsection{Mitigations}
+
+The identified hazards are mitigated as follows:
+\begin{itemize}
+\item  Hazards to personnel are mitigated by turning off HV and LV before doing any work on the detectors.
+\item Hazards associated with high voltage, both to personnel and detectors, is also mitigated by the use of HV voltage modules with a maximum current limit of 1 mA. Furthermore, a more strict pre-set current limit of 0.8 mA is
+programmed into all channels. Any current exceeding this limit causes the that HV channel to trip off and
+remain off.
+\item Hazards associate with exceeding the recommended voltage values will be mitigated by locking the controls
+with password protections with only the authorized trained personnel having access to change the setting. Any
+change to the established settings will have to be authorized by the responsible personnel for the detector.
+\item Hazards to the detectors associated with excessive gas flow rates and input pressures will be mitigated by the use of input relief bubblers in the input gas line of each detector module.
+\item The laser calibration system is a closed system with fibers connected to the
+scintillator bars via a patch panel. All of these connections are light-tight.
+Furthermore, no fiber must be disconnected from the system while it is
+operating. While the laser intensity in each fiber is very small (≈ 100 fJ),
+and comparable to that of a LED, the 355 nm wavelength could be damaging to the human eye. Therefore, one should not look directly at the fiber output.  Eye protection must also be worn.
+Warning labels are applied on the enclosure of the laser system, the patch
+panel and detector frame. The box containing the laser system is interlocked
+such that if the box is open the power will be off. If the system is not in
+use by trained personnel, it will be powered off. During maintenance work
+on the laser system and detector, performed by trained personnel, the Laser
+system is turned off, disconnected from the power supply and locked and
+tagged. The procedures for maintenance work on the laser system can be
+found in the LOSP.
+%\item All areas with possible exposure to laser light are enclosed and interlocked.  Work with exposed laser light is limited to trained
+%  personnel wearing appropriate PPE. The Hall CANS system limits
+%  access to trained personnel during such work.
+%\item Temperature sensors on laser fiber junctions and sensors in the
+%  laser optics housing are interlocked with the laser shutdown
+%  system.
+%\item   The Hall VESDA (Smoke detection) system is also connected
+%  to the laser shutdown system.  The standard hall cameras and a
+%  dedicated target camera allow visual monitoring of the target
+%  apparatus from the counting house.
+\end{itemize}
+
+
+\subsection{Responsible Personnel}
+
+Points of contact for the LAD, GEM, and laser systems are listed in Tab.~\ref{tab:personnel_threehe}.
+
+\begin{namestab}{tab:personnel_threehe}{LAD and GEMs: authorized personnel}
+   {LAD and GEM points-of-contact.}
+   \NilangaLiyanage{\em GEM expert}
+   \FlorianHauenstein{}
+   \StephenWood{}
+  \HollySzumila{}
+  \TylerKutz{}
+    \LarryWeinstein{}
+\end{namestab}
+
+Additional contact information may be found on the counting house
+whiteboard.  Most staff members can be reached by text message by
+visiting the JLab Staff Directory,
+\url{https://misportal.jlab.org/mis/staff/}, and employing
+the ``Click to page'' option.
