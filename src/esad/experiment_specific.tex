@@ -4,16 +4,16 @@
 
 
 \section{Overview}
-For Experiment E12-11-107, the HMS and SHMS spectrometers will detect electrons in coincidence with the dedicated Large Acceptance Detector (LAD) which detects protons and neutrons. LAD will be calibrated and monitored using a laser system. Two GEM tracking planes will be located on the target platform to provide additional tracking information on the recoil particle. The standard Hall C scattering chamber is rotated 30$\deg$ compared to its nominal setup so that a larger, 15-in. GEP window can be used on the SHMS side to act as a window for the LAD detectors. 
+For Experiment E12-11-107, the HMS and SHMS spectrometers will detect electrons in coincidence with the dedicated Large Acceptance Detector (LAD) which detects protons and neutrons. LAD will be calibrated and monitored using a laser system. Two GEM tracking planes will be located on the target platform to provide additional tracking information on the recoil particle. The standard Hall C scattering chamber is rotated 30$^{\circ}$ compared to its nominal setup so that a larger, 15-in. GEP window can be used on the SHMS side to act as a window for the LAD detectors. 
 
 The general hazards and hazards associated with the Hall C base
 equipment are discussed in Chapters~\ref{chap:generalhazards}
 and~\ref{chap:hallspecificequipment} of this ESAD and in the Jefferson
-Lab Hall C Standard Equipment Manual~\cite{HallCosp}.
+Lab Hall C Standard Equipment Manual.%~\cite{HallCosp}.
 
 LAD is constructed from refurbished CLAS TOF scintillators used during the 6-GeV era. The scintillators are arranged in three sections with the backward two sections consisting of double scintillator planes (five planes in total). LAD is located on the SHMS side of Hall C between the SHMS and the beamline covering scattering angles from 90$^{\circ}$- 157$^{\circ}$. LAD is located at 5.2-6.1~m from the target. The scintillators are readout through a total of 110 3~in. PMTs using FADCs. The electronics are kept in the SHMS hut. 
 
-Two GEM chambers will be used on the target platform next to the scattering chamber. The plane closest to the target will be located at 0.65~m from the target with an active area of $1\times 0.45$~m$^2$, and the second plane will be located at 0.85~m from the target with an active area of $1.3\times 0.57$~$m^2$. The GEM trackers will cover 67$^{\circ}$ of the in-plane region and 34$^{\circ}$ of the out-of-plane region.  
+Two GEM chambers will be used on the target platform next to the scattering chamber with sensitive areas of $1.2\times 0.55$~m$^2$. The plane closest to the target will be located at 0.72~m from the target with an active area of $0.96\times 0.44$~m$^2$, and the second plane will be located at 0.92~m from the target with an active area of $1.2\times 0.55$~$m^2$. The GEM trackers will cover 67$^{\circ}$ of the in-plane region and 34$^{\circ}$ of the out-of-plane region. The readout equipment APV25s are located below the target platform, and the processing electronics are housed in the SHMS hut. 
 
 The laser calibration system consists of a Photonics STV-01E-140 picosecond pulse laser with a wavelength of 355~nm, several splitters, reference photodiode and a fiber distribution system. All of these components are in
 a sealed, light-tight box. The output of the laser is about 51 $\mu$J per pulse at
@@ -21,23 +21,29 @@ a sealed, light-tight box. The output of the laser is about 51 $\mu$J per pulse 
 outputs having an output of about 100 fJ. The fibers are connected via a patch panel to each scintillator bar.
 
 %%TODO:
-The GEMs, LAD and LAD laser calibration system, and the modified target chamber and their hazards and mitigations, and operations are fully described in the Operational Safety Procedure ``Operational Safety Procedure for LAD" (LAD OSP), ``Operational Safety Procedure for the GEM detectors in Hall C" (GEM OSP),``Laser Safety Procedure for the LAD laser system" (LAD laser OSP), and ``Operational Safety Procedure for the rotated scattering chamber and GEP window for the Hall C target" (HAPPEX target OSP). Work on these
+The GEMs, LAD and LAD laser calibration system, and the modified target chamber and their hazards and mitigations, and operations are fully described in the Operational Safety Procedure ``Operational Safety Procedure for LAD" (LAD OSP), ``Task Hazard Analysis for the GEM detectors in Hall C" (GEM THA), and the ``Laser Safety Procedure for the LAD laser system" (LAD laser OSP). Work on these
 systems is limited to authorized personnel (Table~\ref{tab:personnel_threehe}).
 
 
 \subsection{Hazards}
-Hazards to personnel and equipment include the following:
+Hazards associated with the operation of LAD and its laser assembly to both equipment and personnel are described:
 \begin{itemize}
 \item Exceeding the recommended high voltage values applied to the detectors.
 \item Exceeding the recommended voltage values applied to readout electronics. 
-\item Exceeding the gas flow rates/input pressures to the detectors leading to the rupture of the detectors.
 \item Laser hazard related to the laser calibration system and its connection with fibers to the scintillator bars when work is being performed. 
 \item Personnel eye sight damage due to exposure to infrared laser light
 \end{itemize}
 
+Hazards that are relevant to the operation of the GEM detectors are described:
+\begin{itemize}
+\item Exceeding the recommended high voltage values applied to the detectors.
+\item Exceeding the recommended voltage values applied to readout electronics. 
+\item Exceeding the gas flow rates/input pressures to the detectors leading to the rupture of the detectors.
+\end{itemize}
+
 \subsection{Mitigations}
 
-The identified hazards are mitigated as follows:
+The hazards identified above are mitigated as follows:
 \begin{itemize}
 \item  Hazards to personnel are mitigated by turning off HV and LV before doing any work on the detectors.
 \item Hazards associated with high voltage, both to personnel and detectors, is also mitigated by the use of HV voltage modules with a maximum current limit of 1 mA. Furthermore, a more strict pre-set current limit of 0.8 mA is
