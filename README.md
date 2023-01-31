@@ -29,6 +29,24 @@ Early drafts of the operating manual and the ESAD, built from this
 repository can be found at
 https://hallcweb.jlab.org/safety-docs/drafts.
 
+Updated instructions Jan 2023 
+==================================
+Updated instructions for producing the COO, ESAD and OPS manual
+
+Running doit in the maim hallc_osp directory creates the ops manual and the ESAD in the version subdirectory.  
+The ESAD is osp-level0.pdf and the manual is osp-level4.pdf.
+
+The COO is in src/coo and is build with doit that is the src/coo.  
+Usually it is sufficient to edit coo_hallc_defs.tex which 
+defines experiment numbers, liaison names etc.
+
+There is a figure in the COO that is made with xfig.  
+You can probably just edit the coo_HallCorg.fig by hand 
+Running "doit" in the src/coo directory will generate 
+ will generate the figure as long as the fig2dev utility is installed.
+Need to be on the jlabl computers which have fig2dev utility.
+
+
 ESAD
 ----
 The LaTeX files in this repository build both the operating
