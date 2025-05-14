@@ -1,64 +1,166 @@
-%
-% Add ESAD material for experiment specific equipment to this file
-%
+
 \chapter{Experiment Specific Equipment}
 \label{chap:expspecific}
 
 
-
 \section{Overview}
-For Experiments E12-13-0010,E12-13-007 and E12-22-006, the Neutral Particle Spectrometer (NPS) will be used in addition with a sweeping magnet.
+For Experiment E12-11-107, the HMS and SHMS spectrometers will detect electrons in
+coincidence with the dedicated Large Acceptance Detector (LAD) which detects protons
+and neutrons. LAD will be calibrated and monitored using a laser system. Two GEM
+tracking planes will be located on the target platform to provide additional tracking
+information on the recoil particle. The standard Hall C scattering chamber is rotated
+$110^\circ$ compared to its nominal setup so that a larger, 15-in. GEP window can be used on
+the SHMS side to act as a window for the LAD detectors.
+
+\section{SHMS Spectrometer Rotation}
+For the first half of the experimental run (E12-11-107), the LAD GEM detectors on the target platform limit the minimum angle of the SHMS rotation.  Therefore all SHMS spectrometer rotations will be executed by magnet experts and technicians during a scheduled Hall access.  Remote rotation from the counting house will be disbled.  HMS rotation will be enabled remotely with the normal limitations as defined at rotation checkout.
+
+For the second half of the run, (R-SIDIS E12-06-104 \& E12-24-001), the GEM detectors will be removed while the LAD scintillators will remain in place.  Spectrometer rotation will be enabled remotely for the SHMS and HMS, with the normal limitations as defined at rotation checkout.
 
 
-The general hazards and hazards associated with the Hall C base
-equipment are discussed in Chapters~\ref{chap:generalhazards}
-and~\ref{chap:hallspecificequipment} of this ESAD and in the Jefferson
-Lab Hall C Standard Equipment Manual~\cite{HallCosp}.
 
-The NPS calorimeter is a calorimeter made of 1080 PbWO4 arranged in an array of 36x30. The calorimeter  
- sits on an additionnal platform located on the beamline side of the SHMS.
-The calorimeter, magnet, their hazards and mitigations, and operation
-are fully described in Operational Safety Procedure ``Operation Safety procedure fo the Polarized
-NPS Calorimeter Operation'' (NPS calorimeter OSP)
-
-%Work on these
-%systems is limited to authorized personnel (Table~\ref{tab:personnel_threehe}).
-
-\subsection{Hazards}
-Hazards include:
+\section{GEM Detectors}
+Two GEM chambers will be used on the target platform next to the scattering
+chamber with sensitive areas of 1.2 × 0.55 m$^2$. The plane closest to the target will be
+located at 0.75 m from the target, and the second plane will be located at 0.95 m from
+the target. The GEM trackers will cover $67^\circ$ of the in-plane region and $34^\circ$ of the out-
+of-plane region. The readout equipment APV25s are located below the target platform,
+and the processing electronics are housed in the SHMS hut.
+\subsection{Hazards} 
+Hazards associated with the operation of GEM detectors to both equipment and personnel are described:
 \begin{itemize}
-\item Beamlime damage when rotating SHMS to change NPS calorimeter angle
-\item Electrical hazard when operating the detector
-\item Fire due to shorts in electronics
-\item Magnetic field when sweeping magnet is turned on
-\item Water leaks
+\item Exceeding the recommended high voltage values applied to the detectors.
+\item Exceeding the recommended voltage values applied to readout electronics.
+\item Exceeding the gas flow rates/input pressures to the detectors leading to the rupture
+of the detectors.
 \end{itemize}
+\subsection{Mitigations}
+
+Any work on this system must be covered by ePAS Permit to Work(s) (PTW).
+\begin{itemize}
+\item Hazards to personnel are mitigated by turning oﬀ HV and LV before doing any
+  work on the detectors.
+\item Hazards associated with high voltage, both to personnel and detectors, is also
+mitigated by the use of HV voltage modules with a maximum current limit of 1
+mA. Furthermore, a more strict pre-set current limit of 0.8 mA is programmed into
+all channels. Any current exceeding this limit causes the that HV channel to trip
+off and remain off.
+\item Hazards to the detectors associated with excessive gas flow rates and input pressures
+  will be mitigated by the use of pressure relief valves and alarms that will shut off HV if flow/pressure is inadequete
+\end{itemize}
+  \section{Responsible Personnel}
+\label{sec:personnelGEM}
+Individuals responsible for the system are:
+
+\begin{table}[!htb]
+ \centering
+ \begin{tabular}{|c|c|c|c|c|}
+\hline
+ Name&Dept.&Phone&email&Comments \\ \hline
+ Florian Hauenstein & Jlab & & \href{mailto:hauenst@jlab.org}{\nolinkurl{hauenst@jlab.org}} &  First/Laser contact\\ \hline
+Carlos Ayerbe Gayoso  & ODU & & \href{mailto:gayoso@jlab.org}{\nolinkurl{gayoso@jlab.org}} & Second contact \\ \hline
+ L.  Weinstein & ODU &  &\href{mailto:weinstein@jlab.org}{\nolinkurl{weinstein@jlab.org}}& Contact  \\ \hline
+ Holly Szumila-Vance & FIU &  &\href{mailto:hszumila@jlab.org}{\nolinkurl{hszumila@jlab.org}}& \\ \hline
+ \end{tabular}
+\caption{Personnel responsible for GEM  Detector.} 
+\label{tb:gem}
+\end{table}
+
+
+  
+
+\section{Large Angle Detector}
+
+The Large Angle Detector (LAD) is placed in Hall C to the beam left between $5-6$ m away of the target covering angles from $90^{\circ}$ to $160^{\circ}$. 
+ 
+LAD is constructed from refurbished CLAS TOF scintillators used during the 6-GeV era. The scintillators are arranged in three sections with the backward two sections consisting of double scintillator planes (five planes in total).  Each plane consists of 11 bars with a thickness of $5.08\,\mathrm{cm}$, a width of $22\,\mathrm{cm}$ and a length from 4 to 5 m.
+All bars are read-out on both sides by PMTs (Philips XP4312B) giving a total of 110 active channels. 
+
+In order to operate the PMTs,  high voltages are provided by a multi-channel CAEN mainframe up to negative 2500V.
+Each PMT has two outputs,  a dynode and amplified output.  One output is sent to flash-ADCs (250 VXS,  16 channels/board,  made and owned by JLab) while the other one is sent to discriminators (16 channels/board,  designed by JLab).
+The discriminated time signal goes to a TDC (CAEN VX1190A, 128 channels/board, 100 ps/channel resolution).  The read-out system is installed within a bunker at around $90^{\circ}$ angle on the beam left side on the hall floor.
+
+In total,  the DAQ system consists of one VXS crate with 7 flash-ADCs,  7 discriminators,  one TDC and a trigger logic board (CAEN v1495).  Furthermore,  a signal distribution card for the flash-ADCs and trigger interface boards are installed in the crate.  A trigger for cosmics and for a signal from the laser calibration system is implemented one the trigger logic board and particularly feed to the main trigger system of Hall C in the counting house.
+
+Each bar is also connected to a laser calibration system.
+The laser calibration system consists of a Photonics STV-01E-140 picosecond pulse laser with a
+wavelength of $355\,\mathrm{nm}$,  several splitters,  reference photodiode,  and a fiber distribution
+system to each bar.  The main components of the system are in a sealed,  light-tight box within the LAD DAQ bunker.  The typical output of the laser is about $1\,\mu\mathrm{J}$ per pulse at $0.3\,$ns width (FWHM).  The output is then attenuated and distributed via fiber to a 100-channel splitter which is installed in the center of the LAD frame.  After the splitter each fiber has an output power of about $200\,\mathrm{pJ}$.  The fibers are connected via a patch panel on to each scintillator bar. The control of the system is via a remote-controlable raspberry PI from the counting house.
+
+\indent
+\subsubsection{Electrical Hazard}
+
+The electrical hazard to personnel can come from the high voltage that powers the PMTs,  which need
+up to 2500 V to function. 
+
+\subsubsection{Fall Hazard}
+
+Fall hazard from maintenance and testing operations of LAD that require the use of ladders or scissor lift to access
+system elements in up to 6\,m. 
+
+\subsubsection{Laser Hazard}
+
+The laser hazard comes from the laser calibration system and its connection with fibers to the scintillator
+bars when work is done on LAD.  The system itself is closed,  light-tight and the output on each fiber is
+$\approx 200\,\mathrm{pJ}$.  This intensity is comparable to that of a LED,  however,  the $355\,\mathrm{nm}$
+wavelength could be damaging to the human eye since it is invisible to the eye and the natural eye reflex
+will not be triggered. 
 
 \subsection{Mitigations}
-\begin{itemize}
-\item SHMS rotation limit switches will be adjusted to avoid any interference with beamline or HMS
-\item HV part are enclosed in the calorimeter box which is interlocked with HV supply. No parts at HV are accessible when box is closed.
-\item  The low voltage and high voltage power supplies have trip levels preventing major shorts.  The Hall VESDA (Smoke detection) will alarm in case o fbeginning of fire.  The standard hall cameras would allow people on shift to see any occurence of smoke from the detector apparatus from the counting house.
-\item a check list will be carried out before turning on magnet to check for any metallic pieces nearby the magnet. A ``Magnet On'' display will turn on when field is on
-\item the chiller system is using water for controlling the temperature of the calorimeter blocks. Water leaks will be visually checked with the camera and a water detector will be placed on the floor of the calorimeter.
-\end{itemize}
 
-Any work on this system must be covered by an ePAS Permit To Work (PTW)
+Any work on this system must be covered by ePAS Permit to Work(s) (PTW).
+
+\indent
+\subsubsection{Electrical Hazard Mitigations} 
+
+The electrical hazard associated with the HV system is mitigated by the use of properly rated cables
+that are terminated at the voltage dividers and the HV supplies.
+The HV supplies are grounded to their electronics racks as well. 
+The maximum current provided by the HV distribution boards is quite low ($<1\,\mathrm{mA}$).  The HV system
+is designed to shutdown any channels that show an over-current condition. The HV boards must not be accessed
+during operation; during maintenance work,  performed by trained personnel,  the HV is turned off,  and the
+power supply is switched off by the power switch on the back of the crate.
+
+\subsubsection{Fall Hazard Mitigations} 
+
+Fall hazard mitigation consists of approriate training like fall protection training and harness training.  For individuals using
+ladders,  they are required to take the appropriate ladder training.
+
+\subsubsection{Laser Hazard Mitigations}
+
+The laser calibration system is a closed system with fibers connected to the scintillator bars via a patch
+panel.  All of these connections are light-tight.  Furthermore,  no fiber must be disconnected from the system
+while it is operating.  While the laser intensity in each fiber is very small ($\approx 200\,\mathrm{pJ}$),
+and comparable to that of a LED, the $355\,\mathrm{nm}$ wavelength could be damaging to the human eye.
+Therefore,  one should not look directly at the fiber output - eye protection must be worn. 
+
+Warning labels are applied on the enclosure of the laser system,  the patch panels,  and detector frame.  The
+box containing the laser system is interlocked such that if the box is open the power is off.  If the system
+is not in use by trained personnel,  it will be powered off.  During maintenance work on the laser system,
+performed by trained personnel,  the laser system is turned off,  disconnected from the power supply,  and
+if necessary LOTO is applied.  The procedures for maintenance work on the laser system can be found in the LOSP and specific ePAS Permit to Work(s).
 
 \subsection{Responsible Personnel}
+\indent
 
-Points of contact for the NPS calorimeter are listed in Tab.~\ref{tab:personnel_threehe}.
+Individuals responsible for the LAD system are (see Table~\ref{tb:lad}):
 
-\begin{namestab}{tab:personnel_threehe}{NPS experts}
-   {Polarized ${}^3$He Target points-of-contact.}
-  \SimonaMalace{\em 1st Contact}
-  \CarlosMunoz{}
-  \WassimHafidi{\em Student}
-\end{namestab}
 
-Additional contact information may be found on the counting house
-whiteboard.  Most staff members can be reached by text message by
-visiting the JLab Staff Directory,
-\url{https://misportal.jlab.org/mis/staff/}, and employging
-the ``Click to page'' option.
+\section{Responsible Personnel}
+\label{sec:personnel}
+Individuals responsible for the system are:
+
+\begin{table}[!htb]
+ \centering
+ \begin{tabular}{|c|c|c|c|c|}
+\hline
+ Name&Dept.&Phone&email&Comments \\ \hline
+ Florian Hauenstein & Jlab & & \href{mailto:hauenst@jlab.org}{\nolinkurl{hauenst@jlab.org}} &  First/Laser contact\\ \hline
+Carlos Ayerbe Gayoso  & ODU & & \href{mailto:gayoso@jlab.org}{\nolinkurl{gayoso@jlab.org}} & Second contact \\ \hline
+ L.  Weinstein & ODU &  &\href{mailto:weinstein@jlab.org}{\nolinkurl{weinstein@jlab.org}}& Contact  \\ \hline
+ Holly Szumila-Vance & FIU &  &\href{mailto:hszumila@jlab.org}{\nolinkurl{hszumila@jlab.org}}& \\ \hline
+ \end{tabular}
+\caption{Personnel responsible for the Large Angle Detector.} 
+\label{tb:lad}
+\end{table}
 
